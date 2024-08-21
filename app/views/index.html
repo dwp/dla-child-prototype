@@ -5,50 +5,16 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds-width">
-    <h1 class="govuk-heading-xl">
-      DLA-CHILD Prototype
-    </h1>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Version</th>
-          <th scope="col" class="govuk-table__header">Changes from previous version</th>
-          <th scope="col" class="govuk-table__header">Link</th>
-        </tr>
-      </thead>
+  <div class="govuk-grid-column-two-thirds">
 
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">CMs view</th>
-                  <td class="govuk-table__cell">
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li><a href="#"></a>Initial Prototype</li>
-                    </ul>
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="/evidence-gathering3/dashboard">CMs view</a><br><br>
-                  </td>
-                </tr>
-              </tbody>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Schools view</th>
-                  <td class="govuk-table__cell">
-                    <ul class="govuk-list govuk-list--bullet">
-                      <li>Previous DBD376 </li>
-                      <li>Current DBD376</li>
-                    </ul>
-                  </td>
-                  <td class="govuk-table__cell">
-                    <a href="/evidence-gathering2/ref-no">DBD376(O)</a><br>
-                    <a href="/evidence-gathering3/ref-no">DBD376(N)
-                  </td>
-                </tr>
-              </tbody>
-    </table>
+    {% include "govuk-prototype-kit/includes/homepage-top.njk" %}
+
+    <h1 class="govuk-heading-xl">
+      {{ serviceName }}
+    </h1>
+
+    {% include "govuk-prototype-kit/includes/homepage-bottom.njk" %}
   </div>
 </div>
-
 
 {% endblock %}

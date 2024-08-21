@@ -5,23 +5,16 @@
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-          Alpha
-      </strong>
-      <span class="govuk-phase-banner__text">
-          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-      </span>
-  </p>
-</div>
-<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
         Have they been known by any other names?
@@ -50,11 +43,10 @@
 
     <br>
     <br>
-    <form class="form" action="/part-1/nino" method="post">
     <button type="submit" class="govuk-button" data-module="govuk-button"><a href="part-1/child-name"></a>
-  Continue
+  Save and continue
 </button>
-</form>
+
   </div>
 
 {% endblock %}
