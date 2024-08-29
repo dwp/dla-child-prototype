@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Who placed – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,37 +21,36 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
       Who placed the child into your care?
       </h1>
 
-      <form class="form" action="/path/of/next/page" method="post">
+      <form class="form"  method="post">
 
         <div class="govuk-radios govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changedName">
+        <input class="govuk-radios__input" id="who-placed" name="who-placed" type="radio" value="parent">
+        <label class="govuk-label govuk-radios__label" for="who-placed">
           A parent of the child
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
+        <input class="govuk-radios__input" id="who-placed-2" name="who-placed" type="radio" value="la">
+        <label class="govuk-label govuk-radios__label" for="who-placed-2">
           A local authority or voluntary organisation
         </label>
       </div>
 
-      </form>
+   
 
 
     </div>
 
     <br>
     <br>
-    <form class="form" action="#" method="post">
-    <button type="submit" class="govuk-button" data-module="govuk-button"><a href="part-1/child-name"></a>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
   Save and continue
 </button>
 </form>
