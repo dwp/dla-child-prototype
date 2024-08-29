@@ -25,7 +25,7 @@ router.post('/part-1/hospital/overnight-stays', function(request, response) {
     if (hasOvernight === "yes"){
         response.redirect("/part-1/hospital/went-in-and-out")
     } else {
-        response.redirect("/part-1/hospital/end-screen")
+        response.redirect("/end-screen")
     }
 })
 
