@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  End – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,23 +24,20 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        What is your relationship to them?
+        Thank you - this part of the testing is done
       </h1>
 
-          <div class="govuk-form-group">
-
-  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
-</div>
+     
 
 
-  <form class="form" action="#" method="post">
-        {{ govukButton({
-          text: " Save and Continue"
-        }) }}
 
-      </form>
-
-    </div>
+    <br>
+    <br>
+    {{ govukButton({
+      text: " Return to Home page",
+      href: "/"
+    }) }}
+  </div>
   </div>
 
 {% endblock %}
