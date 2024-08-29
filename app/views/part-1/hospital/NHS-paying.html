@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Is NHS paying – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -50,11 +50,11 @@
 
     <br>
     <br>
-    <form class="form" action="#" method="post">
-    <button type="submit" class="govuk-button" data-module="govuk-button"><a href="part-1/child-name"></a>
-  Save and continue
-</button>
-  </form>
+    {{ govukButton({
+      text: " Save and Continue",
+      href: "/part-1/hospital/overnight-stays"
+    }) }}
+
   </div>
 
 {% endblock %}

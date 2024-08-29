@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+Accommodation address – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,7 +21,7 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 
       <fieldset class="govuk-fieldset">
   <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -68,12 +68,10 @@
     <input class="govuk-input govuk-input--width-10" id="address-postcode" name="addressPostcode" type="text" autocomplete="postal-code">
   </div>
 </fieldset>
-<form class="form" action="#" method="post">
-        {{ govukButton({
-          text: " Save and Continue"
-        }) }}
-
-      </form>
+{{ govukButton({
+  text: " Save and Continue",
+  href: "/part-1/hospital/accommodation-phone"
+}) }}
 
     </div>
   </div>
