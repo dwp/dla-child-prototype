@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Dates in and out – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -35,7 +35,7 @@
       </p>
     </legend>
     <div id="dob-hint" class="govuk-hint">
-      For example, 31 3 1980
+      For example, 31 3 2024
     </div>
     <div class="govuk-date-input" id="dob">
       <div class="govuk-date-input__item">
@@ -66,11 +66,11 @@
 
         <br>
         <p class="govuk-body govuk-!-font-weight-bold">
-          Dates they went out
+          Dates they came out
         </p>
       </legend>
       <div id="dob-hint" class="govuk-hint">
-        For example, 31 3 1980
+        For example, 31 3 2024
       </div>
       <div class="govuk-date-input" id="dob">
         <div class="govuk-date-input__item">
@@ -101,12 +101,11 @@
     </div>
   </fieldset>
 </div>
-<form class="form" action="#" method="post">
-        {{ govukButton({
-          text: " Save and Continue"
-        }) }}
 
-      </form>
+{{ govukButton({
+  text: " Save and Continue",
+  href: "/part-1/hospital/accommodation-address"
+}) }}
 
     </div>
   </div>

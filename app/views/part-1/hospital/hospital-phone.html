@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Why did they – {{ serviceName }} – GOV.UK Prototype Kit
+  Hospital phone – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,19 +21,30 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
-        Why did they go in?
+        Tell us the telephone number of the hospital
       </h1>
-        <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="wordCount" rows="5" aria-describedby="word-count-info"></textarea>
-<br>
-<br>
 
-{{ govukButton({
-  text: " Save and Continue",
-  href: "/part-1/hospital/NHS-paying"
-}) }}
+
+
+
+          <div class="govuk-form-group">
+  <label class="govuk-label" for="national-insurance-number">
+    UK telephone number
+  </label>
+
+  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+</div>
+
+
+    {{ govukButton({
+      text: " Save and Continue",
+      href: "/part-1/hospital/why-did-they"
+    }) }}
+
+
 
     </div>
   </div>
