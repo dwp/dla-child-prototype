@@ -24,20 +24,15 @@
     <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
-        What is their National Insurance number?
+        Why did they go in?
       </h1>
 
       <form class="form" action="/part-1/dob" method="post">
 
 
-          <div class="govuk-form-group">
-  <label class="govuk-label" for="national-insurance-number">
-    National Insurance number
-  </label>
-  <div id="national-insurance-number-hint" class="govuk-hint">
-    It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
-  </div>
-  <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+        <textarea class="govuk-textarea govuk-js-character-count" id="word-count" name="wordCount" rows="5" aria-describedby="word-count-info"></textarea>
+<div id="word-count-info" class="govuk-hint govuk-character-count__message">
+  You can enter up to 200 words
 </div>
 
 
