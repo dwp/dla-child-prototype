@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -31,7 +31,7 @@
       </h1>
     </legend>
     <div id="dob-hint" class="govuk-hint">
-      For example, 31 3 1980
+      For example, 27 3 2018
     </div>
     <div class="govuk-date-input" id="dob">
       <div class="govuk-date-input__item">
@@ -61,7 +61,7 @@
     </div>
   </fieldset>
 </div>
-<form class="form" action="/part-1/gender" method="post">
+<form class="form" action="/part-1/sex" method="post">
         {{ govukButton({
           text: " Save and Continue"
         }) }}

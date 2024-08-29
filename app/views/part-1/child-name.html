@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Child's name – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -34,6 +34,12 @@
     <input class="govuk-input govuk-input--width-10" id="first-name" name="firstName" type="text" autocomplete="off">
   </div>
   <div class="govuk-form-group">
+    <label class="govuk-label" for="middle-name">
+    Middle names (optional)
+    </label>
+    <input class="govuk-input govuk-input--width-10" id="middle-name" name="middleName" type="text" autocomplete="off">
+    </div>
+  <div class="govuk-form-group">
   <label class="govuk-label" for="last-name">
   Last name
   </label>
@@ -46,7 +52,7 @@
   </div>
   <br>
   <br>
-  <form class="form" action="/part-1/other-names" method="post">
+  <form class="form" action="/part-1/child-other-names" method="post">
   <button type="submit" class="govuk-button" data-module="govuk-button"><a href="part-1/child-name"></a>
 Save and continue
 </button>

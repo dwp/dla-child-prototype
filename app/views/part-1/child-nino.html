@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Child Nino – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -27,7 +27,7 @@
         What is their National Insurance number?
       </h1>
 
-      <form class="form" action="/part-1/dob" method="post">
+      <form class="form" action="/part-1/child-dob" method="post">
 
 
           <div class="govuk-form-group">
@@ -35,7 +35,7 @@
     National Insurance number
   </label>
   <div id="national-insurance-number-hint" class="govuk-hint">
-    It’s on your National Insurance card, benefit letter, payslip or P60. For example, ‘QQ 12 34 56 C’.
+    Guidance to add here
   </div>
   <input class="govuk-input govuk-input--width-10 govuk-input--extra-letter-spacing" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
 </div>

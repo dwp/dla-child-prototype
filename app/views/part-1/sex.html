@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Child sex – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,22 +24,22 @@
     <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
-        Have they been known by any other names?
+        What is their sex?
       </h1>
 
       <form class="form" action="/path/of/next/page" method="post">
 
         <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changedName">
-          Yes
+        <input class="govuk-radios__input" id="sexM" name="sex" type="radio" value="male">
+        <label class="govuk-label govuk-radios__label" for="sexM">
+          Male
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
-          No
+        <input class="govuk-radios__input" id="sexF" name="sex" type="radio" value="female">
+        <label class="govuk-label govuk-radios__label" for="sexF">
+          Female
         </label>
       </div>
 
@@ -50,11 +50,11 @@
 
     <br>
     <br>
-    <form class="form" action="/part-1/nino" method="post">
+    <form class="form" action="/part-1/child-address" method="post">
     <button type="submit" class="govuk-button" data-module="govuk-button"><a href="part-1/child-name"></a>
   Save and continue
 </button>
-</form>
+  </form>
   </div>
 
 {% endblock %}
