@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Name of organisation – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,10 +21,10 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        What is your relationship to them?
+        What is the name of the local authority or voluntary organisation?
       </h1>
 
           <div class="govuk-form-group">
@@ -33,12 +33,10 @@
 </div>
 
 
-  <form class="form" action="#" method="post">
-        {{ govukButton({
-          text: " Save and Continue"
-        }) }}
-
-      </form>
+{{ govukButton({
+  text: " Save and Continue",
+  href: "la-address"
+}) }}
 
     </div>
   </div>

@@ -29,4 +29,23 @@ router.post('/part-1/hospital/overnight-stays', function(request, response) {
     }
 })
 
+router.post('/part-1/foster-care/foster-carer', function(request, response) {
+
+    var isFosterCarer = request.session.data['foster-carer']
+    if (isFosterCarer === "yes"){
+        response.redirect("/part-1/foster-care/when-child-placed")
+    } else {
+        response.redirect("/part-1/foster-care/relationship")
+    }
+})
+
+router.post('/part-1/foster-care/who-placed', function(request, response) {
+
+    var whoPlaced = request.session.data['who-placed']
+    if (whoPlaced === "parent"){
+        response.redirect("/end-screen")
+    } else {
+        response.redirect("/part-1/foster-care/name-of-la")
+    }
+})
 
