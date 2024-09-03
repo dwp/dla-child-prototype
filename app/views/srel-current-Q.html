@@ -24,7 +24,7 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-       This is the current question
+       Are you claiming for a child under the special rules?
       </h1>
 
       {% from "govuk/components/radios/macro.njk" import govukRadios %}
@@ -34,7 +34,7 @@
         name: "srel",
         fieldset: {
           legend: {
-            text: "Are you claiming for a child under the special rules?",
+            text: "",
             isPageHeading: true,
             classes: "govuk-fieldset__legend--m"
           }
@@ -50,15 +50,13 @@
           }
         ]
       }) }}
-     
 
 
 
-    <br>
-    <br>
+
     {{ govukButton({
-      text: " Next",
-      href: "srel-guidance"
+      text: " Continue",
+      href: "srel-new-Q"
     }) }}
   </div>
   </div>
