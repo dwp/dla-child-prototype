@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Foster carer – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">
+        Is the child's parent or guardian working in or paying insurance to an
+        EEA state or Switzerland?
+      </h1>
+
+      <form class="form" method="post">
+
+        <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="child-parent-getting" name="child-parent-getting" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="child-parent-getting">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="child-parent-getting-2" name="child-parent-getting" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="child-parent-getting-2">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="child-parent-getting-3" name="child-parent-getting" type="radio" value="dont">
+        <label class="govuk-label govuk-radios__label" for="child-parent-getting-3">
+          Don't know
+        </label>
+      </div>
+
+
+    </div>
+
+    <br>
+    <br>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Continue
+    </button>
+</form>
+  </div>
+
+{% endblock %}
