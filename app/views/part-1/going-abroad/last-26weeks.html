@@ -1,0 +1,70 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Foster carer – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+
+      <h1 class="govuk-heading-l">
+        Has the child been abroad in the last 26 weeks?
+      </h1>
+
+      <form class="form" method="post">
+
+        <div class="govuk-radios govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yes-more-than" name="yes-more-than" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="yes-more-than">
+          Yes, for less than 13 weeks in total
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="yes-less-than" name="yes-less-than" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="yes-less-than">
+          Yes, for more than 13 weeks in total
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="no-26weeks" name="no-26weeks" type="radio" value="dont">
+        <label class="govuk-label govuk-radios__label" for="no-26weeks">
+          No
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="dont-know-26weeks" name="dont-know-26weeks" type="radio" value="dont">
+        <label class="govuk-label govuk-radios__label" for="dont-know-26weeks">
+          Don't know
+        </label>
+      </div>
+
+
+    </div>
+
+    <br>
+    <br>
+    {{ govukButton({
+      text: "Continue",
+      href: "/part-1/hospital/accommodation-address"
+    }) }}
+</form>
+  </div>
+
+{% endblock %}
