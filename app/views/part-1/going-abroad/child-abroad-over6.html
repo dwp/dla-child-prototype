@@ -21,50 +21,40 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Has the child been abroad in the last 12 months?
+        Has the child ever been abroad?
       </h1>
 
-      <form class="form" method="post">
 
         <div class="govuk-radios govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="yes-6months-less" name="yes-6months-less" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="yes-6months-less">
-          Yes, for less than 6 months in total
+        <input class="govuk-radios__input" id="foster-carer" name="foster-carer" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="foster-carer">
+          Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="yes-6months-more" name="yes-6months-more" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="yes-6months-more">
-          Yes, for more than 6 months in total
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="no-12months" name="no-12months" type="radio" value="dont">
-        <label class="govuk-label govuk-radios__label" for="no-12months">
+        <input class="govuk-radios__input" id="foster-carer-2" name="foster-carer" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="foster-carer-2">
           No
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="dont-know-12months" name="dont-know-12months" type="radio" value="dont">
-        <label class="govuk-label govuk-radios__label" for="dont-know-12months">
+        <input class="govuk-radios__input" id="foster-carer-2" name="foster-carer" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="foster-carer-2">
           Don't know
         </label>
       </div>
-
-
     </div>
 
     <br>
     <br>
     {{ govukButton({
       text: "Continue",
-      href: "/part-1/hospital/accommodation-address"
+      href: "/part-1/going-abroad/over-6months"
     }) }}
-</form>
   </div>
 
 {% endblock %}
