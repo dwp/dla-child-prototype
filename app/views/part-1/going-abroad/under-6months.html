@@ -24,7 +24,7 @@
     <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
-        Has the child been abroad in the last 26 weeks?
+        How much time has the child spent abroad?
       </h1>
 
       <form class="form" method="post">
@@ -33,19 +33,13 @@
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="yes-more-than" name="yes-more-than" type="radio" value="yes">
         <label class="govuk-label govuk-radios__label" for="yes-more-than">
-          Yes, for less than 13 weeks in total
+          Less than 13 weeks in total
         </label>
       </div>
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="yes-less-than" name="yes-less-than" type="radio" value="no">
         <label class="govuk-label govuk-radios__label" for="yes-less-than">
-          Yes, for more than 13 weeks in total
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="no-26weeks" name="no-26weeks" type="radio" value="dont">
-        <label class="govuk-label govuk-radios__label" for="no-26weeks">
-          No
+          More than 13 weeks in total
         </label>
       </div>
       <div class="govuk-radios__item">
@@ -62,7 +56,7 @@
     <br>
     {{ govukButton({
       text: "Continue",
-      href: "/part-1/hospital/accommodation-address"
+      href: "#"
     }) }}
 </form>
   </div>
