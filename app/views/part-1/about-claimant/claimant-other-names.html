@@ -26,32 +26,29 @@
       <h1 class="govuk-heading-l">
         Have you been known by any other names?
       </h1>
-
-      <form class="form" action="/path/of/next/page" method="post">
-
+      <form class="form"  method="post">
+      <div id="other-name-hint" class="govuk-hint">
+          This might be because of a legal name change, or if you use a name which is not your legal name.
+        </div>
         <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changedName">
+        <input class="govuk-radios__input" id="claimant-name-1" name="claimant-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="claimant-name-1">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
+        <input class="govuk-radios__input" id="claimant-name-2" name="claimant-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="claimant-name-2">
           No
         </label>
       </div>
-
-      </form>
-
 
     </div>
 
     <br>
     <br>
-    <form class="form" action="/part-1/nino" method="post">
-    <button type="submit" class="govuk-button" data-module="govuk-button"><a href="part-1/child-name"></a>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
   Continue
 </button>
 </form>

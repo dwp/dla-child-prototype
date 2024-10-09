@@ -36,13 +36,10 @@ Organisation phone – {{ serviceName }} – GOV.UK Prototype Kit
 
   <input class="govuk-input govuk-!-width-one-third" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
 </div>
-
-<form class="form" action="/end-screen" method="post">
-  {{ govukButton({
-    text: "Continue"
-  }) }}
-
-</form>
+{{ govukButton({
+  text: "Continue",
+  href: "/part-1/foster-care/foster-carer"
+}) }}
 
     </div>
   </div>

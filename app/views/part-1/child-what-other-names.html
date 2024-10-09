@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Child Nino – {{ serviceName }} – GOV.UK Prototype Kit
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,29 +24,18 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        What is your National Insurance number?
+        What other names have they been known by?
       </h1>
-
-      <form class="form" action="/part-1/about-claimant/claimant-dob" method="post">
-
-
-          <div class="govuk-form-group">
-  <label class="govuk-label" for="national-insurance-number">
-    National Insurance number
-  </label>
-
-  <input class="govuk-input govuk-!-width-one-third" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+      <div id="other-name-hint" class="govuk-hint">
+        Tell us about any other first or last names you may have used.
+        </div>
+        <div class="govuk-form-group">
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
 </div>
-
-
-
-        {{ govukButton({
-          text: "Continue"
-        }) }}
-
-      </form>
-
-    </div>
+    {{ govukButton({
+      text: " Continue",
+      href: "#"
+    }) }}
   </div>
 
 {% endblock %}
