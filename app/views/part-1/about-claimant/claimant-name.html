@@ -35,7 +35,7 @@
   </div>
   <div class="govuk-form-group">
     <label class="govuk-label" for="middle-name">
-    Middle names (optional)
+    Middle names
     </label>
     <input class="govuk-input govuk-input--width-10" id="middle-name" name="middleName" type="text" autocomplete="off">
     </div>
@@ -52,9 +52,8 @@
   </div>
   <br>
   <br>
-  <form class="form" action="/part-1/child-other-names" method="post">
-  <button type="submit" class="govuk-button" data-module="govuk-button"><a href="part-1/child-name"></a>
-Continue
-</button>
-</form>
+  {{ govukButton({
+    text: "Continue",
+    href: "/part-1/about-claimant/claimant-other-names"
+  }) }}
 {% endblock %}

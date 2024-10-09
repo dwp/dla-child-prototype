@@ -49,3 +49,23 @@ router.post('/part-1/foster-care/who-placed', function(request, response) {
         response.redirect("/part-1/foster-care/name-of-la")
     }
 })
+
+router.post('/part-1/about-claimant/claimant-other-names', function(request, response) {
+
+    var claimantName = request.session.data['claimant-name']
+    if (claimantName === "yes"){
+        response.redirect("/part-1/about-claimant/claimant-what-other-names")
+    } else {
+        response.redirect("/part-1/about-claimant/claimant-nino")
+    }
+})
+
+router.post('/part-1/child-other-names', function(request, response) {
+
+    var childName = request.session.data['child-name']
+    if (childName === "yes"){
+        response.redirect("/part-1/child-what-other-names")
+    } else {
+        response.redirect("/part-1/child-nino")
+    }
+})
