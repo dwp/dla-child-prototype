@@ -69,3 +69,33 @@ router.post('/part-1/child-other-names', function(request, response) {
         response.redirect("/part-1/child-nino")
     }
 })
+
+router.post('/part-1/going-abroad/child-abroad-over3', function(request, response) {
+
+    var fosterCarer = request.session.data['foster-carer']
+    if (fosterCarer === "yes"){
+        response.redirect("/part-1/going-abroad/over-3")
+    } else {
+        response.redirect("/end-screen")
+    }
+})
+
+router.post('/part-1/claimed-benefits', function(request, response) {
+
+    var claimedBenefits = request.session.data['claimed-benefits']
+    if (claimedBenefits === "yes"){
+        response.redirect("/part-1/reference-number")
+    } else {
+        response.redirect("/end-screen")
+    }
+})
+
+router.post('/part-1/reference-number', function(request, response) {
+
+    var refNumber = request.session.data['ref-number']
+    if (refNumber === "yes"){
+        response.redirect("/part-1/reference-number-2")
+    } else {
+        response.redirect("/end-screen")
+    }
+})

@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Child other names – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -21,24 +21,21 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-      <h1 class="govuk-heading-l">
-        What other names have they been known by?
-      </h1>
-      <div id="other-name-hint" class="govuk-hint">
-        Tell us about any other first or last names you may have used.
-        </div>
+    <div class="govuk-grid-column-half">
         <div class="govuk-form-group">
+          <h1 class="govuk-heading-l">
+            Tell us anything else we need to know about their difficulties with their daily living and care needs or how their needs change from day to day
+          </h1>
   <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
 </div>
-<form class="form" action="/part-1/claimed-benefits" method="post">
-  {{ govukButton({
-    text: "Continue"
-  }) }}
+      </div>
 
-</form>
-  </div>
+    <br>
+    <br>
+    {{ govukButton({
+      text: " Continue",
+      href: "/end-screen"
+    }) }}
   </div>
 
 {% endblock %}

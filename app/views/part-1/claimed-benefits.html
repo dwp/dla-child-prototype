@@ -24,34 +24,30 @@
     <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
-        Due to a health condition or disability do they wake and need assistance or supervision during the night?
+        Have you claimed any other benefits for them in the past?
       </h1>
-
+  <form class="form"  method="post">
         <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changedName">
+        <input class="govuk-radios__input" id="claimed-benefits-1" name="claimed-benefits" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="claimed-benefits-1">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
+        <input class="govuk-radios__input" id="claimed-benefits-2" name="claimed-benefits" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="claimed-benefits-2">
           No
         </label>
       </div>
-
-
-
-
     </div>
 
     <br>
     <br>
-    {{ govukButton({
-      text: "Continue",
-      href: "/part-1/night-needs/how-often"
-    }) }}
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+  </button>
+  </form>
   </div>
-
+</div>
 {% endblock %}

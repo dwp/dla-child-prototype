@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Foster carer – {{ serviceName }} – GOV.UK Prototype Kit
+  Child other names – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,30 +24,25 @@
     <div class="govuk-grid-column-full">
 
       <h1 class="govuk-heading-l">
-        How much time has the child spent abroad in the last 12 months?
+        How much time in total do you spend doing this per night, on average?
       </h1>
-
-      <form class="form" method="post">
 
         <div class="govuk-radios govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="yes-6months-less" name="over-3" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="yes-6months-less">
-        Less than 6 months in total
+        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changedName">
+          Less than 20 minutes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="yes-6months-more" name="over-3" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="yes-6months-more">
-        6 months or more in total
+        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changedName-2">
+          20 minutes or more
         </label>
       </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="dont-know-12months" name="over-3" type="radio" value="dont">
-        <label class="govuk-label govuk-radios__label" for="dont-know-12months">
-          Don't know
-        </label>
-      </div>
+
+
+
 
     </div>
 
@@ -55,9 +50,8 @@
     <br>
     {{ govukButton({
       text: "Continue",
-      href: "#"
+      href: "/part-1/night-needs/how-many-nights"
     }) }}
-</form>
   </div>
 
 {% endblock %}

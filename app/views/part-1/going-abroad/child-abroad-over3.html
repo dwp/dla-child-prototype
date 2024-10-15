@@ -26,7 +26,7 @@
       <h1 class="govuk-heading-l">
         Has the child ever been abroad?
       </h1>
-
+<form class="form"  method="post">
         <div class="govuk-radios govuk-radios" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="foster-carer" name="foster-carer" type="radio" value="yes">
@@ -41,8 +41,8 @@
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="foster-carer-2" name="foster-carer" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="foster-carer-2">
+        <input class="govuk-radios__input" id="foster-carer-3" name="foster-carer" type="radio" value="dont-know">
+        <label class="govuk-label govuk-radios__label" for="foster-carer-3">
           Don't know
         </label>
       </div>
@@ -51,11 +51,10 @@
 
     <br>
     <br>
-    {{ govukButton({
-      text: "Continue",
-      href: "/part-1/going-abroad/over-3"
-    }) }}
-
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+  </button>
+</form>
   </div>
-
+</div>
 {% endblock %}

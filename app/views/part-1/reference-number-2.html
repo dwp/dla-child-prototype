@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+  Relationship – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
@@ -24,21 +24,24 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        What other names have they been known by?
+        What is the reference number?
       </h1>
-      <div id="other-name-hint" class="govuk-hint">
-        Tell us about any other first or last names you may have used.
-        </div>
-        <div class="govuk-form-group">
-  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+      <div id="account-number-hint" class="govuk-hint">
+  For example, QQ 12 34 56 C
 </div>
-<form class="form" action="/part-1/claimed-benefits" method="post">
+          <div class="govuk-form-group">
+  <input class="govuk-input govuk-!-width-one-half" id="national-insurance-number" name="nationalInsuranceNumber" type="text" spellcheck="false" aria-describedby="national-insurance-number-hint">
+</div>
+
+
+<form class="form" action="/end-screen" method="post">
   {{ govukButton({
     text: "Continue"
   }) }}
 
 </form>
-  </div>
+
+    </div>
   </div>
 
 {% endblock %}
