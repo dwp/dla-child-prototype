@@ -26,17 +26,17 @@
       <h1 class="govuk-heading-l">
         Do you need to get up during the night to help or supervise the child due to their health condition?
       </h1>
-
+     <form class="form"  method="post">
         <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changedName">
+        <input class="govuk-radios__input" id="get-up-1" name="get-up" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="get-up-1">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
+        <input class="govuk-radios__input" id="get-up-2" name="get-up" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="get-up-2">
           No
         </label>
       </div>
@@ -48,10 +48,11 @@
 
     <br>
     <br>
-    {{ govukButton({
-      text: "Continue",
-      href: "/part-1/night-needs/reasons"
-    }) }}
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+  </button>
+  </form>
+  </div>
   </div>
 
 {% endblock %}
