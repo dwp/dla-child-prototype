@@ -99,3 +99,23 @@ router.post('/part-1/reference-number', function(request, response) {
         response.redirect("/end-screen")
     }
 })
+
+router.post('/part-1/night-needs/need-to-get-up', function(request, response) {
+
+    var getUp = request.session.data['get-up']
+    if (getUp === "yes"){
+        response.redirect("/part-1/night-needs/reasons")
+    } else {
+        response.redirect("/end-screen")
+    }
+})
+
+router.post('/part-1/night-needs/need-to-get-up-2', function(request, response) {
+
+    var getUp = request.session.data['get-up']
+    if (getUp === "yes"){
+        response.redirect("/part-1/night-needs/how-often")
+    } else {
+        response.redirect("/end-screen")
+    }
+})
