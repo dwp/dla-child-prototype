@@ -32,12 +32,10 @@
         <div class="govuk-form-group">
   <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
 </div>
-<form class="form" action="/part-1/claimed-benefits" method="post">
-  {{ govukButton({
-    text: "Continue"
-  }) }}
-
-</form>
+{{ govukButton({
+  text: "Continue",
+  href: "/part-1/claimed-benefits"
+}) }}
   </div>
   </div>
 
