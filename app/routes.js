@@ -66,7 +66,7 @@ router.post('/part-1/child-other-names', function(request, response) {
     if (childName === "yes"){
         response.redirect("/part-1/child-what-other-names")
     } else {
-        response.redirect("/part-1/child-nino")
+        response.redirect("/part-1/claimed-benefits")
     }
 })
 
