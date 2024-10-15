@@ -27,7 +27,7 @@
     <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
       <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
         <h1 class="govuk-fieldset__heading">
-          What does the child need help or support with at night?
+          What help or supervision do you give the child that relates to their health condition?
         </h1>
       </legend>
       <div id="waste-hint" class="govuk-hint">
@@ -37,19 +37,19 @@
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
           <label class="govuk-label govuk-checkboxes__label" for="waste">
-            Getting out or back into bed
+            Encouragement to get into bed, settle in bed, or to turn over
           </label>
         </div>
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
           <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-            Moving around
+          Help or support with their toilet needs
           </label>
         </div>
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
           <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Help or support with their toilet needs
+            Getting cleaned up or changing clothing
           </label>
         </div>
         <div class="govuk-checkboxes__item">
@@ -61,19 +61,19 @@
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
           <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Taking medicine
+            Encouragement or help to take medication
           </label>
         </div>
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
           <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Monitoring or managing equipment
+            Monitoring or managing their equipment
           </label>
         </div>
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
           <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            They need someone to encourage, prompt or watch over them
+            They are unaware of dangers or may harm themselves or others
           </label>
         </div>
         <div class="govuk-checkboxes__item">
@@ -83,12 +83,7 @@
           </label>
         </div>
       <br> <br
-        <div class="govuk-form-group">
-  <p>
-    Tell us about any help or support the child needs at night
-  </p>
-  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
-</div>
+
       </div>
     </fieldset>
   </div>
@@ -98,7 +93,7 @@
     <br>
     {{ govukButton({
       text: " Continue",
-      href: "/end-screen"
+      href: "/part-1/night-needs/does-this-happen"
     }) }}
   </div>
 
