@@ -1,0 +1,184 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <p1 class="govuk-heading-m">
+        John Smith
+      </p1>
+      <p1 class="govuk-body-s">
+        AA 12 34 56 D
+      </p1><br>
+
+      <a href="/evidence-gathering/request">Make a request</a>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+
+<form class="form"  method="post">
+  <h1 class="govuk-heading-l">
+  View and manage supporting documents
+  </h1>
+
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Received documents</caption>
+    <thead class="govuk-table__head">
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-35-percent">Document name</td>
+  <td class="govuk-table__cell govuk-30-percent">Date received </td>
+  <td class="govuk-table__cell govuk-12-percent">Seen by CM</td>
+  <td class="govuk-table__cell govuk-12-percent">Supports application</td>
+  <td class="govuk-table__cell govuk-10-percent">Status</td>
+</tr>
+</thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <a href="#">EHCP plan</a>
+        </td>
+        <td class="govuk-table__cell govuk-30-percent">24 January 2025</td>
+        <td class="govuk-table__cell govuk-12-percent">No</td>
+        <td class="govuk-table__cell govuk-12-percent">Yes</td>
+        <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--grey">
+          Unread
+        </strong>
+      </td>
+      </tr>
+    </tbody>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <a href="#">School report</a>
+        </td>
+        <td class="govuk-table__cell govuk-30-percent">12 January 2025</td>
+        <td class="govuk-table__cell govuk-12-percent">No</td>
+        <td class="govuk-table__cell govuk-12-percent">Yes</td>
+        <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--grey">
+          Unread
+        </strong>
+      </td>
+      </tr>
+    </tbody>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <a href="#">Summary care record</a>
+        </td>
+        <td class="govuk-table__cell govuk-30-percent">12 December 2023</td>
+        <td class="govuk-table__cell govuk-12-percent">No</td>
+        <td class="govuk-table__cell govuk-12-percent">Yes</td>
+        <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--grey">
+          Unread
+        </strong>
+      </td>
+      </tr>
+    </tbody>
+
+  </table>
+  <br>
+  <br>
+  <table class="govuk-table">
+    <caption class="govuk-table__caption govuk-table__caption--m">Documents to assess</caption>
+    <thead class="govuk-table__head">
+<tr class="govuk-table__row">
+  <td class="govuk-table__cell govuk-35-percent">Document name</td>
+  <td class="govuk-table__cell govuk-30-percent">Date received </td>
+  <td class="govuk-table__cell govuk-12-percent">Seen by CM</td>
+  <td class="govuk-table__cell govuk-12-percent">Supports application</td>
+  <td class="govuk-table__cell govuk-10-percent">Status</td>
+</tr>
+</thead>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <a href="#">EHCP plan</a>
+        </td>
+        <td class="govuk-table__cell govuk-30-percent">24 January 2025</td>
+        <td class="govuk-table__cell govuk-12-percent">No</td>
+        <td class="govuk-table__cell govuk-12-percent">Yes</td>
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--blue">
+            To do
+          </strong>
+      </td>
+      </tr>
+    </tbody>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <a href="#">School report</a>
+        </td>
+        <td class="govuk-table__cell govuk-30-percent">12 January 2025</td>
+        <td class="govuk-table__cell govuk-12-percent">No</td>
+        <td class="govuk-table__cell govuk-12-percent">Yes</td>
+        <td class="govuk-table__cell">
+          <strong class="govuk-tag govuk-tag--blue">
+            To do
+          </strong>
+      </td>
+      </tr>
+    </tbody>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <a href="#">Health assessment report</a>
+        </td>
+        <td class="govuk-table__cell govuk-30-percent">24 November 2024</td>
+        <td class="govuk-table__cell govuk-12-percent">Yes</td>
+        <td class="govuk-table__cell govuk-12-percent">Yes</td>
+        <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Done
+        </strong>
+      </td>
+      </tr>
+    </tbody>
+    <tbody class="govuk-table__body">
+      <tr class="govuk-table__row">
+        <td class="govuk-table__cell">
+          <a href="#">Contextual report</a>
+        </td>
+        <td class="govuk-table__cell govuk-30-percent">24 August 2024</td>
+        <td class="govuk-table__cell govuk-12-percent">Yes</td>
+        <td class="govuk-table__cell govuk-12-percent">Yes</td>
+        <td class="govuk-table__cell">
+        <strong class="govuk-tag govuk-tag--green">
+          Done
+        </strong>
+      </td>
+      </tr>
+    </tbody>
+  </table>
+    <br>
+    <br>
+    {{ govukButton({
+      text: "Continue",
+      href: "/evidence-gathering/request"
+    }) }}
+  </div>
+</div>
+{% endblock %}

@@ -119,3 +119,66 @@ router.post('/part-1/night-needs/need-to-get-up-2', function(request, response) 
         response.redirect("/end-screen")
     }
 })
+router.post('/evidence-gathering2/tendencies', function(request, response) {
+
+    var dT = request.session.data['dt']
+    if (dT === "yes"){
+        response.redirect("/evidence-gathering2/tendencies2")
+    } else {
+        response.redirect("/evidence-gathering2/child-safely")
+    }
+})
+router.post('/evidence-gathering2/pe', function(request, response) {
+
+    var pE = request.session.data['pe']
+    if (pE === "yes"){
+        response.redirect("/evidence-gathering2/child-supervision")
+    } else {
+        response.redirect("/evidence-gathering2/school-activities")
+    }
+})
+router.post('/evidence-gathering2/child-supervision', function(request, response) {
+
+    var cS = request.session.data['cs']
+    if (cS === "yes"){
+        response.redirect("/evidence-gathering2/indoor-supervision")
+    } else {
+        response.redirect("/evidence-gathering2/road-safety")
+    }
+})
+router.post('/evidence-gathering2/road-safety', function(request, response) {
+
+    var sA = request.session.data['sa']
+    if (sA === "yes"){
+        response.redirect("/evidence-gathering2/child-medication")
+    } else {
+        response.redirect("/evidence-gathering2/provide-details")
+    }
+})
+router.post('/evidence-gathering2/child-medication', function(request, response) {
+
+    var med = request.session.data['med']
+    if (med === "yes"){
+        response.redirect("/evidence-gathering2/what-medication")
+    } else {
+        response.redirect("/evidence-gathering2/further-details")
+    }
+})
+router.post('/evidence-gathering2/send-us', function(request, response) {
+
+    var send = request.session.data['send']
+    if (send === "yes"){
+        response.redirect("/evidence-gathering2/upload")
+    } else {
+        response.redirect("/evidence-gathering2/school-confirm")
+    }
+})
+router.post('/evidence-gathering2/file-uploaded', function(request, response) {
+
+    var file = request.session.data['file']
+    if (file === "yes"){
+        response.redirect("/evidence-gathering2/upload")
+    } else {
+        response.redirect("/evidence-gathering2/school-confirm")
+    }
+})
