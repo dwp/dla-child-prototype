@@ -170,7 +170,7 @@ router.post('/evidence-gathering2/send-us', function(request, response) {
     if (send === "yes"){
         response.redirect("/evidence-gathering2/upload")
     } else {
-        response.redirect("/evidence-gathering2/school-confirm")
+        response.redirect("/evidence-gathering2/your-details")
     }
 })
 router.post('/evidence-gathering2/file-uploaded', function(request, response) {
@@ -179,6 +179,6 @@ router.post('/evidence-gathering2/file-uploaded', function(request, response) {
     if (file === "yes"){
         response.redirect("/evidence-gathering2/upload")
     } else {
-        response.redirect("/evidence-gathering2/school-confirm")
+        response.redirect("/evidence-gathering2/your-details")
     }
 })
