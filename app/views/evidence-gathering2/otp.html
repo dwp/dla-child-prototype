@@ -21,26 +21,26 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <p1 class="govuk-heading-m">
-        John Smith
-      </p1>
-      <p1 class="govuk-body-s">
-        1 January 2020
-      </p1> <br><br><br><br>
-      <h1 class="govuk-heading-l">
-    What outdoor supervision needs does the child have?
-      </h1>
-      <br>
-      <form class="form"  method="post">
-      <div class="govuk-form-group">
-<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
-</div>
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form"  method="post">
+  <h1 class="govuk-heading-l">
+  Enter the one time password
+  </h1>
+
+ <div id="more-detail-hint" class="govuk-hint">
+    For example, 47329.
+  </div>
+  <div class="govuk-form-group">
+    <input class="govuk-input govuk-input--width-10" id="width-20" name="width20" type="text">
+  </div>
+      <a href="#">Request a new one time password</a>
     <br><br>
     {{ govukButton({
       text: "Continue",
-      href: "/evidence-gathering2/road-safety"
+      href: "/evidence-gathering2/about-child"
     }) }}
-      </div>
-      </div>
+</form>
+  </div>
+</div>
 {% endblock %}

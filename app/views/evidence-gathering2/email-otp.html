@@ -22,25 +22,29 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      <p1 class="govuk-heading-m">
-        John Smith
-      </p1>
-      <p1 class="govuk-body-s">
-        1 January 2020
-      </p1> <br><br><br><br>
-      <h1 class="govuk-heading-l">
-    What outdoor supervision needs does the child have?
-      </h1>
-      <br>
-      <form class="form"  method="post">
-      <div class="govuk-form-group">
-<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
-</div>
-    <br><br>
+
+<form class="form"  method="post">
+  <h1 class="govuk-heading-l">
+  We need to send you a one time password by email
+  </h1>
+  <label class="govuk-label" for="more-detail">
+    You will need to get the one time password from the email we send you, and enter it on the next screen.<br> <br>
+
+ The one time password will expire 30 minutes after you request it. If it expires, you will need to request a new one.
+ </label> <br>
+ <p1 class="govuk-heading-s">
+   Enter an email address
+ </p1>
+  <div class="govuk-form-group">
+    <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+  </div>
+    <br>
+    <br>
     {{ govukButton({
       text: "Continue",
-      href: "/evidence-gathering2/road-safety"
+      href: "/evidence-gathering2/otp"
     }) }}
-      </div>
-      </div>
+</form>
+  </div>
+</div>
 {% endblock %}

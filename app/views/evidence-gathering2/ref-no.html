@@ -21,26 +21,28 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      <p1 class="govuk-heading-m">
-        John Smith
-      </p1>
-      <p1 class="govuk-body-s">
-        1 January 2020
-      </p1> <br><br><br><br>
-      <h1 class="govuk-heading-l">
-    What outdoor supervision needs does the child have?
-      </h1>
-      <br>
-      <form class="form"  method="post">
-      <div class="govuk-form-group">
-<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
-</div>
-    <br><br>
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form"  method="post">
+  <h1 class="govuk-heading-l">
+  Enter the reference number
+  </h1>
+  <label class="govuk-label" for="more-detail">
+   This is the reference number that we sent by email.
+ </label> <br>
+ <div id="more-detail-hint" class="govuk-hint">
+    For example, DWP123A56Z.
+  </div>
+  <div class="govuk-form-group">
+    <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+  </div>
+    <br>
+    <br>
     {{ govukButton({
       text: "Continue",
-      href: "/evidence-gathering2/road-safety"
+      href: "/evidence-gathering2/email-otp"
     }) }}
-      </div>
-      </div>
+</form>
+  </div>
+</div>
 {% endblock %}
