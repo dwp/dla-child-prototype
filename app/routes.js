@@ -182,3 +182,78 @@ router.post('/evidence-gathering2/file-uploaded', function(request, response) {
         response.redirect("/evidence-gathering2/your-details")
     }
 })
+router.post('/evidence-gathering3/additional-support', function(request, response) {
+
+    var as = request.session.data['as']
+    if (as === "yes"){
+        response.redirect("/evidence-gathering3/further-support")
+    } else {
+        response.redirect("/evidence-gathering3/education-plan")
+    }
+})
+router.post('/evidence-gathering3/independently', function(request, response) {
+
+    var ind = request.session.data['ind']
+    if (ind === "yes"){
+        response.redirect("/evidence-gathering3/common-dangers")
+    } else {
+        response.redirect("/evidence-gathering3/move-around")
+    }
+})
+router.post('/evidence-gathering3/common-dangers', function(request, response) {
+
+    var cd = request.session.data['cd']
+    if (cd === "yes"){
+        response.redirect("/evidence-gathering3/awareness")
+    } else {
+        response.redirect("/evidence-gathering3/child-safely")
+    }
+})
+router.post('/evidence-gathering3/need-medication', function(request, response) {
+
+    var tm = request.session.data['tm']
+    if (tm === "yes"){
+        response.redirect("/evidence-gathering3/reminded")
+    } else {
+        response.redirect("/evidence-gathering3/behavioural")
+    }
+})
+router.post('/evidence-gathering3/behavioural', function(request, response) {
+
+    var bd = request.session.data['bd']
+    if (bd === "yes"){
+        response.redirect("/evidence-gathering3/behavioural2")
+    } else {
+        response.redirect("/evidence-gathering3/incidents")
+    }
+})
+
+router.post('/evidence-gathering3/incidents', function(request, response) {
+
+    var si = request.session.data['si']
+    if (si === "yes"){
+        response.redirect("/evidence-gathering3/incidents2")
+    } else {
+        response.redirect("/evidence-gathering3/sleep-problems")
+    }
+})
+
+router.post('/evidence-gathering3/sleep-problems', function(request, response) {
+
+    var sp = request.session.data['sp']
+    if (sp === "yes"){
+        response.redirect("/evidence-gathering3/sleep-problems2")
+    } else {
+        response.redirect("/evidence-gathering3/anymore-info")
+    }
+})
+
+router.post('/evidence-gathering3/file-uploaded', function(request, response) {
+
+    var fileUpload = request.session.data['file-uploaded']
+    if (fileUpload === "yes"){
+        response.redirect("/evidence-gathering3/upload")
+    } else {
+        response.redirect("/evidence-gathering3/more-info")
+    }
+})

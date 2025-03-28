@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+      <p1 class="govuk-heading-m">
+        John Smith
+      </p1>
+      <p1 class="govuk-body-s">
+        1 January 2020
+      </p1> <br><br><br><br>
+      <h1 class="govuk-heading-l">
+      Is the child aware of common dangers, including road safety awareness, appropriate to their age?
+      </h1>
+      <form class="form"  method="post">
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="cd1" name="cd" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="cd1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="cd2" name="cd" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="cd2">
+          No
+        </label>
+      </div>
+    </div>
+    <br><br>
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+  </form>
+      </div>
+      </div>
+{% endblock %}
