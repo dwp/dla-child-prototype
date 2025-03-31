@@ -5,7 +5,7 @@
 
 const govukPrototypeKit = require('govuk-prototype-kit')
 const router = govukPrototypeKit.requests.setupRouter()
-
+const util = require('util')
 // Add your routes here
 
 
@@ -206,7 +206,7 @@ router.post('/evidence-gathering3/common-dangers', function(request, response) {
     if (cd === "yes"){
         response.redirect("/evidence-gathering3/awareness")
     } else {
-        response.redirect("/evidence-gathering3/child-safely")
+        response.redirect("/evidence-gathering3/child-safely2")
     }
 })
 router.post('/evidence-gathering3/need-medication', function(request, response) {
@@ -244,7 +244,7 @@ router.post('/evidence-gathering3/sleep-problems', function(request, response) {
     if (sp === "yes"){
         response.redirect("/evidence-gathering3/sleep-problems2")
     } else {
-        response.redirect("/evidence-gathering3/anymore-info")
+        response.redirect("/evidence-gathering3/anymore-info2")
     }
 })
 
@@ -255,5 +255,25 @@ router.post('/evidence-gathering3/file-uploaded', function(request, response) {
         response.redirect("/evidence-gathering3/upload")
     } else {
         response.redirect("/evidence-gathering3/more-info")
+    }
+})
+
+router.post('/evidence-gathering3/child-safely2', function(request, response) {
+
+    var safely = request.session.data['safely']
+    if (safely.includes("these")){
+        response.redirect("/evidence-gathering3/help-they-need")
+    } else {
+        response.redirect("/evidence-gathering3/need-medication")
+    }
+})
+
+router.post('/evidence-gathering3/anymore-info2', function(request, response) {
+
+    var anymore = request.session.data['anymore']
+    if (anymore.includes("no")){
+        response.redirect("/evidence-gathering3/your-details")
+    } else {
+        response.redirect("/evidence-gathering3/upload")
     }
 })
