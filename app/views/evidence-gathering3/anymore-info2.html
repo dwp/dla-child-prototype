@@ -28,26 +28,42 @@
       <p1 class="govuk-body-s">
         1 January 2020
       </p1> <br><br><br><br>
-      <h1 class="govuk-heading-l">
-    Tell us about the further support they receive at school
-      </h1>
-      <br>
-      <form class="form"  method="post">
-        <p class="govuk-body-m">
-          Tell us about things like:  </p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>any special requirements for school trips</li>
-            <li>whether they need to be supervised in the playground</li>
-            <li>whether their road safety awareness is different than that of other children of the same age</li>
-          </ul>
-      <div class="govuk-form-group">
-<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
-</div>
-    <br><br>
-    {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering3/child-safely2"
-    }) }}
+      <form class="form" action="/evidence-gathering3/anymore-info2" method="post">
+
+  {{ govukCheckboxes({
+    name: "anymore",
+    values: data["anymore"],
+    fieldset: {
+      legend: {
+        text: "Would you like to tell us any more information about the child?",
+        isPageHeading: true,
+        classes: "govuk-fieldset__legend--l"
+      }
+    },
+    hint: {
+      text: "Select all that apply."
+    },
+    items: [
+      {
+        value: "yes1",
+        text: "Yes, I would like to provide written information"
+      },
+      {
+        value: "yes2",
+        text: "Yes, I would like to upload files"
+      },
+      {
+        value: "no",
+        text: "No"
+      }
+    ]
+  }) }}
+
+  {{ govukButton({
+    text: "Continue"
+  }) }}
+
+  </form>
       </div>
       </div>
 {% endblock %}
