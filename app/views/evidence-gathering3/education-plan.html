@@ -37,23 +37,23 @@
       <form class="form"  method="post">
         <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName" name="child-name" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="changedName">
+        <input class="govuk-radios__input" id="ep1" name="ep" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="ep1">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="changedName-2" name="child-name" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="changedName-2">
+        <input class="govuk-radios__input" id="ep2" name="ep" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="ep2">
           No
         </label>
       </div>
     </div>
     <br><br>
-    {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering3/independently"
-    }) }}
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+  </form>
       </div>
       </div>
 {% endblock %}
