@@ -191,6 +191,16 @@ router.post('/evidence-gathering3/additional-support', function(request, respons
         response.redirect("/evidence-gathering3/education-plan")
     }
 })
+
+router.post('/evidence-gathering3/education-plan', function(request, response) {
+
+    var ep = request.session.data['ep']
+    if (ep === "yes"){
+        response.redirect("/evidence-gathering3/plan-upload")
+    } else {
+        response.redirect("/evidence-gathering3/independently")
+    }
+})
 router.post('/evidence-gathering3/independently', function(request, response) {
 
     var ind = request.session.data['ind']

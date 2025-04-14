@@ -21,34 +21,24 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-grid-column-full">
       <p1 class="govuk-heading-m">
         John Smith
       </p1>
       <p1 class="govuk-body-s">
-      AA 12 34 56 D
-      </p1>
-      <br>
-      <br>
-      <br>
-      <br>
-      <br>
+        1 January 2020
+      </p1> <br><br><br><br>
+      <h1 class="govuk-heading-l">
+      Upload the education plan
+      </h1>
+      <form class="form"  method="post">
+         <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
+    <br><br><br><br>
 
-<form class="form"  method="post">
-  <h1 class="govuk-heading-l">
-  Enter school email address
-  </h1>
-
-  <div class="govuk-form-group">
-    <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
-  </div>
-    <br>
-    <br>
     {{ govukButton({
       text: "Continue",
-      href: "/evidence-gathering/check"
+      href: "/evidence-gathering3/independently"
     }) }}
-</form>
-  </div>
-</div>
+      </div>
+      </div>
 {% endblock %}
