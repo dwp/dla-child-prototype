@@ -34,7 +34,22 @@
       <br>
       <form class="form"  method="post">
       <div class="govuk-form-group">
-<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+        <div class="govuk-form-group">
+            <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="medicationRemindYes" name="medicationRemind" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="medicationRemindYes">
+                  Yes
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="medicationRemindNo" name="medicationRemind" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="medicationRemindNo">
+                  No
+                </label>
+              </div>
+            </div>
+        </div>
 </div>
     <br><br>
     {{ govukButton({
