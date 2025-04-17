@@ -28,51 +28,37 @@
       <p1 class="govuk-body-s">
         1 January 2020
       </p1> <br><br><br><br>
+      <form class="form"  method="post">
       <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h1 class="govuk-fieldset__heading">
-          Which of these things can the child do safely and without help from another person?
+        <h1 class="govuk-heading-l">
+      Does the child need more support with any of these activities than other children of the same age?
         </h1>
-      </legend>
-      <div id="waste-hint" class="govuk-hint">
-        Select all that apply.
+        <ul class="govuk-list govuk-list--bullet">
+          <li>dressing and undressing</li>
+          <li>eating and drinking</li>
+          <li>Managing their own toilet needs</li>
+        </ul>
+        <br><br>
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="ms1" name="ms" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="med2">
+          Yes
+        </label>
       </div>
-      <div class="govuk-checkboxes" data-module="govuk-checkboxes">
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-          <label class="govuk-label govuk-checkboxes__label" for="waste">
-            Dress and undress
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-          Eat and drink
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            Attend to their own toilet needs
-          </label>
-        </div>
-        <div class="govuk-checkboxes__item">
-          <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-          <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-            None of these
-          </label>
-        </div>
-
-      <br>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="ms2" name="ms" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="ms2">
+          No
+        </label>
       </div>
-    </fieldset>
+    </div>
   </div>
-    <br>
-    {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering3/need-medication"
-    }) }}
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+  </button>
+  </form>
       </div>
       </div>
 {% endblock %}

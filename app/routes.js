@@ -214,9 +214,9 @@ router.post('/evidence-gathering3/common-dangers', function(request, response) {
 
     var cd = request.session.data['cd']
     if (cd === "yes"){
-        response.redirect("/evidence-gathering3/awareness")
+        response.redirect("/evidence-gathering3/child-safely")
     } else {
-        response.redirect("/evidence-gathering3/child-safely2")
+        response.redirect("/evidence-gathering3/awareness")
     }
 })
 router.post('/evidence-gathering3/need-medication', function(request, response) {
@@ -285,5 +285,14 @@ router.post('/evidence-gathering3/anymore-info2', function(request, response) {
         response.redirect("/evidence-gathering3/your-details")
     } else {
         response.redirect("/evidence-gathering3/upload")
+    }
+})
+router.post('/evidence-gathering3/child-safely', function(request, response) {
+
+    var ms = request.session.data['ms']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering3/help-they-need")
+    } else {
+        response.redirect("/evidence-gathering3/need-medication")
     }
 })

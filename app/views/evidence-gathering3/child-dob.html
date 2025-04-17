@@ -22,16 +22,16 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-
+<form class="form"  method="post">
       <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
       <h1 class="govuk-fieldset__heading">
-        Tell us the child's date of birth?
+        What is John's date of birth?
       </h1>
-    </legend>
+    </legend> <br>
     <div id="dob-hint" class="govuk-hint">
-      For example, 27 3 2018
+      For example, 27 3 2007
     </div>
     <div class="govuk-date-input" id="dob">
       <div class="govuk-date-input__item">
@@ -60,11 +60,20 @@
       </div>
     </div>
   </fieldset>
-</div>
-<form class="form" action="/part-1/sex" method="post">
+</div> <br>
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+    If you do not know their date of birth
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+
+  </div>
+</details>
   {{ govukButton({
     text: "Continue",
-    href: "/evidence-gathering2/child-postcode"
+    href: "/evidence-gathering3/additional-support"
   }) }}
 
       </form>
