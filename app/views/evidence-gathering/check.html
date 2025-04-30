@@ -24,15 +24,18 @@
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds-from-desktop">
-        <h1 class="govuk-heading-l">Check your answers before sending your school information request</h1>
+        <h1 class="govuk-heading-l">Check your answers before sending the information request to the school</h1>
 
         <dl class="govuk-summary-list govuk-!-margin-bottom-9">
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              Name
+              Child details
             </dt>
             <dd class="govuk-summary-list__value">
-              John Smith
+              <p> Evie Scarlett Johnson</p>
+                <p> LJ 34 29 66 C</p>
+                 <p>24 March 2020</p>
+
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> name</span></a>
@@ -40,55 +43,34 @@
           </div>
           <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
-              National Insurance
+              Child home address
             </dt>
             <dd class="govuk-summary-list__value">
-              AA 12 34 56 D
+              1 New Street, Newtown, Newtownshire, NE1 1NE
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> date of birth</span></a>
             </dd>
           </div>
-          <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-              What do you want to do?
-            </dt>
-            <dd class="govuk-summary-list__value">
-              Send DBD376(N)
-            </dd>
-            <dd class="govuk-summary-list__actions">
-              <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
-            </dd>
-           </div>
+
            <div class="govuk-summary-list__row">
              <dt class="govuk-summary-list__key">
-               School name and address
+              School contact details
              </dt>
              <dd class="govuk-summary-list__value">
-              <p> Manchester Primary School</p>
-                <p> 1 Manchester Road</p>
-                 <p>Greater Manchester</p>
-                <p>  M1 1AZ</p>
+              <p> Newtown Primary School</p>
+                <p> Mr Seymour Skinner</p>
+                 <p>Principal</p>
+                <p> enquiry@newtownprimary.ac.uk</p>
              </dd>
              <dd class="govuk-summary-list__actions">
                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
              </dd>
             </div>
-            <div class="govuk-summary-list__row">
-              <dt class="govuk-summary-list__key">
-                School's email address
-              </dt>
-              <dd class="govuk-summary-list__value">
-                info@manchesterprimary.gov.uk
-              </dd>
-              <dd class="govuk-summary-list__actions">
-                <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> customer reference</span></a>
-              </dd>
-             </div>
         </dl>
 
-        <h2 class="govuk-heading-m">Now send your DBD376(N)</h2>
-        <p class="govuk-body">By submitting this request you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+        <h2 class="govuk-heading-m">Now send the information request to the school</h2>
+        <p class="govuk-body">By submitting this request you are confirming that, to the best of your knowledge, the details you are providing.</p>
         <form action="/evidence-gathering/confirmation" method="post" novalidate>
           <input type="hidden" name="answers-checked" value="true">
           <button type="submit" class="govuk-button" data-module="govuk-button">
