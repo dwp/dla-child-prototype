@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+
+{% endblock %}
+
+{% block content %}
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Your supporting information has been sent
+          </h1>
+          <div class="govuk-panel__body">
+            Reference number<br><strong>HDJ2123F</strong>
+          </div>
+        </div>
+        
+        <p class="govuk-body"> The supporting information you provided has been sent to DWP.</p>
+        <h2 class="govuk-heading-m">What happens next</h2>
+        <p class="govuk-body">
+          DWP will use the information you have provided to make a decision about the claim.
+        </p>
+        <p class="govuk-body">
+          We may contact you again if we need to ask for more information.
+        </p>
+        <p class="govuk-body">
+          <a href="#">Print or save a copy of your answers</a>
+        </p>
+      <p class="govuk-body">
+        <a href="https://www.gov.uk/">Return to GOV.UK</a>
+
+    </p>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

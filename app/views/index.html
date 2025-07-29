@@ -2,9 +2,21 @@
 
 {% set pageName="Home" %}
 
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+ 
+
 {% block content %}
 
 <div class="govuk-grid-row">
+  
   <div class="govuk-grid-column-two-thirds-width">
     <h1 class="govuk-heading-xl">
       DLA-CHILD Prototype
@@ -27,7 +39,8 @@
                     </ul>
                   </td>
                   <td class="govuk-table__cell">
-                    <a href="/evidence-gathering3/dashboard">CMs view</a><br><br>
+                    <a href="/evidence-gathering3/dashboard">CMs view Round 3</a><br>
+                    <a href="/evidence-gathering4/cms-view/dashboard">CMs view Round 4 testing</a><br><br>
                   </td>
                 </tr>
               </tbody>
@@ -42,7 +55,9 @@
                   </td>
                   <td class="govuk-table__cell">
                     <a href="/evidence-gathering2/ref-no">DBD376(O)</a><br>
-                    <a href="/evidence-gathering3/ref-no">DBD376(N)
+                    <a href="/evidence-gathering3/ref-no">DBD376(N) Round 1</a><br>
+                    <a href="/evidence-gathering4/schools-view/start">Round 2</a>
+
                   </td>
                 </tr>
               </tbody>

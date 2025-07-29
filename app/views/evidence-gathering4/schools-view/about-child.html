@@ -1,0 +1,96 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l">
+     Do you know this child?
+      </h1> <br>
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Name
+    </dt>
+    <dd class="govuk-summary-list__value">
+    Evie Scarlett Johnson
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+       Year of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+    24 March 2020
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Home postcode
+    </dt>
+    <dd class="govuk-summary-list__value">
+      NE1 1NE
+    </dd>
+  </div>
+</dl>
+      <form class="form"  method="post">
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+          Yes, and I am happy to provide information about them
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+         Yes, but I do not want to provide any information about them
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="whereDoYouLive-3" name="whereDoYouLive" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="whereDoYouLive-3">
+       No
+        </label>
+      </div>
+    </div>
+  </fieldset>
+</div>
+
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+      </div>
+      </div>
+{% endblock %}
+

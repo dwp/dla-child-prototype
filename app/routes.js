@@ -296,3 +296,16 @@ router.post('/evidence-gathering3/child-safely', function(request, response) {
         response.redirect("/evidence-gathering3/need-medication")
     }
 })
+
+// Evidence gather 4
+
+
+router.post('/evidence-gathering4/about-child', function(request, response) {
+
+    var ms = request.session.data['ms']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering3/help-they-need")
+    } else {
+        response.redirect("/evidence-gathering3/need-medication")
+    }
+})
