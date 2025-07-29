@@ -300,12 +300,16 @@ router.post('/evidence-gathering3/child-safely', function(request, response) {
 // Evidence gather 4
 
 
-router.post('/evidence-gathering4/about-child', function(request, response) {
+router.post('/evidence-gathering4/schools-view/about-child', function(request, response) {
 
-    var ms = request.session.data['ms']
+    var ms = request.session.data['kno']
     if (ms === "yes"){
-        response.redirect("/evidence-gathering3/help-they-need")
-    } else {
-        response.redirect("/evidence-gathering3/need-medication")
+        response.redirect("/evidence-gathering4/schools-view/child-dob")
+    } 
+        if (ms === "yesbut"){
+        response.redirect("/evidence-gathering4/schools-view/tell-us-why")
+    } 
+    else {
+        response.redirect("/evidence-gathering4/need-medication")
     }
 })
