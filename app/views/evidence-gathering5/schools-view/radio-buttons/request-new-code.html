@@ -30,22 +30,39 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 
-
-      <h1 class="govuk-heading-l">
-    Tell us about their sleep problems
-      </h1>
-      <br>
-      <form class="form"  method="post">
-      <div class="govuk-form-group">
-<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+<form class="form"  method="post">
+  <h1 class="govuk-heading-l">
+Request a new one time 
+code
+  </h1>
+<p class="govuk-body-m">Emails sometimes take a few minutes to arrive. If you do not receive the email, you can request a new one.</p>
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Change where the code is sent
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+<div class="govuk-form-group">
+    <div class="govuk-form-group">
+  <label class="govuk-label" for="two-thirds">
+    Email address
+  </label>
+  <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="twoThirds" type="text">
 </div>
-    <br><br>
+</div>
+  </div>
+</details>
+
+
+    <br>
     {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering3/schools-view/education-plan"
+      text: "Request a new password",
+      href: "/evidence-gathering4/schools-view/otp-code-resent"
     }) }}
-      </div>
-      </div>
+</form>
+  </div>
+</div>
 {% endblock %}

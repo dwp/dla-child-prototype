@@ -1,0 +1,103 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h1 class="govuk-heading-xl">
+          Provide supporting information 
+for Disability Living Allowance 
+(DLA) for children
+</h1>
+        <form class="form"  method="post">
+                <p class="govuk-body-m">
+We have received an application to claim Disability Living Allowance for Children from the parent or guardian of the child named in the email that we sent you. 
+    </p>
+
+    <p class="govuk-body-m">
+As part of their application, they provided details about Evie's school in case we needed further information. 
+    </p>
+
+        <p class="govuk-body-m">
+The parent or guardian of the child gave their consent to us contacting you about the child. 
+    </p>
+
+    <h2 class="govuk-heading-m">Before you start</h2>
+        <p class="govuk-body-m">
+You will need the reference number from the email we sent you.  
+    </p>
+        <p class="govuk-body-m">
+You will also need to tell us information about the child, including:
+    </p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>the level of support and help they need while at school</li>
+  <li>any education plans they may have in place</li>
+    <li>their ability to move around school</li>
+  <li>their ability to move around school</li>
+  <li>their behaviour at school</li>
+  <li>details of any therapy or medication they need while at school</li>
+
+</ul>
+<br>
+          {{ govukButton({
+  text: "Start now",
+  href: "ref-no",
+  isStartButton: true
+}) }}
+        </form>
+      </div>
+
+  <div class="govuk-grid-column-one-third-from-desktop">
+<div class="border-top-color"></div>
+        <h2 class="govuk-heading-s">Related actions</h2>
+<p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state">
+    Contact us
+  </a>
+</p>
+  </div>
+    </div>
+  </main>
+</div>
+
+<style>
+  .border-top-color {
+    padding: 5px;
+    border-top-style: solid;
+    border-top-color: #1d70b8;
+  }
+</style>
+
+
+{% endblock %}

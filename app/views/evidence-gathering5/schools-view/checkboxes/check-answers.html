@@ -1,0 +1,500 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds-from-desktop">
+          <form method="post" action="/submit-application" id="main-form">
+
+        <h1 class="govuk-heading-l">Check your answers before sending the information request to the school</h1>
+
+<!-- Child details -->
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Child details
+    </h2>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Do you know this child?
+           <div class="govuk-hint">
+    Evie Scarlett Johnson
+  </div>
+        </dt>
+        <dd class="govuk-summary-list__value">
+        Yes
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> age (Lead tenant)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Are you happy to provide 
+information about 
+them
+        </dt>
+        <dd class="govuk-summary-list__value">
+         No
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> nationality (Lead tenant)</span></a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+         Date of birth
+        </dt>
+        <dd class="govuk-summary-list__value">
+        24 March 2020
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> working situation (Lead tenant)</span></a>
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+<!-- Your details -->
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Your details
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="child-details.html">Change<span class="govuk-visually-hidden">Child details</span></a>
+      </li>
+  
+    </ul>
+  </div>
+  
+  <div class="govuk-summary-card__content">
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+          Name
+        </dt>
+        <dd class="govuk-summary-list__value">
+         Seymour Skinner
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        Role 
+        </dt>
+        <dd class="govuk-summary-list__value">
+         Special Educational Needs<br>
+Co-ordinator
+        </dd>
+      </div>
+         <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+        UK phone number 
+        </dt>
+        <dd class="govuk-summary-list__value">
+        07700 700 007
+        </dd>
+      </div>
+          <div class="govuk-summary-list__row">
+        <dt class="govuk-summary-list__key">
+       Email address
+        </dt>
+        <dd class="govuk-summary-list__value">
+       enquiry@newtownprimary.sch.uk
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+<!-- Provided information -->
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+      Provided information
+    </h2>
+       <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="child-details.html">Change<span class="govuk-visually-hidden">Child details</span></a>
+      </li>
+  
+    </ul>
+  </div>
+  <div class="govuk-summary-card__content">
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+    Any individual plans in place
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <p class="govuk-body">Yes</p>
+        </dd>
+      </div>
+
+            <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+Additional learning support that they get, or that they would benefit from
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <p class="govuk-body">Yes</p>
+        </dd>
+      </div>
+
+                  <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+       Their behaviour at school
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <p class="govuk-body">No</p>
+        </dd>
+      </div>
+
+                        <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+Support they need to move around school
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <p class="govuk-body">Yes</p>
+        </dd>
+      </div>
+
+                           <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+      How they manage their own personal safety
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <p class="govuk-body">Yes</p>
+        </dd>
+      </div>
+
+                                 <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+ How they manage their own personal care
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <p class="govuk-body">Yes</p>
+        </dd>
+      </div>
+
+                                       <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+Therapy or medication while at school
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <p class="govuk-body">Yes</p>
+        </dd>
+      </div>
+
+                                            <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+    Sleep problems
+        </dd>
+        <dd class="govuk-summary-list__actions">
+          <p class="govuk-body">Yes</p>
+        </dd>
+      </div>
+ 
+    </dl>
+  </div>
+</div>
+<!-- Any individual plans in place -->
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+     Any individual plans in place
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"></span></a>
+      </li>
+  
+    </ul>
+  </div>
+  
+  <div class="govuk-summary-card__content">
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+        Tell us about any individual plans in place to support them at school:
+        </dd>
+      </div>
+     <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+        They have these plans...
+        </dd>
+      </div>
+ 
+  
+    </dl>
+  </div>
+</div>
+<!-- Additional learning support that they get, or that they would benefit from -->
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+   Additional learning support that they get, or that they would benefit from
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"></span></a>
+      </li>
+  
+    </ul>
+  </div>
+  
+  <div class="govuk-summary-card__content">
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+       Tell us about any additional learning support they get that is more than that of other children of the same age:
+        </dd>
+      </div>
+     <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+         The learning support...
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+<!-- Their behaviour at school -->
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+Their behaviour at school
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"></span></a>
+      </li>
+  
+    </ul>
+  </div>
+  
+  <div class="govuk-summary-card__content">
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+        Tell us about their behaviour at school:
+        </dd>
+      </div>
+     <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+         Their behaviour is affected by...
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+<!-- Support they need to move around school -->
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+  Support they need to move around school 
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"></span></a>
+      </li>
+  
+    </ul>
+  </div>
+  
+  <div class="govuk-summary-card__content">
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+        Tell us about any support they need to move around school that is more than that of other children of the same age: 
+        </dd>
+      </div>
+     <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+       The support they need to move around school...
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+<!-- How they manage their own personal care -->
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+How they manage their own personal care
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"></span></a>
+      </li>
+  
+    </ul>
+  </div>
+  
+  <div class="govuk-summary-card__content">
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+       Tell us about any help they need with their personal care at school that is more than that of other children of the same age:
+        </dd>
+      </div>
+     <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+      They manage their personal care....
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+<!-- Therapy or medication while at school -->
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+ Therapy or medication while at school
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"></span></a>
+      </li>
+  
+    </ul>
+  </div>
+  
+  <div class="govuk-summary-card__content">
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+      Tell us about any therapy they get, or any medication they take at school:
+        </dd>
+      </div>
+     <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+     Yes
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+<!-- Sleep problems -->
+<div class="govuk-summary-card">
+  <div class="govuk-summary-card__title-wrapper">
+    <h2 class="govuk-summary-card__title">
+Sleep problems
+    </h2>
+    <ul class="govuk-summary-card__actions">
+      <li class="govuk-summary-card__action">
+        <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"></span></a>
+      </li>
+  
+    </ul>
+  </div>
+  
+  <div class="govuk-summary-card__content">
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+     Tell us about their sleep problems:
+        </dd>
+      </div>
+     <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+   They have regular...
+        </dd>
+      </div>
+    </dl>
+  </div>
+</div>
+
+<!-- Print options -->
+<div class="govuk-inset-text">
+  <h3 class="govuk-heading-s">Print options</h3>
+  <p class="govuk-body">You can choose to print a copy of your application details immediately as you submit. </p>
+    {{ govukCheckboxes({
+      name: "accept-terms",
+      items: [
+        {
+          value: "accepted",
+          text: "Print a copy of this information as you submit",
+          id: "accept-terms"
+        }
+      ]
+    }) }}
+
+</div>
+
+<!-- Send your response -->
+        <h2 class="govuk-heading-m">Now send your response</h2>
+        <p class="govuk-body">By submitting this request you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+        {{ govukButton({
+      text: "Accept and send",
+      type: "submit"
+    }) }}
+      </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Trigger print -->
+  <script>
+    document.getElementById('main-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+     
+      const checkbox = document.getElementById('accept-terms');
+     
+      if (checkbox && checkbox.checked) {
+        // If checkbox is checked, trigger print then navigate
+        window.print();
+       
+        // Handle after print
+        const handleAfterPrint = function() {
+          window.location.href = 'confirmation';
+          window.removeEventListener('afterprint', handleAfterPrint);
+        };
+       
+        window.addEventListener('afterprint', handleAfterPrint);
+       
+        // Fallback for browsers that don't support afterprint
+        setTimeout(function() {
+          window.location.href = 'confirmation';
+          window.removeEventListener('afterprint', handleAfterPrint);
+        }, 1000);
+      } else {
+        // If checkbox not checked, go directly to confirmation
+        window.location.href = 'confirmation';
+      }
+    });
+  </script>
+
+{% endblock %}

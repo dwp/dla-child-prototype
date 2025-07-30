@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+
+{% block pageTitle %}
+  Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<form class="form"  method="post">
+    <h1 class="govuk-heading-l">
+  Are you sure you want to cancel the request for Newtown Primary School?
+</h1>
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      National Insurance number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      LJ 34 29 66 C
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+      24 March 2020
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Home address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      1 New Street, Newtown, Newtownshire NE1 1NE
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      School details
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">Newtown Primary School</p>
+      <p class="govuk-body">enquiry@newtownprimary.sch.uk</p>
+    </dd>
+  </div>
+</dl>
+
+{{ govukButton({
+  text: "Yes, cancel this request",
+      href: "/evidence-gathering4/cms-view/case-details-request-cancelled",
+  classes: "govuk-button--warning"
+}) }}
+
+<p class="govuk-body">
+  <a href="case-details.html" class="govuk-link govuk-link--no-visited-state">
+    No, return to case details
+  </a>
+</p>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

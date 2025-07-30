@@ -1,0 +1,61 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="more-detail">
+      Individual plans in place to 
+support them at school
+    </label>
+  </h1>
+ <p class="govuk-body">Tell us about things like:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Educational Health Care Plans (EHCPs)</li>
+  <li>Independent Development Plans (IDPs) or Individualised Education Plans (IEPs)</li>
+  <li>Individual Behaviour Plan (IBPs)</li>
+  <li>risk assessments</li>
+   <li>de-escalation or restraint plans</li>
+
+</ul>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+   {{ govukButton({
+    text: "Continue",
+    href: "additional-learning-support"
+  }) }}
+
+  </form>
+      </div>
+      </div>
+{% endblock %}

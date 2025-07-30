@@ -31,29 +31,31 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-      
+
+
       <h1 class="govuk-heading-l">
-    Tell us about how they move around at school
+      Does the child have road safety awareness appropriate to their age?
       </h1>
-      <br>
       <form class="form"  method="post">
-        <p class="govuk-body-m">
-          Tell us about things like:  </p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>how they move in specific rooms like classrooms or canteens</li>
-            <li>how they move indoors, between other rooms in the same building</li>
-            <li>how they move outdoors, between buildings</li>
-            <li>any aids or adaptations they may use</li>
-            <li>whether they need more supervision when moving around school than other children of the same age</li>
-          </ul>
-      <div class="govuk-form-group">
-<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
-</div>
+        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sa1" name="sa" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="sa1">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="sa2" name="sa" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="sa2">
+          No
+        </label>
+      </div>
+    </div>
     <br><br>
-    {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering3/schools-view/common-dangers"
-    }) }}
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+  </form>
       </div>
       </div>
 {% endblock %}

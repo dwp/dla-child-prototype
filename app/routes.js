@@ -310,6 +310,20 @@ router.post('/evidence-gathering4/schools-view/about-child', function(request, r
         response.redirect("/evidence-gathering4/schools-view/tell-us-why")
     } 
     else {
-        response.redirect("/evidence-gathering4/need-medication")
+        response.redirect("/evidence-gathering4/schools-view/do-not-know-this-child")
+    }
+})
+
+router.post('/evidence-gathering5/schools-view/checkboxes/about-child', function(request, response) {
+
+    var ms = request.session.data['5kno']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering5/schools-view/checkboxes/child-dob")
+    } 
+        if (ms === "yesbut"){
+        response.redirect("/evidence-gathering5/schools-view/checkboxes/response-sent")
+    } 
+    else {
+        response.redirect("/evidence-gathering5/schools-view//checkboxes/response-sent")
     }
 })
