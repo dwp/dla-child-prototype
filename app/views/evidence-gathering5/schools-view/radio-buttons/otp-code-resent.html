@@ -47,22 +47,28 @@
   <h1 class="govuk-heading-l">
  Enter the one time code 
   </h1>
-<p class="govuk-body-m">You will need to get the one time code from the email we send you, and enter it on the next screen.</p>
-<p class="govuk-body-m">The one time code will expire 30 minutes after you request it. If it expires, you will need to request a new one.</p>
- <div id="more-detail-hint" class="govuk-hint">
-    For example, 47329.
+<p class="govuk-body-m">We've sent you an email with a security code. </p>
+<div class="govuk-form-group">
+  <label class="govuk-label" for="width-5">
+    Security code
+  </label>
+    <div id="account-number-hint" class="govuk-hint">
+   For example, 47329.
   </div>
-  <div class="govuk-form-group">
-    <input class="govuk-input govuk-input--width-10" id="width-20" name="width20" type="text">
-  </div>
-  <p class="govuk-body">
-  <a href="request-new-code.html" class="govuk-link govuk-link--no-visited-state">Request a new one time code</a>
-</p>
+  <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
+</div>
+
     <br>
     {{ govukButton({
       text: "Continue",
-      href: "/evidence-gathering4/schools-view/about-child"
+      href: "your-details"
     }) }}
+
+      <p class="govuk-body">
+  <a href="request-new-code.html" class="govuk-link govuk-link--no-visited-state">
+    Not received a email? 
+  </a>
+</p>
 </form>
   </div>
 </div>

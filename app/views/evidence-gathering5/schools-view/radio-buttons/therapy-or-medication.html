@@ -30,28 +30,40 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-    
-      <h1 class="govuk-heading-l">
-    Tell us about their behavioural difficulties
-      </h1>
-      <br>
-      <form class="form"  method="post">
-        <p class="govuk-body-m">
-          Tell us about things like:  </p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>the way that their behaviour is affected</li>
-            <li>how often their behaviour is affected</li>
-            <li>what intervention is needed</li>
-          </ul>
-      <div class="govuk-form-group">
-<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+    <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="more-detail">
+Therapy they get or medication they 
+take at school
+    </label>
+  </h1>
+ <p class="govuk-body">
+Tell us about any therapy they get, or any medication they take at school. For example:
+ </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>
+what medication they take at school, and how often
+  </li>
+  <li>
+if they need any support to take their medication
+  </li>
+    <li>
+if they get any therapy at school, and how often
+  </li>
+      <li>
+whether there have been any medical incidents that required external support in the last 6 months
+  </li>
+</ul>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
-    <br><br>
-    {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering3/schools-view/incidents"
-    }) }}
+   {{ govukButton({
+    text: "Continue",
+    href: "sleep-problems"
+  }) }}
+
+  </form>
       </div>
       </div>
 {% endblock %}

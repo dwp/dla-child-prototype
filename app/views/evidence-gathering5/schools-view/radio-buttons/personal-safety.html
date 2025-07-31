@@ -31,27 +31,36 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      
-      <h1 class="govuk-heading-l">
-    Tell us about the additional support they receive at school
-      </h1>
-      <br>
-      <form class="form"  method="post">
-        <p class="govuk-body-m">
-          Tell us about things like:  </p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>if they need to work in small groups, or one to one</li>
-            <li>adjustments that are made for them that are not needed for other children of the same age</li>
-            <li>why this support is needed</li>
-          </ul>
-      <div class="govuk-form-group">
-<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="more-detail">
+Their ability to manage their own personal safety
+    </label>
+  </h1>
+ <p class="govuk-body">
+Tell us about any help they need to manage their own personal safety that is more than that of other children of the same age. 
+For example:
+ </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>
+   their awareness of common dangers 
+  </li>
+  <li>
+ if they have any special requirements for going outside of school
+  </li>
+    <li>
+whether they any additional supervision needs
+  </li>
+</ul>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
-    <br><br>
-    {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering3/schools-view/independently"
-    }) }}
+   {{ govukButton({
+    text: "Continue",
+    href: "personal-care"
+  }) }}
+
+  </form>
       </div>
       </div>
 {% endblock %}

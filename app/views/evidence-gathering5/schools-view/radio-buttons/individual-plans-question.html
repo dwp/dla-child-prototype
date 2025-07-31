@@ -29,34 +29,51 @@
 
 {% block content %}
 
+
+
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-three-quarters">
-    
-      <h1 class="govuk-heading-l">
-      Can they walk safely and independently 
-      around school, including between buildings, 
-      appropriate to their age?
+    <div class="govuk-grid-column-two-thirds">
+<form class="form"  method="post">
+<div class="govuk-form-group">
+
+  <!-- <div class="govuk-grid-column-three-quarters"> -->
+
+  <fieldset class="govuk-fieldset" aria-describedby="changedName-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Do they have any individual plans in place to support them at school?
       </h1>
-      <form class="form"  method="post">
-        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="ind1" name="ind" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="ind1">
+        <input class="govuk-radios__input" id="changedName" name="changedName" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changedName">
           Yes
         </label>
       </div>
       <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="ind2" name="ind" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="ind2">
+        <input class="govuk-radios__input" id="changedName-2" name="changedName" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changedName-2">
           No
         </label>
       </div>
     </div>
-    <br><br>
-    <button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
-  </form>
+          </form>
+        </div>
+
+        </div>
+
+  </fieldset>
+
+  
+</div>
+
+     {{ govukButton({
+    text: "Continue",
+    href: "additional-learning-support"
+  }) }}
+        </form>
       </div>
-      </div>
+    </div>
+ 
 {% endblock %}

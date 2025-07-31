@@ -1,0 +1,36 @@
+{% extends "layouts/main.html" %}
+
+{% block content %}
+  <form method="post" action="/choose-options">
+    <div class="govuk-form-group {% if error %}govuk-form-group--error{% endif %}">
+      <fieldset class="govuk-fieldset" {% if error %}aria-describedby="checkbox-error"{% endif %}>
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          <h1 class="govuk-fieldset__heading">Choose one or both options</h1>
+        </legend>
+
+        {% if error %}
+          <p id="checkbox-error" class="govuk-error-message">
+            <span class="govuk-visually-hidden">Error:</span> Select at least one option
+          </p>
+        {% endif %}
+
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="option1" name="options" type="checkbox" value="option1">
+            <label class="govuk-label govuk-checkboxes__label" for="option1">Option 1</label>
+          </div>
+
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="option2" name="options" type="checkbox" value="option2">
+            <label class="govuk-label govuk-checkboxes__label" for="option2">Option 2</label>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+
+            <p>Debug: error = {{ error }}</p>
+
+
+    <button class="govuk-button" type="submit">Continue</button>
+  </form>
+{% endblock %}

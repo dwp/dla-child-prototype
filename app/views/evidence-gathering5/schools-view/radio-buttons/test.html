@@ -1,51 +1,108 @@
 {% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
 
 {% block pageTitle %}
    {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-          Alpha
-      </strong>
-      <span class="govuk-phase-banner__text">
-          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
-      </span>
-  </p>
-</div>
-<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+
 {% endblock %}
 
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-    
-      <h1 class="govuk-heading-l">
-      Does the child receive any additional support at school compared to their peers?
-      </h1>
-      <form class="form"  method="post">
-        <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="as1" name="as" type="radio" value="yes">
-        <label class="govuk-label govuk-radios__label" for="as1">
-          Yes
-        </label>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="as2" name="as" type="radio" value="no">
-        <label class="govuk-label govuk-radios__label" for="as2">
-          No
-        </label>
-      </div>
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-xl">Submit your application</h1>
+
+```
+  <form method="post" action="/submit-application" id="main-form">
+   
+    <!-- Your form content here -->
+    <div class="govuk-form-group">
+      <fieldset class="govuk-fieldset">
+        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+          Application details
+        </legend>
+       
+        {{ govukInput({
+          label: {
+            text: "Full name"
+          },
+          id: "full-name",
+          name: "full-name",
+          autocomplete: "name"
+        }) }}
+       
+        {{ govukInput({
+          label: {
+            text: "Email address"
+          },
+          id: "email",
+          name: "email",
+          type: "email",
+          autocomplete: "email"
+        }) }}
+      </fieldset>
     </div>
-    <br><br>
-    <button type="submit" class="govuk-button" data-module="govuk-button">
-  Continue
-</button>
+
+    {{ govukCheckboxes({
+      name: "accept-terms",
+      items: [
+        {
+          value: "accepted",
+          text: "I want to print a copy of my application",
+          id: "accept-terms"
+        }
+      ]
+    }) }}
+
+    {{ govukButton({
+      text: "Accept and send",
+      type: "submit"
+    }) }}
   </form>
-      </div>
-      </div>
+</div>
+```
+
+  </div>
+
+  <script>
+    document.getElementById('main-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+     
+      const checkbox = document.getElementById('accept-terms');
+     
+      if (checkbox && checkbox.checked) {
+        // If checkbox is checked, trigger print then navigate
+        window.print();
+       
+        // Handle after print
+        const handleAfterPrint = function() {
+          window.location.href = 'confirmation';
+          window.removeEventListener('afterprint', handleAfterPrint);
+        };
+       
+        window.addEventListener('afterprint', handleAfterPrint);
+       
+        // Fallback for browsers that don't support afterprint
+        setTimeout(function() {
+          window.location.href = 'confirmation';
+          window.removeEventListener('afterprint', handleAfterPrint);
+        }, 1000);
+      } else {
+        // If checkbox not checked, go directly to confirmation
+        window.location.href = 'confirmation';
+      }
+    });
+  </script>
+
 {% endblock %}

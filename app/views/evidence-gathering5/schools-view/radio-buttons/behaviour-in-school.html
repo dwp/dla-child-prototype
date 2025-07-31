@@ -31,25 +31,38 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-l">Significant incidents due to their health condition</span>
-<h1 class="govuk-heading-l">
- Tell us about any significant incidents that required intervention
-</h1>
 
-<p class="govuk-body">Tell us about things like:</p>
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="more-detail">
+  Behaviour in school
+    </label>
+  </h1>
+ <p class="govuk-body">
+  Tell us about their behaviour at school. For example:
+ </p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>how often these significants happen</li>
-  <li>what actions was taken</li>
+  <li>
+    whether they present with any challenging behaviours
+  </li>
+  <li>
+   whether they need support with their emotional regulation
+  </li>
+    <li>
+  whether any intervention is needed due to their behaviour
+  </li>
+     <li>
+ any adaptations to support them, including additional supervision
+  </li>
+      <li>
+whether there has been any incidents that required more intervention than usual in the last 6 months
+  </li>
 </ul>
-
-      <form class="form"  method="post">
-    <div class="govuk-form-group">
   <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
- 
-  {{ govukButton({
+   {{ govukButton({
     text: "Continue",
-    href: "/evidence-gathering4/schools-view/formal-plan"
+    href: "move-around-school"
   }) }}
 
   </form>

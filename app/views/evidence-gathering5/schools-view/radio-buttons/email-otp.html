@@ -42,15 +42,16 @@ time code by email
 
 The one time code will expire 30 minutes after you request it. If it expires, you will need to request a new one.
  </label> <br>
- <p1 class="govuk-heading-s">
-   Enter an email address
- </p1>
-  <div class="govuk-form-group">
-    <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
-  </div>
+ <div class="govuk-form-group">
+  <label class="govuk-label" for="width-20">
+    Enter an email address
+  </label>
+  <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+</div>
+
     {{ govukButton({
       text: "Continue",
-      href: "/evidence-gathering4/schools-view/otp"
+      href: "otp"
     }) }}
 </form>
   </div>

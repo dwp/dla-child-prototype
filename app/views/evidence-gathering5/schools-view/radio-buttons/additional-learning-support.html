@@ -30,20 +30,31 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="more-detail">
+   Additional learning support 
+they get at school
+    </label>
+  </h1>
+ <p class="govuk-body">Tell us about any additional learning support they get that is more than that of other children of the same age. For example:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>if they need to work in small groups, or one to one</li>
+  <li>adjustments that are made for them</li>
+  <li>why this support is needed</li>
+  <li>any support that they do not currently get, but that they would benefit from</li>
 
-      <h1 class="govuk-heading-l">
-      Upload a file
-      </h1>
-      <form class="form"  method="post">
-         <input class="govuk-file-upload" id="file-upload-1" name="fileUpload1" type="file">
-    <br><br><br><br>
+</ul>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+   {{ govukButton({
+    text: "Continue",
+    href: "behaviour-in-school"
+  }) }}
 
-    {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering3/file-uploaded"
-    }) }}
+  </form>
       </div>
       </div>
 {% endblock %}

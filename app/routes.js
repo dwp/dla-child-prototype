@@ -314,6 +314,87 @@ router.post('/evidence-gathering4/schools-view/about-child', function(request, r
     }
 })
 
+router.post('/handle-sort-selection', function(request, response) {
+const sort = request.body.sort;
+
+if (sort === 'nino') {
+    response.redirect('/evidence-gathering4/cms-view/national-insurance-number');
+} else if (sort === 'case-reference') {
+     response.redirect('evidence-gathering4/cms-view/case-details');
+}
+})
+
+router.post('/choose-options', function (req, res) {
+  const selected = req.body.options;
+
+  if (!selected) {
+    // Show error if nothing selected
+    return res.render('choose-options', { error: true });
+  }
+
+  const selectedArray = Array.isArray(selected) ? selected : [selected];
+  req.session.selectedOptions = selectedArray;
+  req.session.currentStepIndex = 0;
+
+  res.redirect('/evidence-gathering5/schools-view/checkboxes/personal-safety.html');
+});
+
+
+
+router.get('/choose-options', function (req, res) {
+  res.render('choose-options');
+});
+
+
+// router.post('/choose-options', function (req, res) {
+//   let selected = req.body.options;
+
+//   // ❌ When nothing is selected, `selected` is undefined
+//   if (!selected || (Array.isArray(selected) && selected.length === 0)) {
+//     return res.render('choose-options', { error: true });
+//   }
+
+//   // ✅ Make sure it's always an array
+//   if (!Array.isArray(selected)) {
+//     selected = [selected];
+//   }
+
+//   req.session.selectedOptions = selected;
+//   req.session.currentStepIndex = 0;
+
+//   res.redirect('/show-next-screen');
+// });
+
+// router.get('/show-next-screen', function (req, res) {
+//   const selectedOptions = req.session.selectedOptions || [];
+//   const index = req.session.currentStepIndex || 0;
+
+//   // ❌ Nothing selected or skipped form → go back to checkboxes
+//   if (selectedOptions.length === 0) {
+//     return res.redirect('/choose-options');
+//   }
+
+//   // ✅ All options already shown
+//   if (index >= selectedOptions.length) {
+//     return res.redirect('/done');
+//   }
+
+//   const currentOption = selectedOptions[index];
+//   req.session.currentStepIndex = index + 1;
+
+//   if (currentOption === 'option1') {
+//     return res.redirect('/screen-one');
+//   }
+
+//   if (currentOption === 'option2') {
+//     return res.redirect('/screen-two');
+//   }
+
+//   // Catch-all fallback
+//   return res.redirect('/done');
+// });
+
+
 router.post('/evidence-gathering5/schools-view/checkboxes/about-child', function(request, response) {
 
     var ms = request.session.data['5kno']
@@ -327,3 +408,19 @@ router.post('/evidence-gathering5/schools-view/checkboxes/about-child', function
         response.redirect("/evidence-gathering5/schools-view//checkboxes/response-sent")
     }
 })
+
+
+router.post('/evidence-gathering5/schools-view/radio-buttons/about-child', function(request, response) {
+
+    var ms = request.session.data['6kno']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/child-dob")
+    } 
+        if (ms === "yesbut"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/response-sent")
+    } 
+    else {
+        response.redirect("/evidence-gathering5/schools-view//radio-buttons/response-sent")
+    }
+})
+

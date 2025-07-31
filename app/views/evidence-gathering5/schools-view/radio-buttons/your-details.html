@@ -41,7 +41,12 @@
     </h1>
   </legend>
   <br>
-  <br>
+
+  <p class="govuk-body-m">
+    The email address has been verified. Now tell us a bit more about yourself.
+  </p>
+
+
   <div class="govuk-form-group">
       <h2 class="govuk-heading-s">
       Name
@@ -65,22 +70,11 @@
 We will only use this if we need more information about this application</div>
     <input class="govuk-input govuk-input--width-20" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
   </div>
-  <div class="govuk-form-group">
-    <h2 class="govuk-heading-s">
-    Email address
-  </h2>
-  <div 
-  class="govuk-hint"
-  id="example-hint"
-  style="display: block; white-space: normal; overflow-wrap:break-word; max-width: 80%;">
-We will only use this if we need more information about this application</div>
-    <input class="govuk-input govuk-input--width-20" id="address-town" name="addressTown" type="text" autocomplete="address-level2">
-  </div>
 </fieldset>
 <br>
 {{ govukButton({
   text: "Continue",
-  href: "/evidence-gathering4/schools-view/about-child"
+  href: "about-child"
 }) }}
 
 

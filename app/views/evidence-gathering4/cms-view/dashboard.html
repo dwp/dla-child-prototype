@@ -97,24 +97,23 @@ View and manage supporting information  </h1> <br>
   href: "/evidence-gathering4/cms-view/child-details"
 }) }}
 
+<form method="post" action="/handle-sort-selection">
 <div class="govuk-form-group">
   <label class="govuk-label" for="sort">
     Search by
   </label>
   <select class="govuk-select" id="sort" name="sort">
-    <option value="published" selected>National Insurance Number</option>
-    <option value="updated">Case Reference Number</option>
+    <option value="nino" selected>National Insurance Number</option>
+    <option value="case-reference">Case Reference Number</option>
   </select>
 
   <input class="govuk-input govuk-input--width-10" id="width-9" name="width10" type="text">
   
-{% from "govuk/components/button/macro.njk" import govukButton %}
+  <button class="govuk-button govuk-button--secondary" type="submit">
+    Continue 
+  </button>
+  </form>
 
-{{ govukButton({
-  text: "Search",
-  classes: "govuk-button--secondary",
-    href: "/evidence-gathering4/cms-view/national-insurance-number"
-}) }}
 
 </div>
   <h1 class="govuk-heading-s">Cases you submitted</h1>
@@ -150,9 +149,9 @@ Status
 
     <tr class="govuk-table__row">
 
-          <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="#">KW8424V</a></td>
+          <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="/evidence-gathering4/cms-view/case-details">KW8424V</a></td>
       <td class="govuk-table__cell">ES 47 25 85 B </td>
-      <td class="govuk-table__cell">Summer Baker-Oates</td>
+      <td class="govuk-table__cell">Amy Hannah Dawson</td>
       <td class="govuk-table__cell" data-sort-value="6961">1 Mar 2025</td>
       <td class="govuk-table__cell">10 Jun 2025</td>
           <td class="govuk-table__cell" data-sort-value="1">
@@ -219,7 +218,7 @@ Status
     <tr class="govuk-table__row">
        <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="/evidence-gathering4/cms-view/case-details">MMS842F</a></td>
       <td class="govuk-table__cell">YM 87 00 99 B</td>
-      <td class="govuk-table__cell">Amy Hannah Dawson</td>
+      <td class="govuk-table__cell">Summer Baker-Oates</td>
       <td class="govuk-table__cell" data-sort-value="6961">22 Jan 2025</td>
       <td class="govuk-table__cell">10 Jan 2025</td>
           <td class="govuk-table__cell" data-sort-value="3">

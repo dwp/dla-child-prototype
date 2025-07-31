@@ -31,31 +31,38 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-    <span class="govuk-caption-l">Walk safety and independently</span>
-<h1 class="govuk-heading-l">
- Tell us about how they move around at school
-</h1>
 
-<p class="govuk-body">Tell us about things like:</p>
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="more-detail">
+Support they need to move around at school
+    </label>
+  </h1>
+ <p class="govuk-body">
+  Tell us about any support they need to move around school that is more than that of other children of the same age. For example:
+ </p>
 <ul class="govuk-list govuk-list--bullet">
-  <li>how they move in specific rooms like classrooms or canteens</li>
-  <li>how they move indoors, between other rooms in the same building</li>
-  <li>how they move outdoors, between buildings</li>
-  <li>any aids or adaptations they may use</li>
-    <li>whether they need more supervision when moving around school     
-    than other children of the same age</li>
-
-
+  <li>
+   help they need to move around indoors, including between rooms
+  </li>
+  <li>
+  help they need to move around outdoors
+  </li>
+    <li>
+  any aids or adaptations they may use
+  </li>
+     <li>
+ whether there are times that they refuse to walk
+  </li>
+      <li>
+whether they need to be supervised when moving around school
+  </li>
 </ul>
-
-      <form class="form"  method="post">
-    <div class="govuk-form-group">
   <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
- 
-  {{ govukButton({
+   {{ govukButton({
     text: "Continue",
-    href: "/evidence-gathering4/schools-view/level-of-awareness"
+    href: "personal-safety"
   }) }}
 
   </form>

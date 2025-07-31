@@ -30,29 +30,37 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
-      
-      <h1 class="govuk-heading-l">
-    Tell us about the support they need
-      </h1>
-      <br>
-      <form class="form"  method="post">
-        <p class="govuk-body-m">
-          Tell us about things like:  </p>
-          <ul class="govuk-list govuk-list--bullet">
-            <li>if they need help to dress or undress</li>
-            <li>whether they can eat or drink by themselves</li>
-            <li>if they need help with their toilet needs</li>
-            <li>whether any of their needs are greater than that of other children of the same age</li>
-          </ul>
-      <div class="govuk-form-group">
-<textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="8" aria-describedby="more-detail-hint"></textarea>
+    <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="more-detail">
+Help they need with personal care
+    </label>
+  </h1>
+ <p class="govuk-body">
+Tell us about any help they need with their personal care at school that is more than that of other children of the same age. 
+For example:
+ </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>
+ if they need help to dress or undress
+  </li>
+  <li>
+whether they can eat or drink by themselves
+  </li>
+    <li>
+if they need help with their toilet needs
+  </li>
+</ul>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
-    <br><br>
-    {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering3/schools-view/need-medication"
-    }) }}
+   {{ govukButton({
+    text: "Continue",
+    href: "therapy-or-medication"
+  }) }}
+
+  </form>
       </div>
       </div>
 {% endblock %}

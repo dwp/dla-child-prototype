@@ -31,20 +31,40 @@
 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-     <div class="govuk-form-group">
+
+<div class="govuk-form-group">
   <h1 class="govuk-label-wrapper">
-      <span class="govuk-caption-l">Sleep problems</span>
     <label class="govuk-label govuk-label--l" for="more-detail">
-      Tell us about their sleep problems
+Sleep problems
     </label>
   </h1>
- 
+ <p class="govuk-body">
+Tell us about problems they have sleeping that are more than that of other children of the same age. For example:
+ </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>
+if they wake up during the night
+  </li>
+  <li>
+if they have difficulty settling at night
+  </li>
+      <li>
+whether they take any medication to help them sleep
+  </li>
+        <li>
+if they have difficulty staying awake or concentrating at school
+  </li>
+          <li>
+if you have been made aware of any reasons for their sleep being affected
+  </li>
+</ul>
   <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
    {{ govukButton({
     text: "Continue",
-    href: "/evidence-gathering4/schools-view/check-answers"
+    href: "check-answers"
   }) }}
+
   </form>
       </div>
       </div>
