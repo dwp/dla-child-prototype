@@ -60,11 +60,11 @@ if you have been made aware of any reasons for their sleep being affected
 </ul>
   <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
-   {{ govukButton({
-    text: "Continue",
-    href: "check-answers"
-  }) }}
-
+     <form action="/evidence-gathering5/schools-view/checkboxes/submit-page8" method="post" novalidate>
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+        </form>
   </form>
       </div>
       </div>

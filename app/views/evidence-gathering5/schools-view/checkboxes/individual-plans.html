@@ -50,10 +50,12 @@ support them at school
 </ul>
   <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
-   {{ govukButton({
-    text: "Continue",
-    href: "additional-learning-support"
-  }) }}
+
+       <form action="/evidence-gathering5/schools-view/checkboxes/submit-page1" method="post" novalidate>
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+        </form>
 
   </form>
       </div>

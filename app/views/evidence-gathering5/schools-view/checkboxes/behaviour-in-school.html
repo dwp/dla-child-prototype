@@ -60,12 +60,11 @@ whether there has been any incidents that required more intervention than usual 
 </ul>
   <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
-   {{ govukButton({
-    text: "Continue",
-    href: "move-around-school"
-  }) }}
-
-  </form>
+        <form action="/evidence-gathering5/schools-view/checkboxes/submit-page3" method="post" novalidate>
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+        </form>
       </div>
       </div>
 {% endblock %}

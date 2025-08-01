@@ -346,55 +346,6 @@ router.get('/choose-options', function (req, res) {
 });
 
 
-// router.post('/choose-options', function (req, res) {
-//   let selected = req.body.options;
-
-//   // ❌ When nothing is selected, `selected` is undefined
-//   if (!selected || (Array.isArray(selected) && selected.length === 0)) {
-//     return res.render('choose-options', { error: true });
-//   }
-
-//   // ✅ Make sure it's always an array
-//   if (!Array.isArray(selected)) {
-//     selected = [selected];
-//   }
-
-//   req.session.selectedOptions = selected;
-//   req.session.currentStepIndex = 0;
-
-//   res.redirect('/show-next-screen');
-// });
-
-// router.get('/show-next-screen', function (req, res) {
-//   const selectedOptions = req.session.selectedOptions || [];
-//   const index = req.session.currentStepIndex || 0;
-
-//   // ❌ Nothing selected or skipped form → go back to checkboxes
-//   if (selectedOptions.length === 0) {
-//     return res.redirect('/choose-options');
-//   }
-
-//   // ✅ All options already shown
-//   if (index >= selectedOptions.length) {
-//     return res.redirect('/done');
-//   }
-
-//   const currentOption = selectedOptions[index];
-//   req.session.currentStepIndex = index + 1;
-
-//   if (currentOption === 'option1') {
-//     return res.redirect('/screen-one');
-//   }
-
-//   if (currentOption === 'option2') {
-//     return res.redirect('/screen-two');
-//   }
-
-//   // Catch-all fallback
-//   return res.redirect('/done');
-// });
-
-
 router.post('/evidence-gathering5/schools-view/checkboxes/about-child', function(request, response) {
 
     var ms = request.session.data['5kno']
@@ -424,3 +375,189 @@ router.post('/evidence-gathering5/schools-view/radio-buttons/about-child', funct
     }
 })
 
+router.post('/evidence-gathering5/schools-view/radio-buttons/individual-plans-question', function(request, response) {
+
+    var ms = request.session.data['plan']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/individual-plans")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/learning-support-question")
+    } 
+})
+
+router.post('/evidence-gathering5/schools-view/radio-buttons/learning-support-question', function(request, response) {
+
+    var ms = request.session.data['support']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/additional-learning-support")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/behaviour-question")
+    } 
+})
+
+router.post('/evidence-gathering5/schools-view/radio-buttons/behaviour-question', function(request, response) {
+
+    var ms = request.session.data['behaviour']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/behaviour-in-school")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/move-around-question")
+    } 
+})
+
+router.post('/evidence-gathering5/schools-view/radio-buttons/move-around-question', function(request, response) {
+
+    var ms = request.session.data['move']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/move-around-school")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/move-around-question")
+    } 
+})
+
+router.post('/evidence-gathering5/schools-view/radio-buttons/personal-safety-question', function(request, response) {
+
+    var ms = request.session.data['safety']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/personal-safety")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/personal-care-question")
+    } 
+})
+
+router.post('/evidence-gathering5/schools-view/radio-buttons/personal-care-question', function(request, response) {
+
+    var ms = request.session.data['care']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/personal-care")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/therapy-or-medication-question")
+    } 
+})
+
+router.post('/evidence-gathering5/schools-view/radio-buttons/therapy-or-medication-question', function(request, response) {
+
+    var ms = request.session.data['therapy']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/therapy-or-medication")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/sleep-problems-question")
+    } 
+})
+
+router.post('/evidence-gathering5/schools-view/radio-buttons/sleep-problems-question', function(request, response) {
+
+    var ms = request.session.data['sleep']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/sleep-problems")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/check-answers")
+    } 
+})
+
+// CHECKBOX LOGIC
+
+// Define page order
+const pageOrder = ['individual-plans', 
+    'additional-learning-support', 
+    'behaviour-in-school', 
+    'move-around-school',
+    'personal-safety',
+    'personal-care',
+    'therapy-or-medication',
+    'sleep-problems',
+]
+
+// Form submission
+router.post('/evidence-gathering5/schools-view/checkboxes/submit', (req, res) => {
+  // Normalize options to an array
+  const options = req.session.data['options'] = Array.isArray(req.body['options']) ? req.body['options'] : req.body['options'] ? [req.body['options']] : []
+
+  // Redirect to error page if no options selected
+  if (!options || options.length === 0) {
+    return res.redirect('/evidence-gathering5/schools-view/checkboxes/provide-information-error')
+  }
+
+  // Store selected pages and initialize index
+  req.session.data['selectedPages'] = options
+  req.session.data['currentPageIndex'] = 0
+
+  // Redirect to first selected page
+  const firstPage = options.find(page => pageOrder.includes(page))
+  if (!firstPage) {
+    return res.redirect('/evidence-gathering5/schools-view/checkboxes/provide-information-error')
+  }
+  res.redirect(`/evidence-gathering5/schools-view/checkboxes/${firstPage}`)
+})
+
+// Page submissions
+router.post('/evidence-gathering5/schools-view/checkboxes/submit-page1', (req, res) => {
+  nextPage(req, res)
+})
+
+router.post('/evidence-gathering5/schools-view/checkboxes/submit-page2', (req, res) => {
+  nextPage(req, res)
+})
+
+router.post('/evidence-gathering5/schools-view/checkboxes/submit-page3', (req, res) => {
+  nextPage(req, res)
+})
+
+router.post('/evidence-gathering5/schools-view/checkboxes/submit-page4', (req, res) => {
+  nextPage(req, res)
+})
+
+router.post('/evidence-gathering5/schools-view/checkboxes/submit-page5', (req, res) => {
+  nextPage(req, res)
+})
+
+router.post('/evidence-gathering5/schools-view/checkboxes/submit-page6', (req, res) => {
+  nextPage(req, res)
+})
+
+router.post('/evidence-gathering5/schools-view/checkboxes/submit-page7', (req, res) => {
+  nextPage(req, res)
+})
+
+
+router.post('/evidence-gathering5/schools-view/checkboxes/submit-page8', (req, res) => {
+  nextPage(req, res)
+})
+
+
+// Helper function to navigate to the next page
+function nextPage(req, res) {
+  const selectedPages = req.session.data['selectedPages'] || []
+  const currentPageIndex = req.session.data['currentPageIndex'] || 0
+
+  // If only one page was selected, go to confirmation
+  if (selectedPages.length === 1) {
+    req.session.data['options'] = null
+    req.session.data['selectedPages'] = null
+    req.session.data['currentPageIndex'] = null
+    return res.redirect('/evidence-gathering5/schools-view/checkboxes/check-answers')
+  }
+
+  // Find the next selected page
+  const nextPageIndex = currentPageIndex + 1
+  const nextPage = selectedPages[nextPageIndex]
+
+  if (nextPage && pageOrder.includes(nextPage)) {
+    req.session.data['currentPageIndex'] = nextPageIndex
+    res.redirect(`/evidence-gathering5/schools-view/checkboxes/${nextPage}`)
+  } else {
+    // Clear session data
+    req.session.data['options'] = null
+    req.session.data['selectedPages'] = null
+    req.session.data['currentPageIndex'] = null
+    res.redirect('/evidence-gathering5/schools-view/checkboxes/check-answers')
+  }
+}

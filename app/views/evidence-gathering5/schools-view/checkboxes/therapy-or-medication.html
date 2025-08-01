@@ -58,12 +58,11 @@ whether there have been any medical incidents that required external support in 
 </ul>
   <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
 </div>
-   {{ govukButton({
-    text: "Continue",
-    href: "sleep-problems"
-  }) }}
-
-  </form>
+    <form action="/evidence-gathering5/schools-view/checkboxes/submit-page7" method="post" novalidate>
+          {{ govukButton({
+            text: "Continue"
+          }) }}
+        </form>
       </div>
       </div>
 {% endblock %}
