@@ -415,7 +415,7 @@ router.post('/evidence-gathering5/schools-view/radio-buttons/move-around-questio
         response.redirect("/evidence-gathering5/schools-view/radio-buttons/move-around-school")
     } 
         if (ms === "no"){
-        response.redirect("/evidence-gathering5/schools-view/radio-buttons/move-around-question")
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/personal-safety-question")
     } 
 })
 
@@ -423,10 +423,10 @@ router.post('/evidence-gathering5/schools-view/radio-buttons/personal-safety-que
 
     var ms = request.session.data['safety']
     if (ms === "yes"){
-        response.redirect("/evidence-gathering5/schools-view/radio-buttons/personal-safety")
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/personal-care-question")  
     } 
         if (ms === "no"){
-        response.redirect("/evidence-gathering5/schools-view/radio-buttons/personal-care-question")
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/personal-safety")
     } 
 })
 
@@ -434,10 +434,10 @@ router.post('/evidence-gathering5/schools-view/radio-buttons/personal-care-quest
 
     var ms = request.session.data['care']
     if (ms === "yes"){
-        response.redirect("/evidence-gathering5/schools-view/radio-buttons/personal-care")
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/therapy-or-medication-question") 
     } 
         if (ms === "no"){
-        response.redirect("/evidence-gathering5/schools-view/radio-buttons/therapy-or-medication-question")
+        response.redirect("/evidence-gathering5/schools-view/radio-buttons/personal-care")
     } 
 })
 
