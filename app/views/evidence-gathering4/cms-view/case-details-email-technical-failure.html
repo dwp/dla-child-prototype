@@ -42,8 +42,8 @@
   </div>
   <div class="govuk-notification-banner__content">
     <p class="govuk-notification-banner__heading">
-      Email address does not exist.
-      <a class="govuk-notification-banner__link" href="#">Resend email or 
+     Technical failure
+      <a class="govuk-notification-banner__link" href="resend-email-request.html">Resend email or 
 change email address</a>.
     </p>
   </div>
@@ -53,6 +53,14 @@ change email address</a>.
 <span class="govuk-tag govuk-tag--red govuk-!-margin-top-0 govuk-!-margin-bottom-4">
 Email not delivered
 </span>
+
+<div class="govuk-button-group">
+  {{ govukButton({
+  text: "Cancel request",
+  href: "/evidence-gathering4/cms-view/cancel-request",
+  classes: "govuk-button--secondary"
+}) }}
+</div>
 
 <dl class="govuk-summary-list govuk-summary-list--no-border">
   <div class="govuk-summary-list__row">
