@@ -54,7 +54,7 @@
            Do you know this child?
             </dt>
             <dd class="govuk-summary-list__value">
-            Yes
+            Yes, and I am happy to provide information about them
             </dd>
             <dd class="govuk-summary-list__actions">
               <a class="govuk-link" href="about-child.html">Change<span class="govuk-visually-hidden">about child</span></a>
@@ -260,14 +260,16 @@ take at school
 
         <!-- Print options -->
 <div class="govuk-inset-text">
-  <h3 class="govuk-heading-s">Print options</h3>
-  <p class="govuk-body">You can choose to print a copy of your application details immediately as you submit. </p>
+  <h3 class="govuk-heading-s">Print or save a copy of your answers</h3>
+  <p class="govuk-body">If you need to print or save a copy of your answers, you must do it now.</p>
+    <p class="govuk-body">You will not be able to print or save them after you send your information.</p>
+
     {{ govukCheckboxes({
       name: "accept-terms",
       items: [
         {
           value: "accepted",
-          text: "Print a copy of this information as you submit",
+          text: "Print or save a copy of your answers now",
           id: "accept-terms"
         }
       ]
@@ -277,7 +279,9 @@ take at school
 
 <!-- Send your response -->
         <h2 class="govuk-heading-m">Now send your response</h2>
-        <p class="govuk-body">By submitting this request you are confirming that, to the best of your knowledge, the details you are providing are correct.</p>
+        <p class="govuk-body">
+         By sending this response you are confirming that, to the best of your knowledge, the details you are providing are correct.
+        </p>
         {{ govukButton({
       text: "Accept and send",
       type: "submit"
