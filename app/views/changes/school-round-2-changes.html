@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+ 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">
+      School Round 2 changes
+    </h1>
+    <table class="govuk-table">
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+   <p>- Changed questions to a checkbox style to select all the info at once</p>
+   <p>- Changed questions to a checkbox style to select all the info at once</p>
+   <p>- Upload files removed</p>
+   <p>- Your details moved to the start of the flow</p>
+   <p>- Do you know this child and happy to provide info combined to one screen</p>
+   <p>- Check your answers changed to summary cards instead of a summary list</p>
+
+                  </td>
+               
+                </tr>
+              </tbody>
+       
+    </table>
+</div>
+
+
+{% endblock %}

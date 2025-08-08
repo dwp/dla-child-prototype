@@ -1,0 +1,51 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+ 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">
+      Case Manager Round 4 changes
+    </h1>
+    <table class="govuk-table">
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                    <p>- Send new request button moved up to the top of the dashboard screen</p>
+                    <p>- Cases you submitted table updated with different columns</p>
+                    <p>- Cases you submitted table sort by status added</p>
+                    <p>- Cases detail flows added when clicking into a case reference number</p>
+                    <p>- Child home address fields changed to just the home postcode field</p>
+                    <p>- Search by NINO and Case Reference number added</p>
+                    <p>- Only the Role is included for school contact</p>
+                    <p>- Enter the response date included in the create New Request flow </p>
+                    <p>- Preview the email request added to the check your answers screen</p>
+
+                  </td>
+               
+                </tr>
+              </tbody>
+       
+    </table>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+ 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">
+      School Round 3 changes
+    </h1>
+    <table class="govuk-table">
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                    <p>- Two version to test, one with users using checkboxes to select which info they’d like and the other using radio buttons yes/no options. 
+</p>
+                    <p>
+                      - Removed Email address from the 'Your details' screen.
+</p>
+             <p>
+                      - Changed the logic on ‘Do you know this child screen’ so If the user clicks I know them but don't want to provide information or no, a response is sent. 
+</p>
+     <p>
+                 - Revised the questions.
+</p>
+    <p>
+                 - Removed download your answers from the supporting info sent screen due to security problems.
+</p>
+  <p>
+                 - Added print or save a copy of your answers to the check your answers screen.
+</p>
+                  </td>
+               
+                </tr>
+              </tbody>
+       
+    </table>
+</div>
+
+
+{% endblock %}
