@@ -24,7 +24,6 @@
       </span>
   </p>
 </div>
-<a class="govuk-back-link" href="javascript:history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -34,33 +33,12 @@
 
 <form class="form"  method="post">
   <h1 class="govuk-heading-l">
-Request a new one-time 
-passcode
+You deleted your answers
   </h1>
-<p class="govuk-body-m">Emails sometimes take a few minutes to arrive. If you do not receive the email, you can request a new one.</p>
-<details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Change where the passcode is sent
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-<div class="govuk-form-group">
-    <div class="govuk-form-group">
-  <label class="govuk-label" for="two-thirds">
-    Email address
-  </label>
-  <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="twoThirds" type="text">
-</div>
-</div>
-  </div>
-</details>
 
-
-    <br>
     {{ govukButton({
-      text: "Request a new code",
-      href: "/evidence-gathering5/schools-view/checkboxes/otp-code-resent"
+      text: "Start again",
+      href: "/evidence-gathering5/schools-view/checkboxes/start"
     }) }}
 </form>
   </div>

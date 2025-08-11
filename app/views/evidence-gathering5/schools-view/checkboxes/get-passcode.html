@@ -34,33 +34,22 @@
 
 <form class="form"  method="post">
   <h1 class="govuk-heading-l">
-Request a new one-time 
-passcode
+Get passcode
   </h1>
-<p class="govuk-body-m">Emails sometimes take a few minutes to arrive. If you do not receive the email, you can request a new one.</p>
-<details class="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Change where the passcode is sent
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-<div class="govuk-form-group">
-    <div class="govuk-form-group">
-  <label class="govuk-label" for="two-thirds">
-    Email address
-  </label>
-  <input class="govuk-input govuk-!-width-two-thirds" id="two-thirds" name="twoThirds" type="text">
+    <div class="govuk-inset-text">
+We have sent an email to: <strong>email@address.co.uk</strong>
 </div>
-</div>
-  </div>
-</details>
+   
+<p class="govuk-body-m">
+You can request 5 passcodes. If you request more than 5, you will be locked out for 2 hours.
+<br><br>
+Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.
+</p>
 
-
-    <br>
+<br>
     {{ govukButton({
-      text: "Request a new code",
-      href: "/evidence-gathering5/schools-view/checkboxes/otp-code-resent"
+      text: "Get passcode",
+      href: "/evidence-gathering5/schools-view/checkboxes/otp"
     }) }}
 </form>
   </div>

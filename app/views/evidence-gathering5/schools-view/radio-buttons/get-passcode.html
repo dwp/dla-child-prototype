@@ -34,19 +34,22 @@
 
 <form class="form"  method="post">
   <h1 class="govuk-heading-l">
-Enter your email address
+Get passcode
   </h1>
-   <div id="email-name-hint" class="govuk-hint">
-   This should be your work email address, not a 
-personal email address.
-  </div>
- <div class="govuk-form-group">
-  <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+    <div class="govuk-inset-text">
+We have sent an email to: <strong>email@address.co.uk</strong>
 </div>
+   
+<p class="govuk-body-m">
+You can request 5 passcodes. If you request more than 5, you will be locked out for 2 hours.
+<br><br>
+Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.
+</p>
 
+<br>
     {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering5/schools-view/radio-buttons/otp"
+      text: "Get passcode",
+      href: "/evidence-gathering5/schools-view/checkboxes/otp"
     }) }}
 </form>
   </div>

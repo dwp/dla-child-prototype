@@ -34,15 +34,24 @@
 
 <form class="form"  method="post">
   <h1 class="govuk-heading-l">
-Enter the one-time passcode that has been sent by email
+Check your email
   </h1>
+  <div class="govuk-inset-text">
+We have sent an email to: <strong>email@address.co.uk</strong>
+</div>
+<p class="govuk-body">
+ The email contains a 5 digit passcode.
+<br/> <br/> 
+ Your email might take a few minutes to arrive. If you do not get an email, check your spam folder.
+ <br/> <br/> 
+ The code will expire after [x] minutes.
+</p>
+
 <div class="govuk-form-group">
   <label class="govuk-label" for="width-5">
-    One-time passcode
+    Enter the 5 digit passcode
   </label>
-    <div id="account-number-hint" class="govuk-hint">
-   For example, 47329.
-  </div>
+ 
   <input class="govuk-input govuk-input--width-5" id="width-5" name="width5" type="text">
 </div>
 
@@ -52,11 +61,17 @@ Enter the one-time passcode that has been sent by email
       href: "your-details"
     }) }}
 
-      <p class="govuk-body">
-  <a href="request-new-code.html" class="govuk-link govuk-link--no-visited-state">
-    Not received an email? 
-  </a>
-</p>
+    <details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+     Problems with the code?
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+We can <a href="get-passcode" class="govuk-link">send the code again</a> or you can <a href="email-otp" class="govuk-link">use a different email address</a>.
+  </div>
+</details>
+
 </form>
   </div>
 </div>

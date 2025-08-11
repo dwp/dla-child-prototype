@@ -24,7 +24,6 @@
       </span>
   </p>
 </div>
-<a class="govuk-back-link" href="javascript:history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -34,19 +33,16 @@
 
 <form class="form"  method="post">
   <h1 class="govuk-heading-l">
-Enter your email address
+For your security, we deleted
+your answers
   </h1>
-   <div id="email-name-hint" class="govuk-hint">
-   This should be your work email address, not a 
-personal email address.
-  </div>
- <div class="govuk-form-group">
-  <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
-</div>
+  <p class="govuk-body">
+    You have not entered any information for 15 minutes, so we have deleted your answers to keep them secure.
+  </p>
 
     {{ govukButton({
-      text: "Continue",
-      href: "/evidence-gathering5/schools-view/radio-buttons/otp"
+      text: "Start again",
+      href: "/evidence-gathering5/schools-view/checkboxes/start"
     }) }}
 </form>
   </div>
