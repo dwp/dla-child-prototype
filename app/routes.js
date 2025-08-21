@@ -348,8 +348,8 @@ router.get('/choose-options', function (req, res) {
 
 router.post('/evidence-gathering5/schools-view/checkboxes/about-child', function(request, response) {
 
-    var ms = request.session.data['5kno']
-    if (ms === "yes"){
+    var ms = request.session.data['live1']
+    if (ms === "yesdirect"){
         response.redirect("/evidence-gathering5/schools-view/checkboxes/child-dob")
     } 
         if (ms === "yesbut"){
