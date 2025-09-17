@@ -41,12 +41,28 @@
             <!-- Main content -->
             <div class="govuk-grid-column-two-thirds">
 
-                <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-27 govuk-!-margin-bottom-2">Prisha Amir Singh</p>
-              <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-2">Reference number: <span class="govuk-body">FGE8364F</span></p>
+        <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    The inbox for this email address is not accepting messages right now. 
+    <a href="#" class="govuk-link">Resend the email</a>, or change the email address to resend.
+  </strong>
+</div>
+              <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-27 govuk-!-margin-bottom-2">Jane Henry Johnson</p>
+              <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-2">Reference number: <span class="govuk-body">GSE9312E</span></p>
 
-<span class="govuk-tag govuk-tag--green govuk-!-margin-top-0 govuk-!-margin-bottom-4">
-Response received
+<span class="govuk-tag govuk-tag--red govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+Email not delivered
 </span>
+
+<div class="govuk-button-group">
+  {{ govukButton({
+  text: "Cancel request",
+  href: "/evidence-gathering4/cms-view/cancel-request",
+  classes: "govuk-button--secondary"
+}) }}
+</div>
 
 <dl class="govuk-summary-list govuk-summary-list">
   <div class="govuk-summary-list__row">
@@ -54,7 +70,7 @@ Response received
       National Insurance number
     </dt>
     <dd class="govuk-summary-list__value">
-     TX 67 67 23 A
+   	SJ 52 12 39 F
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -62,7 +78,7 @@ Response received
       Date of birth
     </dt>
     <dd class="govuk-summary-list__value">
-   28 Dec 2024
+     18 Feb 2025
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -73,7 +89,8 @@ Response received
       NE1 1NE
     </dd>
   </div>
- <div class="govuk-summary-list__row">
+
+    <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       School name
     </dt>
@@ -114,45 +131,10 @@ Response received
   </thead>
   
   <tbody class="govuk-table__body">
-          <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Response received</td>
-      <td class="govuk-table__cell">Newtown Primary School</td>
-            <td class="govuk-table__cell">22 April 2025 at 8:40am</td>
-    </tr>
-               <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Reminder delivered</td>
-      <td class="govuk-table__cell"></td>
-            <td class="govuk-table__cell">19 April 2025 at 11:18am</td>
-    </tr>
-           <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Reminder sent</td>
-      <td class="govuk-table__cell">jane.lee@dwp.gov.uk</td>
-            <td class="govuk-table__cell">19 April 2025 at 11:15am</td>
-    </tr>
-           <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Response overdue</td>
-      <td class="govuk-table__cell"></td>
-            <td class="govuk-table__cell">18 April 2025 at 9:05am</td>
-    </tr>
-          <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Reminder delivered</td>
-      <td class="govuk-table__cell"></td>
-            <td class="govuk-table__cell">11 April 2025 at 11:20am</td>
-    </tr>
-          <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Reminder sent</td>
-      <td class="govuk-table__cell">jane.lee@dwp.gov.uk</td>
-            <td class="govuk-table__cell">11 April 2025 at 11:18am</td>
-    </tr>
-        <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Response overdue</td>
-      <td class="govuk-table__cell"></td>
-            <td class="govuk-table__cell">10 April 2025 at 11:18am</td>
-    </tr>
     <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Request delivered</td>
+              <td class="govuk-table__cell">Request not delivered</td>
       <td class="govuk-table__cell"></td>
-            <td class="govuk-table__cell">27 Mar 2025 at 11:27am/td>
+            <td class="govuk-table__cell">27 Mar 2025 at 11:27am</td>
     </tr>
          <tr class="govuk-table__row">
               <td class="govuk-table__cell">Request sent</td>
