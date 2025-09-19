@@ -41,21 +41,16 @@
             <!-- Main content -->
             <div class="govuk-grid-column-two-thirds">
 
-              <div class="govuk-notification-banner" role="region" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-  <div class="govuk-notification-banner__header">
-    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-      Important
-    </h2>
-  </div>
-  <div class="govuk-notification-banner__content">
-    <p class="govuk-notification-banner__heading">
-      Inbox not accepting messages. 
-      <a class="govuk-notification-banner__link" href="resend-email-request.html">Resend email or 
-change email address</a>.
-    </p>
-  </div>
+              <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    The inbox for this email address is not accepting messages right now. 
+     <a class="govuk-notification-banner__link" href="case-details-email-not-accepting-messages-resend.html">Resend the email</a>,
+     or change the email address to resend. 
+  </strong>
 </div>
-
+  
               <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-27 govuk-!-margin-bottom-2">Jane Henry Johnson</p>
               <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-2">Reference number: <span class="govuk-body">GSE9312E</span></p>
 
@@ -71,13 +66,19 @@ Email not delivered
 }) }}
 </div>
 
+<h1 class="govuk-heading-l">Case details</h1>
+
+
 <dl class="govuk-summary-list govuk-summary-list">
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       National Insurance number
     </dt>
     <dd class="govuk-summary-list__value">
-   	SJ 52 12 39 F
+    SJ 52 12 39 F
+    </dd>
+      <dd class="govuk-summary-list__actions">
+      <a class="govuk-link"><span class="govuk-visually-hidden"></span></a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -85,7 +86,10 @@ Email not delivered
       Date of birth
     </dt>
     <dd class="govuk-summary-list__value">
-     18 Feb 2025
+       18 Feb 2025
+    </dd>
+      <dd class="govuk-summary-list__actions">
+      <a class="govuk-link"><span class="govuk-visually-hidden"></span></a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -95,14 +99,20 @@ Email not delivered
     <dd class="govuk-summary-list__value">
       NE1 1NE
     </dd>
+      <dd class="govuk-summary-list__actions">
+      <a class="govuk-link"><span class="govuk-visually-hidden"></span></a>
+    </dd>
   </div>
 
-    <div class="govuk-summary-list__row">
+  <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       School name
     </dt>
     <dd class="govuk-summary-list__value">
       Newtown Primary School
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link"><span class="govuk-visually-hidden"></span></a>
     </dd>
   </div>
 
@@ -113,6 +123,9 @@ Email not delivered
     <dd class="govuk-summary-list__value">
       <p class="govuk-body">enquiry@newtownprimary.sch.uk</p>
     </dd>
+     <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="change-school-email-not-accepting">Change<span class="govuk-visually-hidden"> name</span></a>
+    </dd>
   </div>
 
    <div class="govuk-summary-list__row">
@@ -122,10 +135,14 @@ Email not delivered
     <dd class="govuk-summary-list__value">
       <p class="govuk-body">SENCo</p>
     </dd>
+      <dd class="govuk-summary-list__actions">
+      <a class="govuk-link"><span class="govuk-visually-hidden"></span></a>
+    </dd>
   </div>
 </dl>
 
 <br/>
+
 
 <table class="govuk-table">
   <caption class="govuk-table__caption govuk-table__caption--m">Case history</caption>
@@ -133,7 +150,7 @@ Email not delivered
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">What happened</th>
       <th scope="col" class="govuk-table__header">Who was involved</th>
-            <th scope="col" class="govuk-table__header">Date/Time</th>
+            <th scope="col" class="govuk-table__header">Date and time</th>
     </tr>
   </thead>
   
