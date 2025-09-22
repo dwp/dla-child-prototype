@@ -1,0 +1,333 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row"> 
+      <div class="govuk-grid-column-full-from-desktop">
+                  <form method="post" action="/submit-application" id="main-form">
+        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           Your details
+            </dt>
+            <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">Seymour Skinner <br>
+             Special Educational Needs</p>
+             
+                       <p class="govuk-body"> Co-ordinator</p>
+                                <p class="govuk-body">07700 700 007</p>
+                                <p class="govuk-body">enquiry@newtownprimary.sch.uk</p>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           Do you know this child?
+            </dt>
+            <dd class="govuk-summary-list__value">
+            Yes, and I am happy to provide information about them
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="about-child.html">Change<span class="govuk-visually-hidden">about child</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+          Do they have any individual plans in place to 
+support them at school?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="individual-plans-question.html">Change<span class="govuk-visually-hidden">individual plans question</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Individual plans in place to 
+support them at school
+            </dt>
+            <dd class="govuk-summary-list__value">
+             This answer is around 100 characters long. It shows roughly how many characters it takes to write 100 characters.
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="individual-plans.html">Change<span class="govuk-visually-hidden">individual plans</span></a>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+             Do they get any more learning support at school compared to other children of the same age?
+            </dt>
+            <dd class="govuk-summary-list__value">
+             Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="learning-support-question.html">Change<span class="govuk-visually-hidden">learning support question</span></a>
+            </dd>
+          </div>
+
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+            Additional learning support they get at school
+            </dt>
+            <dd class="govuk-summary-list__value">
+          This answer is around 100 characters long. It shows roughly how many characters it takes to write 100 characters.
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="additional-learning-support.html">Change<span class="govuk-visually-hidden">additional learning support</span></a>
+            </dd>
+          </div>
+
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           Do they present with any challenging behaviour in school?
+            </dt>
+            <dd class="govuk-summary-list__value">
+          Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="behaviour-question.html">Change<span class="govuk-visually-hidden">additional learning support</span></a>
+            </dd>
+          </div>
+
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+          Behaviour at school
+            </dt>
+            <dd class="govuk-summary-list__value">
+        This answer is around 100 characters long. It shows roughly how many characters it takes to write 100 characters.
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="behaviour-in-school.html">Change<span class="govuk-visually-hidden">behaviour in school</span></a>
+            </dd>
+          </div>
+
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+          Do they need any support to move around at school?
+            </dt>
+            <dd class="govuk-summary-list__value">
+        Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="move-around-question.html">Change<span class="govuk-visually-hidden">move around school question</span></a>
+            </dd>
+          </div>
+
+           <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+       Support they need to move around school
+            </dt>
+            <dd class="govuk-summary-list__value">
+        This answer is around 100 characters long. It shows roughly how many characters it takes to write 100 characters.
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="move-around-school.html">Change<span class="govuk-visually-hidden">move around school</span></a>
+            </dd>
+          </div>
+
+                   <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Can they manage their own personal safety?
+            </dt>
+            <dd class="govuk-summary-list__value">
+       No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="personal-safety-question.html">Change<span class="govuk-visually-hidden">personal safety question</span></a>
+            </dd>
+          </div>
+
+
+                   <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Their ability to manage their own personal safety
+            </dt>
+            <dd class="govuk-summary-list__value">
+   This answer is around 100 characters long. It shows roughly how many characters it takes to write 100 characters.
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="personal-safety.html">Change<span class="govuk-visually-hidden">personal safety</span></a>
+            </dd>
+          </div>
+
+                          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Can they manage their own personal care?
+            </dt>
+            <dd class="govuk-summary-list__value">
+   No
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="personal-care-question.html">Change<span class="govuk-visually-hidden">personal care question</span></a>
+            </dd>
+          </div>
+          
+                                  <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Help they need with personal care
+            </dt>
+            <dd class="govuk-summary-list__value">
+ This answer is around 100 characters long. It shows roughly how many characters it takes to write 100 characters.
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="personal-care.html">Change<span class="govuk-visually-hidden">personal care</span></a>
+            </dd>
+          </div>
+
+                                        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Do they get any therapy or take any medication while at school?
+            </dt>
+            <dd class="govuk-summary-list__value">
+          Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="therapy-or-medication-question.html">Change<span class="govuk-visually-hidden">therapy or medication question</span></a>
+            </dd>
+          </div>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+      Therapy they get or medication they 
+take at school
+            </dt>
+            <dd class="govuk-summary-list__value">
+      This answer is around 100 characters long. It shows roughly how many characters it takes to write 100 characters.
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="therapy-or-medication.html">Change<span class="govuk-visually-hidden">therapy or medication</span></a>
+            </dd>
+          </div>
+
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+  Do they have more sleep problems than other children of the same age?
+            </dt>
+            <dd class="govuk-summary-list__value">
+      Yes
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="sleep-problems-question.html">Change<span class="govuk-visually-hidden">sleep problems question</span></a>
+            </dd>
+          </div>
+
+                <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+          Sleep problems
+            </dt>
+            <dd class="govuk-summary-list__value">
+     This answer is around 100 characters long. It shows roughly how many characters it takes to write 100 characters.
+            </dd>
+            <dd class="govuk-summary-list__actions">
+              <a class="govuk-link" href="sleep-problems.html">Change<span class="govuk-visually-hidden">sleep problems</span></a>
+            </dd>
+          </div>
+
+        </dl>
+  
+
+        <!-- Print options -->
+<div class="govuk-inset-text">
+  <h3 class="govuk-heading-s">Print or save a copy of your answers</h3>
+  <p class="govuk-body">If you need to print or save a copy of your answers, you must do it now.</p>
+    <p class="govuk-body">You will not be able to print or save them after you send your information.</p>
+
+    {{ govukCheckboxes({
+      name: "accept-terms",
+      items: [
+        {
+          value: "accepted",
+          text: "Print or save a copy of your answers now",
+          id: "accept-terms"
+        }
+      ]
+    }) }}
+
+</div>
+
+<!-- Send your response -->
+        <h2 class="govuk-heading-m">Now send your response</h2>
+        <p class="govuk-body">
+         By sending this response you are confirming that, to the best of your knowledge, the details you are providing are correct.
+        </p>
+        {{ govukButton({
+      text: "Accept and send",
+      type: "submit"
+    }) }}
+
+      </div>
+    </div>
+  </main>
+</div>
+
+      </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Trigger print -->
+  <script>
+    document.getElementById('main-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+     
+      const checkbox = document.getElementById('accept-terms');
+     
+      if (checkbox && checkbox.checked) {
+        // If checkbox is checked, trigger print then navigate
+        window.print();
+       
+        // Handle after print
+        const handleAfterPrint = function() {
+          window.location.href = 'confirmation';
+          window.removeEventListener('afterprint', handleAfterPrint);
+        };
+       
+        window.addEventListener('afterprint', handleAfterPrint);
+       
+        // Fallback for browsers that don't support afterprint
+        setTimeout(function() {
+          window.location.href = 'confirmation';
+          window.removeEventListener('afterprint', handleAfterPrint);
+        }, 1000);
+      } else {
+        // If checkbox not checked, go directly to confirmation
+        window.location.href = 'confirmation';
+      }
+    });
+  </script>
+
+{% endblock %}

@@ -1,0 +1,143 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+
+{% endblock %}
+
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds-from-desktop">
+        <h1 class="govuk-heading-xl">
+Provide supporting information for Disability   
+Living Allowance (DLA) for children  
+</h1>
+        <form class="form"  method="post">
+                <p class="govuk-body-m">
+Use this service to respond to our request for further information.  
+                </p>
+
+    <p class="govuk-body-m">
+We have already received some information from the child’s parent or   
+guardian as part of their application.  
+    </p>
+
+        <p class="govuk-body-m">
+However, we need some more information about the child’s day to day   
+needs to help us make a decision.  
+    </p>
+
+         <p class="govuk-body-m">
+The information you provide will help us to understand the level of   
+support that the child needs.   
+    </p>
+
+           <p class="govuk-body-m">
+This information may also be seen by their parent or guardian upon   
+request.  
+    </p>
+
+    <h2 class="govuk-heading-m">Before you start</h2>
+        <p class="govuk-body-m">
+You will need the reference number from the email we sent you.
+    </p>
+        <p class="govuk-body-m">
+We will ask about: 
+    </p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>any individual plans in place</li>
+  <li>any additional learning support that they get, or would benefit from</li>
+    <li>their behaviour at school</li>
+  <li>any support they need to move around at school</li>
+    <li>how they manage their own personal safety</li>
+  <li>how they manage their own personal care</li>
+  <li>any therapy or medication while at school</li>
+  <li>any sleep problems</li>
+</ul>
+
+    <h2 class="govuk-heading-m">Using the service</h2>
+
+       <p class="govuk-body-m">
+If you are inactive for 15 minutes while using the service, we will delete   
+your answers for your security, and you will need to start again.  
+    </p>
+<br>
+
+
+          {{ govukButton({
+  text: "Start now",
+  href: "ref-no",
+  isStartButton: true
+}) }}
+     </form>
+         </div>
+
+       <div class="govuk-grid-column-full-from-desktop">
+
+
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+    <h2 class="govuk-heading-m">Get help</h2>
+        <p class="govuk-body-m">
+Telephone: 0800 121 4600 <br>Textphone: 0800 121 4523
+    </p>
+        <p class="govuk-body-m">
+ <a href="https://www.relayuk.bt.com/" class="govuk-link govuk-link--no-visited-state">Relay UK</a> (if you cannot hear or speak on the phone): 18001 then 0800 121 4600 
+    </p>
+            <p class="govuk-body-m">
+British Sign Language (BSL) 
+ <a href="https://connect2.interpreterslive.co.uk/vrs?ilc=DWP" class="govuk-link govuk-link--no-visited-state">video relay service</a>
+if you're on a computer - find out <br>
+ <a href="https://www.youtube.com/watch?v=oELNMfAvDxw" class="govuk-link govuk-link--no-visited-state">how to use the service on mobile or tablet</a>
+    </p>
+        <p class="govuk-body-m">
+          
+All services are available Monday to Friday, 9am to 5pm (except public holidays)
+    </p>
+      <p class="govuk-body-m">
+         <a href="https://www.gov.uk/call-charges" class="govuk-link govuk-link--no-visited-state">Find out about call charges</a>
+    </p>
+         </div>
+         </div>
+
+    </div>
+  </main>
+</div>
+
+<style>
+  .border-top-color {
+    padding: 5px;
+    border-top-style: solid;
+    border-top-color: #1d70b8;
+  }
+</style>
+
+
+{% endblock %}

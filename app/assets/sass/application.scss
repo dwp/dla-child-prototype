@@ -12,3 +12,8 @@
   .govuk-hint.govuk-hint--small {
     font-size: 16px;
   }
+
+  .govuk-notification-banner:focus {
+  outline: none;
+  box-shadow: none;
+}

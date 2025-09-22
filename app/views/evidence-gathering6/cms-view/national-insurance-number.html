@@ -1,0 +1,173 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#",
+  navigationClasses: "margin-left-signout",
+  navigation: [
+    {
+      href: "#",
+      text: "Sign out"
+     }
+  ]
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+</head>
+<body>
+<div class="govuk-width-container">
+  <h1 class="govuk-heading-l">
+Results for "GU118625D" </h1> <br>
+
+
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      National Insurance number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      GU 11 86 25 D
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+     11 March 2015
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Child name 
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Tom Smith Johnson
+    </dd>
+  </div>
+</dl>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Search again",
+  classes: "govuk-button--secondary",
+    href: "/evidence-gathering4/cms-view/dashboard"
+}) }}
+
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value govuk-body-s govuk-hint">
+   3 results
+    </dd>
+  </div>
+
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-2">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-link" >
+ <a href="#" class="govuk-link">WAE8362L</a>
+    </dt>
+  </div>
+  <div class="govuk-summary-list__row--no-border">
+     <strong class="govuk-tag govuk-tag--yellow">
+   Request delivered 
+  </strong>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value govuk-body-s">
+     Created: 18 Aug 2025<br>
+              <span class="govuk-hint govuk-hint--small">
+ Last updated: 18 Aug 2025
+      </span>
+    </dd>
+     
+  </div>
+</dl>
+
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-2">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-link" >
+ <a href="#" class="govuk-link">QAR8321W</a>
+    </dt>
+  </div>
+  <div class="govuk-summary-list__row--no-border">
+     <strong class="govuk-tag govuk-tag--green">
+    Response received
+  </strong>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value govuk-body-s">
+      Created: 18 Nov 2023<br>
+              <span class="govuk-hint govuk-hint--small">
+ Last updated: 12 Dec 2023
+      </span>
+    </dd>
+  </div>
+</dl>
+
+<hr class="govuk-section-break govuk-section-break--visible">
+
+<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-2">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key govuk-link" >
+ <a href="#" class="govuk-link">BSW3316J</a>
+    </dt>
+  </div>
+  <div class="govuk-summary-list__row--no-border">
+     <strong class="govuk-tag govuk-tag--grey">
+    Request cancelled
+  </strong>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value govuk-body-s">
+      Created: 13 Oct 2021 <br>
+        <span class="govuk-hint govuk-hint--small">
+Last updated: 22 Nov 2021
+      </span>
+    </dd>
+  </div>
+  <!-- <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value">
+      <span class="govuk-hint govuk-hint--small">
+Last updated: 22 Nov 2021
+      </span>
+    </dd>
+  </div> -->
+</dl>
+
+
+</div>
+
+</body>
+
+</html>
+
+
+{% endblock %}
