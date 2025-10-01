@@ -582,17 +582,6 @@ router.post('/evidence-gathering6/schools-view/about-child', function(request, r
     }
 })
 
-router.post('/evidence-gathering6/schools-view/individual-plans-question', function(request, response) {
-
-    var ms = request.session.data['plan']
-    if (ms === "yes"){
-        response.redirect("/evidence-gathering6/schools-view/individual-plans")
-    } 
-        if (ms === "no"){
-        response.redirect("/evidence-gathering6/schools-view/learning-support-question")
-    } 
-})
-
 router.post('/evidence-gathering6/schools-view/learning-support-question', function(request, response) {
 
     var ms = request.session.data['support']
@@ -666,6 +655,18 @@ router.post('/evidence-gathering6/schools-view/sleep-problems-question', functio
         response.redirect("/evidence-gathering6/schools-view/sleep-problems")
     } 
         if (ms === "no"){
+        response.redirect("/evidence-gathering6/schools-view/individual-plans-question")
+    } 
+})
+
+router.post('/evidence-gathering6/schools-view/individual-plans-question', function(request, response) {
+
+    var ms = request.session.data['plan']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering6/schools-view/individual-plans")
+    } 
+        if (ms === "no"){
         response.redirect("/evidence-gathering6/schools-view/check-answers")
     } 
 })
+
