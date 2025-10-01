@@ -575,10 +575,10 @@ router.post('/evidence-gathering6/schools-view/about-child', function(request, r
         response.redirect("/evidence-gathering6/schools-view/child-dob")
     } 
         if (ms === "yesbut"){
-        response.redirect("/evidence-gathering6/schools-view/response-sent")
+        response.redirect("/evidence-gathering6/schools-view/check-answers-child")
     } 
     else {
-        response.redirect("/evidence-gathering6/schools-view/response-sent")
+        response.redirect("/evidence-gathering6/schools-view/check-answers-child")
     }
 })
 
@@ -619,10 +619,10 @@ router.post('/evidence-gathering6/schools-view/personal-safety-question', functi
 
     var ms = request.session.data['safety']
     if (ms === "yes"){
-        response.redirect("/evidence-gathering6/schools-view/personal-care-question")  
+        response.redirect("/evidence-gathering6/schools-view/personal-safety")  
     } 
-        if (ms === "no"){
-        response.redirect("/evidence-gathering6/schools-view/personal-safety")
+        if (ms === "no"){ 
+        response.redirect("/evidence-gathering6/schools-view/personal-care-question")
     } 
 })
 
@@ -630,10 +630,10 @@ router.post('/evidence-gathering6/schools-view/personal-care-question', function
 
     var ms = request.session.data['care']
     if (ms === "yes"){
-        response.redirect("/evidence-gathering6/schools-view/therapy-or-medication-question") 
+        response.redirect("/evidence-gathering6/schools-view/personal-care") 
     } 
-        if (ms === "no"){
-        response.redirect("/evidence-gathering6/schools-view/personal-care")
+        if (ms === "no"){ 
+        response.redirect("/evidence-gathering6/schools-view/therapy-or-medication-question")
     } 
 })
 
