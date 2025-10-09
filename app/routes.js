@@ -670,3 +670,12 @@ router.post('/evidence-gathering6/schools-view/individual-plans-question', funct
     } 
 })
 
+router.post('/handle-sort-selection-v6', function(request, response) {
+const sort = request.body.sort;
+
+if (sort === 'nino') {
+    response.redirect('/evidence-gathering6/cms-view/national-insurance-number');
+} else if (sort === 'case-reference') {
+     response.redirect('evidence-gathering6/cms-view/case-details');
+}
+})
