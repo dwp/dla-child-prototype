@@ -67,6 +67,9 @@
                             <p class="govuk-body">Co-ordinator<br>
 
             </dd>
+                <dd class="govuk-summary-list__actions" style="width: 0% !important;">
+              <a class="govuk-link" href="child-dob.html">Change<span class="govuk-visually-hidden">about child</span></a>
+            </dd>
           </div>
 
                         <div class="govuk-summary-list__row">
@@ -76,6 +79,9 @@
             <dd class="govuk-summary-list__value">
                             <p class="govuk-body">07700 700 007<br>
 
+            </dd>
+                <dd class="govuk-summary-list__actions" style="width: 0% !important;">
+              <a class="govuk-link" href="child-dob.html">Change<span class="govuk-visually-hidden">about child</span></a>
             </dd>
           </div>
 
@@ -109,16 +115,15 @@ margin-top: 40px;
 
         <!-- Print options -->
 <div class="govuk-inset-text">
-  <h3 class="govuk-heading-s">Print or save a copy of your answers</h3>
-  <p class="govuk-body">If you need to print or save a copy of your answers, you must do it now.</p>
-    <p class="govuk-body">You will not be able to print or save them after you send your information.</p>
+  <h2 class="govuk-heading-m">Download your answers</h2>
+  <p class="govuk-body">If you do not select this, you will not be able to access your answers again.</p>
 
     {{ govukCheckboxes({
       name: "accept-terms",
       items: [
         {
           value: "accepted",
-          text: "Print or save a copy of your answers now",
+          text: "I want to download a copy of my answers",
           id: "accept-terms"
         }
       ]
@@ -152,31 +157,34 @@ margin-top: 40px;
   <script>
     document.getElementById('main-form').addEventListener('submit', function(e) {
       e.preventDefault();
-     
       const checkbox = document.getElementById('accept-terms');
      
       if (checkbox && checkbox.checked) {
-        // If checkbox is checked, trigger print then navigate
-        window.print();
-       
-        // Handle after print
-        const handleAfterPrint = function() {
-          window.location.href = 'response-sent';
-          window.removeEventListener('afterprint', handleAfterPrint);
-        };
-       
-        window.addEventListener('afterprint', handleAfterPrint);
-       
+        downloadAnswers();
         // Fallback for browsers that don't support afterprint
         setTimeout(function() {
           window.location.href = 'response-sent';
-          window.removeEventListener('afterprint', handleAfterPrint);
-        }, 1000);
+        }, 500);
       } else {
         // If checkbox not checked, go directly to confirmation
         window.location.href = 'response-sent';
       }
     });
+
+    // Create download link
+    function downloadAnswers() {
+      const content = document.documentElement.outerHTML;
+      const blob = new Blob([content], { type: 'text/html' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'my-answers-' + new Date().toISOString().split('T')[0] + '.html';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(link.href);
+    }
+    
   </script>
+
 
 {% endblock %}
