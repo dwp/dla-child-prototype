@@ -578,7 +578,7 @@ router.post('/evidence-gathering6/schools-view/about-child', function(request, r
         response.redirect("/evidence-gathering6/schools-view/check-answers-child")
     } 
     else {
-        response.redirect("/evidence-gathering6/schools-view/check-answers-child")
+        response.redirect("/evidence-gathering6/schools-view/check-answers-no-child")
     }
 })
 

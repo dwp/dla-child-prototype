@@ -1,0 +1,182 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row"> 
+      
+      <div class="govuk-grid-column-full-from-desktop">
+        
+                  <form method="post" action="/submit-application" id="main-form">
+        <h1 class="govuk-heading-l">Check your answers before sending your application</h1>
+      <br>
+      
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9 govuk-summary-list--no-border" style="margin: 0 !important; padding: 0 !important; width: auto !important; min-width: fit-content !important">
+          
+          <h2 class="govuk-heading-m">
+            Your details
+          </h2>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">Seymour Skinner </p>
+                              <br>
+            </dd>
+               <dd class="govuk-summary-list__actions" style="width: 0% !important;">
+              <a class="govuk-link" href="your-details.html">Change<span class="govuk-visually-hidden">about child</span></a>
+            </dd>
+          </div>
+
+                    <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           Role
+            </dt>
+            <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">Special Educational Needs<br>
+                            <p class="govuk-body">Co-ordinator<br>
+
+            </dd>
+          </div>
+
+                        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           UK phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">07700 700 007<br>
+
+            </dd>
+          </div>
+
+          <!-- Line split -->
+          <br/>
+         <div class="govuk-section-break govuk-section-break--visible govuk-section-break--m"></div>
+                    <br/>
+
+          <h2 class="govuk-heading-m"
+style="
+margin-top: 40px;
+"> Child details
+          </h2>
+
+          <div class="govuk-summary-list__row" style="width: 0% !important;">
+            <dt class="govuk-summary-list__key">
+           Do you know this child?
+            <div id="authentication-code-hint" class="govuk-hint">
+ Evie Scarlett Johnson  </div>
+            </dt>
+            <dd class="govuk-summary-list__value">
+          No, I do not know this child
+            </dd>
+            <dd class="govuk-summary-list__actions" style="width: 0% !important;">
+              <a class="govuk-link" href="about-child.html">Change<span class="govuk-visually-hidden">about child</span></a>
+            </dd>
+          </div>
+  
+        </dl>
+  
+
+        <!-- Print options -->
+<div class="govuk-inset-text">
+  <h3 class="govuk-heading-s">Print or save a copy of your answers</h3>
+  <p class="govuk-body">If you need to print or save a copy of your answers, you must do it now.</p>
+    <p class="govuk-body">You will not be able to print or save them after you send your information.</p>
+
+    {{ govukCheckboxes({
+      name: "accept-terms",
+      items: [
+        {
+          value: "accepted",
+          text: "Print or save a copy of your answers now",
+          id: "accept-terms"
+        }
+      ]
+    }) }}
+
+</div>
+
+<!-- Send your response -->
+        <h2 class="govuk-heading-m">Now send your response</h2>
+        <p class="govuk-body">
+         By sending this response you are confirming that, to the best of your knowledge, the details you are providing are correct.
+        </p>
+        {{ govukButton({
+      text: "Accept and send",
+      type: "submit"
+    }) }}
+
+      </div>
+    </div>
+  </main>
+</div>
+
+      </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Trigger print -->
+  <script>
+    document.getElementById('main-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+     
+      const checkbox = document.getElementById('accept-terms');
+     
+      if (checkbox && checkbox.checked) {
+        // If checkbox is checked, trigger print then navigate
+        window.print();
+       
+        // Handle after print
+        const handleAfterPrint = function() {
+          window.location.href = 'response-sent';
+          window.removeEventListener('afterprint', handleAfterPrint);
+        };
+       
+        window.addEventListener('afterprint', handleAfterPrint);
+       
+        // Fallback for browsers that don't support afterprint
+        setTimeout(function() {
+          window.location.href = 'response-sent';
+          window.removeEventListener('afterprint', handleAfterPrint);
+        }, 1000);
+      } else {
+        // If checkbox not checked, go directly to confirmation
+        window.location.href = 'response-sent';
+      }
+    });
+  </script>
+
+{% endblock %}
