@@ -1,0 +1,46 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form"  method="post">
+  <h1 class="govuk-heading-l">
+  You have entered an incorrect reference number too many times
+  </h1>
+  <p class="govuk-body">
+Go to the email we sent you to find the reference number and try again.
+ <br/> <br/>
+If you are having issues with the reference number, you can <a href="https://www.gov.uk/disability-service-centre#:~:text=DLA%20helpline%20%2D%20if%20you%20were%20born%20after%208%20April%201948" class="govuk-link">contact us</a>.
+  </p>
+</form>
+  </div>
+</div>
+{% endblock %}
