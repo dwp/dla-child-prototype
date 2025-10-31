@@ -39,25 +39,46 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 <form class="form"  method="post">
       <div class="govuk-form-group">
    
     <h1 class="govuk-heading-l">
-   Change email address and resend email
+  Check the details and send the reminder
     </h1> 
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="width-20">
-    Email address
-  </label>
-  <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
-</div>
+
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+    Child name
+    </dt>
+    <dd class="govuk-summary-list__value">
+    Oliver Charles Smith
+    </dd>
+  
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date you would like a response by
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">27 May 2025</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <ul class="govuk-summary-list__actions-list">
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </li>
+      </ul>
+    </dd>
+  </div>
+</dl>
 
 </div> 
   {{ govukButton({
-    text: "Continue",
-    href: "check-email-resend.html"
+    text: "Send reminder",
+    href: "/evidence-gathering4/cms-view/case-details-reminder-sent"
   }) }}
 
       </form>

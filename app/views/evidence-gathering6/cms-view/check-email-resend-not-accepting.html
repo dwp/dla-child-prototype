@@ -39,25 +39,53 @@
 {% block content %}
 
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-full">
+    <div class="govuk-grid-column-two-thirds">
 <form class="form"  method="post">
       <div class="govuk-form-group">
    
     <h1 class="govuk-heading-l">
-   Change email address and resend email
+   Check the details and resend the email
     </h1> 
 
-<div class="govuk-form-group">
-  <label class="govuk-label" for="width-20">
-    Email address
-  </label>
-  <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
-</div>
+<dl class="govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+    Child name
+    </dt>
+    <dd class="govuk-summary-list__value">
+     Oliver Charles Smith
+    </dd>
+  
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      School name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Newtown Primary School
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">senco@newtownprimary.sch.uk</p>
+    </dd>
+    <dd class="govuk-summary-list__actions">
+      <ul class="govuk-summary-list__actions-list">
+        <li class="govuk-summary-list__actions-list-item">
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
+        </li>
+      </ul>
+    </dd>
+  </div>
+</dl>
 
 </div> 
   {{ govukButton({
-    text: "Continue",
-    href: "check-email-resend.html"
+    text: "Resend email",
+    href: "case-details-email-technical-failure-sent.html"
   }) }}
 
       </form>
