@@ -1,0 +1,69 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <h1 class="govuk-label-wrapper">
+    <label class="govuk-label govuk-label--l" for="more-detail">
+Therapy they get or medication they 
+take at school
+    </label>
+  </h1>
+ <p class="govuk-body">
+Tell us about any therapy they get, or any medication they take at school. For example:
+ </p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>
+what medication they take at school, and how often
+  </li>
+  <li>
+if they need any support to take their medication
+  </li>
+    <li>
+any therapy they get at school, and how often
+  </li>
+      <li>
+any medical incidents that required external support in the last 6 months
+  </li>
+</ul>
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+   {{ govukButton({
+    text: "Continue",
+    href: "sleep-problems-question"
+  }) }}
+
+  </form>
+      </div>
+      </div>
+{% endblock %}

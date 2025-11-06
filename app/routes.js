@@ -679,3 +679,122 @@ if (sort === 'nino') {
      response.redirect('evidence-gathering6/cms-view/case-details');
 }
 })
+
+
+// RADIO BUTTONS evidence gathering 7
+
+router.get('/choose-options', function (req, res) {
+  res.render('choose-options');
+});
+
+router.post('/evidence-gathering7/schools-view/about-child', function(request, response) {
+
+    var ms = request.session.data['6kno']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering7/schools-view/child-dob")
+    } 
+        if (ms === "yesbut"){
+        response.redirect("/evidence-gathering7/schools-view/check-answers-child")
+    } 
+    else {
+        response.redirect("/evidence-gathering7/schools-view/check-answers-no-child")
+    }
+})
+
+router.post('/evidence-gathering7/schools-view/learning-support-question', function(request, response) {
+
+    var ms = request.session.data['support']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering7/schools-view/additional-learning-support")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering7/schools-view/behaviour-question")
+    } 
+})
+
+router.post('/evidence-gathering7/schools-view/behaviour-question', function(request, response) {
+
+    var ms = request.session.data['behaviour']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering7/schools-view/behaviour-in-school")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering7/schools-view/move-around-question")
+    } 
+})
+
+router.post('/evidence-gathering7/schools-view/move-around-question', function(request, response) {
+
+    var ms = request.session.data['move']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering7/schools-view/move-around-school")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering7/schools-view/personal-safety-question")
+    } 
+})
+
+router.post('/evidence-gathering7/schools-view/personal-safety-question', function(request, response) {
+
+    var ms = request.session.data['safety']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering7/schools-view/personal-safety")  
+    } 
+        if (ms === "no"){ 
+        response.redirect("/evidence-gathering7/schools-view/personal-care-question")
+    } 
+})
+
+router.post('/evidence-gathering7/schools-view/personal-care-question', function(request, response) {
+
+    var ms = request.session.data['care']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering7/schools-view/personal-care") 
+    } 
+        if (ms === "no"){ 
+        response.redirect("/evidence-gathering7/schools-view/therapy-or-medication-question")
+    } 
+})
+
+router.post('/evidence-gathering7/schools-view/therapy-or-medication-question', function(request, response) {
+
+    var ms = request.session.data['therapy']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering7/schools-view/therapy-or-medication")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering7/schools-view/sleep-problems-question")
+    } 
+})
+
+router.post('/evidence-gathering7/schools-view/sleep-problems-question', function(request, response) {
+
+    var ms = request.session.data['sleep']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering7/schools-view/sleep-problems")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering7/schools-view/individual-plans-question")
+    } 
+})
+
+router.post('/evidence-gathering7/schools-view/individual-plans-question', function(request, response) {
+
+    var ms = request.session.data['plan']
+    if (ms === "yes"){
+        response.redirect("/evidence-gathering7/schools-view/individual-plans")
+    } 
+        if (ms === "no"){
+        response.redirect("/evidence-gathering7/schools-view/check-answers")
+    } 
+})
+
+router.post('/handle-sort-selection-v7', function(request, response) {
+const sort = request.body.sort;
+
+if (sort === 'nino') {
+    response.redirect('/evidence-gathering7/cms-view/national-insurance-number');
+} else if (sort === 'case-reference') {
+     response.redirect('evidence-gathering7/cms-view/case-details');
+}
+})

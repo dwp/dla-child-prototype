@@ -1,0 +1,190 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper " id="main-content" role="main">
+    <div class="govuk-grid-row"> 
+      
+      <div class="govuk-grid-column-two-thirds">
+        
+                  <form method="post" action="/submit-application" id="main-form">
+        <h1 class="govuk-heading-l">Check your answers before sending your response to our request</h1>
+      <br>
+      
+        <dl class="govuk-summary-list govuk-!-margin-bottom-9 govuk-summary-list--no-border" style="margin: 0 !important; padding: 0 !important; width: auto !important; min-width: fit-content !important">
+          
+          <h2 class="govuk-heading-m">
+            Your details
+          </h2>
+
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           Name
+            </dt>
+            <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">Seymour Skinner </p>
+                              <br>
+            </dd>
+               <dd class="govuk-summary-list__actions" style="width: 0% !important;">
+              <a class="govuk-link" href="your-details.html">Change<span class="govuk-visually-hidden">about child</span></a>
+            </dd>
+          </div>
+
+                    <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           Role
+            </dt>
+            <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">Special Educational Needs<br>
+                            <p class="govuk-body">Co-ordinator<br>
+
+            </dd>
+                <dd class="govuk-summary-list__actions" style="width: 0% !important;">
+              <a class="govuk-link" href="child-dob.html">Change<span class="govuk-visually-hidden">about child</span></a>
+            </dd>
+          </div>
+
+                        <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+           UK phone number
+            </dt>
+            <dd class="govuk-summary-list__value">
+                            <p class="govuk-body">07700 700 007<br>
+
+            </dd>
+                <dd class="govuk-summary-list__actions" style="width: 0% !important;">
+              <a class="govuk-link" href="child-dob.html">Change<span class="govuk-visually-hidden">about child</span></a>
+            </dd>
+          </div>
+
+          <!-- Line split -->
+          <br/>
+         <div class="govuk-section-break govuk-section-break--visible govuk-section-break--m"></div>
+                    <br/>
+
+          <h2 class="govuk-heading-m"
+style="
+margin-top: 40px;
+"> Child details
+          </h2>
+
+          <div class="govuk-summary-list__row" style="width: 0% !important;">
+            <dt class="govuk-summary-list__key">
+           Do you know this child?
+            <div id="authentication-code-hint" class="govuk-hint">
+ Evie Scarlett Johnson  </div>
+            </dt>
+            <dd class="govuk-summary-list__value">
+          I know them but I cannot provide information about them
+            </dd>
+            <dd class="govuk-summary-list__actions" style="width: 0% !important;">
+              <a class="govuk-link" href="about-child.html">Change<span class="govuk-visually-hidden">about child</span></a>
+            </dd>
+          </div>
+  
+        </dl>
+  
+
+        <!-- Print options -->
+<div class="govuk-inset-text">
+  <h2 class="govuk-heading-m">Download your answers</h2>
+  <p class="govuk-body">If you do not select this, you will not be able to access your answers again.</p>
+
+    {{ govukCheckboxes({
+      name: "accept-terms",
+      items: [
+        {
+          value: "accepted",
+          text: "I want to download a copy of my answers",
+          id: "accept-terms"
+        }
+      ]
+    }) }}
+
+</div>
+
+<!-- Send your response -->
+        <h2 class="govuk-heading-m">Now send your response</h2>
+        <p class="govuk-body">
+         By sending this response you are confirming that, to the best of your knowledge, the details you are providing are correct.
+        </p>
+        {{ govukButton({
+      text: "Accept and send",
+      type: "submit"
+    }) }}
+
+      </div>
+    </div>
+  </main>
+</div>
+
+      </form>
+
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- Trigger print -->
+  <script>
+    document.getElementById('main-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const checkbox = document.getElementById('accept-terms');
+     
+      if (checkbox && checkbox.checked) {
+        downloadAnswers();
+        // Fallback for browsers that don't support afterprint
+        setTimeout(function() {
+          window.location.href = 'response-sent';
+        }, 500);
+      } else {
+        // If checkbox not checked, go directly to confirmation
+        window.location.href = 'response-sent';
+      }
+    });
+
+    // Create download link
+    function downloadAnswers() {
+      const content = document.documentElement.outerHTML;
+      const blob = new Blob([content], { type: 'text/html' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'my-answers-' + new Date().toISOString().split('T')[0] + '.html';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(link.href);
+    }
+    
+  </script>
+
+
+{% endblock %}

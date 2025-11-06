@@ -1,0 +1,76 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Hospital address – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <fieldset class="govuk-fieldset">
+
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    <h1 class="govuk-fieldset__heading">
+      Your details
+    </h1>
+  </legend>
+  <br>
+
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+    Name
+  </label>
+    <input class="govuk-input govuk-input--width-20" id="hospital" name="hospital" type="text" autocomplete="hospital">
+  </div>
+  <div class="govuk-form-group">
+      <label class="govuk-label" for="event-name">
+    Role
+  </label>
+    <input class="govuk-input govuk-input--width-20" id="address-line-1" name="addressLine1" type="text" autocomplete="address-line1">
+  </div>
+  <div class="govuk-form-group">
+ <label class="govuk-label" for="authentication-code">
+    UK phone number
+  </label>
+  <div id="authentication-code-hint" class="govuk-hint">
+We will only use this if we need more information about this application  </div>
+    <input class="govuk-input govuk-input--width-20" id="address-line-2" name="addressLine2" type="text" autocomplete="address-line2">
+  </div>
+</fieldset>
+<br>
+{{ govukButton({
+  text: "Continue",
+  href: "about-child"
+}) }}
+
+
+    </div>
+  </div>
+
+{% endblock %}
