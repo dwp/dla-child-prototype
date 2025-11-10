@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+ 
+{{
+        dwpHeader({
+            serviceName: "Request supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: 'dashboard',
+            container: true
+        })
+}}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="dashboard">Back</a>
+{% endblock %}
+
+{% block content %}
+
+</head>
+<body>
+<div class="govuk-width-container">
+  <h1 class="govuk-heading-l">
+No results for "LJ342966C" </h1> <br>
+
+<p class="govuk-body">Check that the National Insurance number you entered is correct.</p>
+
+<p class="govuk-body">
+  <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">
+    Return to View and manage supporting information
+  </a>
+</p>
+
+</div>
+
+</body>
+
+</html>
+
+
+{% endblock %}
