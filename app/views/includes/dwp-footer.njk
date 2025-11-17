@@ -1,0 +1,19 @@
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
+
+{{
+        dwpFooter({
+            meta: {
+                visuallyHiddenTitle: "About this website",
+                items: [
+                {
+                    href: "",
+                    text: "Accessibility statement"
+                },
+                {
+                    href: "",
+                    text: "Privacy"
+                }
+                ]
+            }
+        }) 
+}}
