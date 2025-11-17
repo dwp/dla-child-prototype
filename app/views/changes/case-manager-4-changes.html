@@ -1,12 +1,14 @@
 {% extends "layouts/main.html" %}
+
 {% block header %}
-{{ super() }}
-{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
  
-{{ govukServiceNavigation({
-  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
-  serviceUrl: "#"
-}) }}
+{{
+        dwpHeader({
+            serviceName: "Request supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: 'dashboard',
+            container: true
+        })
+}}
 {% endblock %}
 
 {% block pageTitle %}
