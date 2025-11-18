@@ -1,4 +1,7 @@
 {% extends "layouts/main.html" %}
+{% block footer %}
+  {% include "includes/regular-footer.njk" %}
+{% endblock %}
 
 {% set pageName="Home" %}
 
@@ -15,61 +18,87 @@
   
 
   <h1 class="govuk-heading-xl">
-      DLA-CHILD Prototype
+      DLA child: supporting Information 
     </h1>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Prototype</th>
-          <th scope="col" class="govuk-table__header">Round</th>
-          <th scope="col" class="govuk-table__header">Changes</th>
-        </tr>
-      </thead>
 
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">Case Manager</th>
-                  <td class="govuk-table__cell">
-                    <a href="/evidence-gathering3/dashboard">Round 3</a><br>
-                    <a href="/evidence-gathering4/cms-view/dashboard">Round 4</a><br>
-                    <a href="/evidence-gathering6/cms-view/dashboard">Round 5</a><br>
-                  </td>
-                         <td class="govuk-table__cell">
-                 <a href="/"></a><br>
-                    <a href="changes/case-manager-4-changes.html">View changes</a><br>
-                    <a href="changes/case-manager-6-changes.html">View changes</a><br>
-                  </td>
-                </tr>
-              </tbody>
-              <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">
-                  <th scope="row" class="govuk-table__header">School</th>
-                  <td class="govuk-table__cell">
-                    <a href="/evidence-gathering2/ref-no">Round 0</a><br>
-                    <a href="/evidence-gathering3/ref-no">Round 1</a><br>
-                    <a href="/evidence-gathering4/schools-view/start">Round 2</a><br>
-                   <a href="/evidence-gathering5/schools-view/checkboxes/start">Round 3: Select multiple options</a> 
-                   <br>
-                   <a href="/evidence-gathering5/schools-view/radio-buttons/start">Round 3: Select one option</a>
-                    <br>
-                   <a href="/evidence-gathering6/schools-view/email">Round 4</a> 
-    <br>
-                   <a href="/evidence-gathering7/schools-view/email">Round 5</a> 
+  <form id="my-form" method="post" novalidate>
 
-                  </td>
+  <div class="govuk-form-group" id="radio-group">
+  <fieldset class="govuk-fieldset" aria-describedby="radio-error">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">Select a prototype </h1>
+    </legend>
+    
+    <p id="radio-error" class="govuk error-message govuk-visually-hidden">
+      <span class="govuk-visually-hidden">Error;</span>Select an option 
+    </p>
 
-                             <td class="govuk-table__cell">
-                    <a href="/"></a><br>
-                    <a href="changes/school-round-1-changes">View changes</a><br>
-                    <a href="changes/school-round-2-changes">View changes</a><br>
-                     <a href="changes/school-round-3-changes">View changes</a><br><br>
-                     <a href="changes/school-round-4-changes">View changes</a><br>
-                     <a href="changes/school-round-5-changes">View changes</a><br>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="opt1" name="goto" type="radio" data-href="evidence-gathering6/cms-view/dashboard">
+        <label class="govuk-label govuk-radios__label" for="opt1">Case Manager </label>
+        <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+          Send a new request to the school with the child's details and view existing cases.
+        </div>
+      </div>
 
-                  </td>
-                </tr>
-              </tbody>
-    </table>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="opt2" name="goto" type="radio" data-href="evidence-gathering7/schools-view/email">
+        <label class="govuk-label govuk-radios__label" for="opt2">
+         Educational Professional
+        </label>
+        <div id="signIn-2-item-hint" class="govuk-hint govuk-radios__hint">
+          View the supporting information email sent to the school and provide supporting information about the child.
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div>
+<button class="govuk-button" type="submit">Continue</button>
+</form>
+
+<!-- Logic for radio routes -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('my-form');
+    const radios = form.querySelectorAll('.govuk-radios__input');
+    const formGroup = document.getElementById('radio-group');
+    const errorMessage = document.getElementById('radio-error');
+
+    let selectedHref = null;
+
+    radios.forEach(radio => {
+      radio.addEventListener('change', () => {
+        selectedHref = radio.dataset.href;
+
+        formGroup.classList.remove('govuk-form-group--error');
+        errorMessage.classList.add('govuk-visually-hidden');
+        radios.forEach(r => r.classList.remove('govuk-input--error'));
+      });
+    });
+
+    form.addEventListener('submit', (e) => {
+      console.log("selected href:", selectedHref);
+      if (!selectedHref) {
+        e.preventDefault();
+
+        formGroup.classList.add('govuk-form-group--error');
+        errorMessage.classList.remove('govuk-visually-hidden');
+        radios.forEach(radio => {
+          radio.classList.add('govuk-input--error');
+        });
+
+        errorMessage.focus();
+        return;
+      }
+
+      e.preventDefault();
+      window.location.href = selectedHref;
+      });
+    });
+  </script>
+
+<br/>
 </div>
 
 

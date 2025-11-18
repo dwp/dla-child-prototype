@@ -1,0 +1,76 @@
+{% extends "layouts/main.html" %}
+
+{% set pageName="Home" %}
+
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{% endblock %}
+ 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  
+
+  <h1 class="govuk-heading-xl">
+     DLA Child: Supporting Information 
+    </h1>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Prototype</th>
+          <th scope="col" class="govuk-table__header">Round</th>
+          <th scope="col" class="govuk-table__header">Changes</th>
+        </tr>
+      </thead>
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">Case Manager</th>
+                  <td class="govuk-table__cell">
+                    <a href="/evidence-gathering3/dashboard">Round 3</a><br>
+                    <a href="/evidence-gathering4/cms-view/dashboard">Round 4</a><br>
+                    <a href="/evidence-gathering6/cms-view/dashboard">Round 5</a><br>
+                  </td>
+                         <td class="govuk-table__cell">
+                 <a href="/"></a><br>
+                    <a href="changes/case-manager-4-changes.html">View changes</a><br>
+                    <a href="changes/case-manager-6-changes.html">View changes</a><br>
+                  </td>
+                </tr>
+              </tbody>
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                  <th scope="row" class="govuk-table__header">School</th>
+                  <td class="govuk-table__cell">
+                    <a href="/evidence-gathering2/ref-no">Round 0</a><br>
+                    <a href="/evidence-gathering3/ref-no">Round 1</a><br>
+                    <a href="/evidence-gathering4/schools-view/start">Round 2</a><br>
+                   <a href="/evidence-gathering5/schools-view/checkboxes/start">Round 3: Select multiple options</a> 
+                   <br>
+                   <a href="/evidence-gathering5/schools-view/radio-buttons/start">Round 3: Select one option</a>
+                    <br>
+                   <a href="/evidence-gathering6/schools-view/email">Round 4</a> 
+    <br>
+                   <a href="/evidence-gathering7/schools-view/email">Round 5</a> 
+
+                  </td>
+
+                             <td class="govuk-table__cell">
+                    <a href="/"></a><br>
+                    <a href="changes/school-round-1-changes">View changes</a><br>
+                    <a href="changes/school-round-2-changes">View changes</a><br>
+                     <a href="changes/school-round-3-changes">View changes</a><br><br>
+                     <a href="changes/school-round-4-changes">View changes</a><br>
+                     <a href="changes/school-round-5-changes">View changes</a><br>
+
+                  </td>
+                </tr>
+              </tbody>
+    </table>
+</div>
+
+
+{% endblock %}
