@@ -1,0 +1,44 @@
+{% macro appModal(params) %}
+    {% set id = params.id or "app-modal" %}
+    {% set isOpen = params.isOpen or false %}
+    {% set title = params.title or "Dialog" %}
+    {% set html = params.html or "" %}
+
+    <div 
+    class="app-modal{% if isOpen %} app-modal--open{% endif %}"
+    id="{{ id }}"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="{{ id }}-title"
+    >
+    <div class="app-modal__overlay" data-app-modal-close></div>
+
+    <div class="app-modal__dialog" role="document">
+        <div class="app-modal__header">
+        <h2 class="govuk-heading-m" id="{{ id }}-title">
+        {{ title | safe }}
+        </h2>
+        </div>
+
+        <div class="app-modal__body">
+        <div class="govuk-warning-text">
+  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+  <strong class="govuk-warning-text__text">
+    <span class="govuk-visually-hidden">Warning</span>
+    You can be fined up to £5,000 if you do not register.
+  </strong>
+</div>
+        {{ html | safe }}
+        </div>
+        <button type="submit"  class="govuk-button" data-module="govuk-button">
+  Continue for 30 minutes and finish providing information
+</button>
+    <div style="text-align: center;">
+<p class="govuk-body">
+  <a href="#" class="govuk-link govuk-link--no-visited-state">End the session now</a>
+</p>
+    </div>
+    </div>
+ </div>
+{% endmacro %}
+

@@ -21,3 +21,43 @@
 .govuk-summary-list__actions {
   width: 0%;
 }
+
+// App model for ref-no-modal
+
+.app-modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+}
+
+.app-modal--open {
+  display: block;
+}
+
+.app-modal__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.app-modal__dialog {
+  position: relative;
+  max-width: 400px;
+  margin: 10vh auto 0 auto;
+  background: #fff;
+  padding: 20px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.app-modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.app-modal__close {
+  border: none;
+  background: none;
+  cursor: pointer;
+}
