@@ -1,4 +1,6 @@
 {% extends "layouts/main.html" %}
+{% from "includes/modal-shorter.njk" import appModal %}
+
 {% block header %}
 {{ super() }}
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
@@ -24,6 +26,7 @@
       </span>
   </p>
 </div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -33,14 +36,37 @@
 
 <form class="form"  method="post">
   <h1 class="govuk-heading-l">
-You deleted your answers
+  Enter the reference number
   </h1>
-
+  <label class="govuk-label" for="more-detail">
+   This is the reference number that we sent by email.
+ </label> <br>
+ <div id="more-detail-hint" class="govuk-hint">
+    For example, ABC1234Z.
+  </div>
+  <div class="govuk-form-group">
+    <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+  </div>
     {{ govukButton({
-      text: "Start again",
-      href: "start"
+      text: "Continue",
+      href: "email-otp"
     }) }}
 </form>
   </div>
 </div>
+
+{{ appModal({
+  id: "example-modal",
+  title: "Your answers are about to be 
+deleted",
+  isOpen: true,
+  html: "
+  <p class='govuk-body'>
+   For your security, we will delete your 
+answers in <strong><strong>15 minutes</strong>.
+  </p>
+  
+  "
+}) }}
+
 {% endblock %}

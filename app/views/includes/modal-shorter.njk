@@ -21,27 +21,20 @@
         </div>
 
         <div class="app-modal__body">
-        <div class="govuk-warning-text">
-  <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
-  <strong class="govuk-warning-text__text">
-    <span class="govuk-visually-hidden">Warning</span>
-    You have 30 minutes to finish providing 
-information.
-  </strong>
-</div>
+  
         {{ html | safe }}
  <form class="form" action="ref-no" method="post">
     <button type="submit"  class="govuk-button" data-module="govuk-button">
-  Continue for 30 minutes and finish providing information
+Continue providing information
 </button>
 </form>
 
 
-    <div style="text-align: center;">
 <p class="govuk-body">
-  <a href="/evidence-gathering7/schools-view/deleted-answers.html" class="govuk-link govuk-link--no-visited-state">End the session now</a>
+  <a href="/evidence-gathering7/schools-view/deleted-answers.html" class="govuk-link govuk-link--no-visited-state">
+  Delete your answers
+  </a>
 </p>
-    </div>
     </div>
  </div>
 {% endmacro %}
