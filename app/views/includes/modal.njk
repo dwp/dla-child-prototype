@@ -25,17 +25,21 @@
   <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
   <strong class="govuk-warning-text__text">
     <span class="govuk-visually-hidden">Warning</span>
-    You can be fined up to £5,000 if you do not register.
+    You have 30 minutes to finish providing 
+information.
   </strong>
 </div>
         {{ html | safe }}
-        </div>
-        <button type="submit"  class="govuk-button" data-module="govuk-button">
+ <form class="form" action="ref-no" method="post">
+    <button type="submit"  class="govuk-button" data-module="govuk-button">
   Continue for 30 minutes and finish providing information
 </button>
+</form>
+
+
     <div style="text-align: center;">
 <p class="govuk-body">
-  <a href="#" class="govuk-link govuk-link--no-visited-state">End the session now</a>
+  <a href="/evidence-gathering7/schools-view/session-ended.html" class="govuk-link govuk-link--no-visited-state">End the session now</a>
 </p>
     </div>
     </div>

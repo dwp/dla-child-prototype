@@ -1,0 +1,58 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "start"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form"  method="post">
+  <h1 class="govuk-heading-l">
+  The session has ended
+  </h1>
+  <p class="govuk-body">
+    To protect your information, there is an 8 hour limit for sessions on this service. 
+    
+  </p>
+   <p class="govuk-body">    
+    Any information you entered has been lost. 
+  </p>
+   <p class="govuk-body">
+Return to the start to use the service again. 
+  </p>
+
+    {{ govukButton({
+      text: "Return to the start",
+      href: "start"
+    }) }}
+</form>
+  </div>
+</div>
+
+{% endblock %}
