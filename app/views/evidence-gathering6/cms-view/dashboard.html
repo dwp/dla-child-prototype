@@ -102,15 +102,11 @@ View and manage supporting information  </h1> <br>
   href: "child-details"
 }) }}
 
-<form method="post" action="/handle-sort-selection-v6">
+<form method="post" action="national-insurance-number">
 <div class="govuk-form-group">
   <label class="govuk-label" for="sort">
-    Search by
+    Search by National Insurance number
   </label>
-  <select class="govuk-select" id="sort" name="sort">
-    <option value="nino" selected>National insurance number</option>
-    <option value="case-reference">Case reference number</option>
-  </select>
 
   <input class="govuk-input govuk-input--width-10" id="width-9" name="width10" type="text">
   
@@ -121,327 +117,23 @@ View and manage supporting information  </h1> <br>
 
 
 </div>
-  <h1 class="govuk-heading-s">Cases you submitted</h1>
-
-
-<table class="govuk-table" data-module="moj-sortable-table">
-<thead class="govuk-table__head">
-<tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Case reference number</th>
-      <th scope="col" class="govuk-table__header">National Insurance number</th>
-      <!-- <th scope="col" class="govuk-table__header">Child name</th> -->
-          
-      <th scope="col" class="govuk-table__header" style="color: #1d70b8;">
-            Child name
-            <svg width="12" height="18" focusable="false" aria-hidden="true" role="img" viewBox="3 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
-<path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor"></path>
-</svg>
-</th>
-      <th scope="col" class="govuk-table__header" style="color: #1d70b8;">
-            Last updated
-            <svg width="12" height="18" focusable="false" aria-hidden="true" role="img" viewBox="3 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
-<path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor"></path>
-</svg>
-</th>
-        <th scope="col" class="govuk-table__header" style="color: #1d70b8;">
-            Expected response date
-            <svg width="12" height="18" focusable="false" aria-hidden="true" role="img" viewBox="3 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M8.1875 9.5L10.9609 3.95703L13.7344 9.5H8.1875Z" fill="currentColor"></path>
-<path d="M13.7344 12.0781L10.9609 17.6211L8.1875 12.0781H13.7344Z" fill="currentColor"></path>
-</svg>
-</th>
-<th scope="col" class="govuk-table__header" aria-sort="none" data-sort-column="status">
-Status
-</th>
-</tr>
-</thead>
-<tbody class="govuk-table__body">
-
-      <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="case-details-child-not-known.html">
-              HDJ9424B
-             </a></td>
-      <td class="govuk-table__cell">JL 34 22 33 D</td>
-      <td class="govuk-table__cell">Evie Scarlett Johnson</td>
-      <td class="govuk-table__cell" data-sort-value="6961">17 Aug 2025</td>
-      <td class="govuk-table__cell"></td>
-         <td class="govuk-table__cell" data-sort-value="1">
-        <strong class="govuk-tag govuk-tag--red" data-status="red">
-          Child not known 
-        </strong>
-      </td>
-    </tr>
-
- <tr class="govuk-table__row">
-       <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="case-details-email-does-not-exist.html">HDJ2123F</a></td>
-      <td class="govuk-table__cell">LJ 34 29 66 C</td>
-      <td class="govuk-table__cell">Oliver Charles Smith</td>
-      <td class="govuk-table__cell" data-sort-value="6961">14 Aug 2025</td>
-      <td class="govuk-table__cell"></td>
-   <td class="govuk-table__cell" data-sort-value="1">
-        <strong class="govuk-tag govuk-tag--red">
-          Email not delivered
-        </strong>
-      </td>
-
-    </tr>
-
-     <tr class="govuk-table__row">
-       <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="case-details-email-not-accepting-messages.html">GSE9312E</a></td>
-      <td class="govuk-table__cell">SJ 52 12 39 C</td>
-      <td class="govuk-table__cell">Jane Henry Johnson</td>
-      <td class="govuk-table__cell" data-sort-value="6961">13 Aug 2025</td>
-      <td class="govuk-table__cell"></td>
-   <td class="govuk-table__cell" data-sort-value="1">
-        <strong class="govuk-tag govuk-tag--red">
-          Email not delivered
-        </strong>
-      </td>
-
-    </tr>
-
-     <tr class="govuk-table__row">
-       <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="case-details-email-technical-failure.html">VAD329A</a></td>
-      <td class="govuk-table__cell">XZ 12 32 19 B</td>
-      <td class="govuk-table__cell">Tim Jones Miller</td>
-      <td class="govuk-table__cell" data-sort-value="6961">08 Aug 2025</td>
-      <td class="govuk-table__cell"></td>
-   <td class="govuk-table__cell" data-sort-value="1">
-        <strong class="govuk-tag govuk-tag--red">
-          Email not delivered
-        </strong>
-      </td>
-
-    </tr>
-
-    <tr class="govuk-table__row">
-
-          <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="case-details">KW8424V</a></td>
-      <td class="govuk-table__cell">ES 47 25 85 B</td>
-      <td class="govuk-table__cell">Amy Hannah Dawson</td>
-      <td class="govuk-table__cell" data-sort-value="6961">12 Aug 2025</td>
-      <td class="govuk-table__cell">26 Aug 2025</td>
-          <td class="govuk-table__cell" data-sort-value="1">
-        <strong class="govuk-tag govuk-tag--red">
-          Response overdue
-        </strong>
-      </td>
-    </tr>
-
-    <tr class="govuk-table__row">
-          <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="case-details-request-declined.html">LEB7435C</a></td>
-      <td class="govuk-table__cell">DT 46 27 58 D</td>
-      <td class="govuk-table__cell">Zara Begum</td>
-      <td class="govuk-table__cell" data-sort-value="6961">22 Jul 2025</td>
-      <td class="govuk-table__cell">10 Sept 2025</td>
-         <td class="govuk-table__cell" data-sort-value="1">
-        <strong class="govuk-tag govuk-tag--red" data-status="red">
-          Request declined
-        </strong>
-      </td>
-    </tr>
-
-    <tr class="govuk-table__row">
-      <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="case-details-response-received.html">VED348Q</a></td>
-      <td class="govuk-table__cell">TX 67 67 23 A</td>
-      <td class="govuk-table__cell">Prisha Amir Singh</td>
-      <td class="govuk-table__cell" data-sort-value="6961">7 Aug 2025</td>
-      <td class="govuk-table__cell"></td>
-        <td class="govuk-table__cell" data-sort-value="2">
-        <strong class="govuk-tag govuk-tag--green" data-status="green">
-          Response received
-        </strong>
-      </td>
-    </tr>
-
-    <tr class="govuk-table__row">
-            <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="#">CVI362B</a></td>
-      <td class="govuk-table__cell">LJ 34 29 66 C</td>
-      <td class="govuk-table__cell">Jack George Cook</td>
-      <td class="govuk-table__cell" data-sort-value="6961">23 Aug 2025</td>
-      <td class="govuk-table__cell">13 Sept 2025</td>
-          <td class="govuk-table__cell" data-sort-value="3">
-        <strong class="govuk-tag govuk-tag--yellow">
-           Reminder sent
-        </strong>
-      </td>
-
-
-    </tr>
-
-  <tr class="govuk-table__row">
-
-    <td class="govuk-table__cell govuk-!-font-weight-bold"> <a href="#">MKO835D</a></td>
-    <td class="govuk-table__cell">XZ 85 89 77 C</td>
-    <td class="govuk-table__cell">Muhammad Abdullah Abadi</td>
-    <td class="govuk-table__cell" data-sort-value="6961">18 Aug 2025</td>
-    <td class="govuk-table__cell">2 Sept 2025</td>
-         <td class="govuk-table__cell" data-sort-value="3">
-        <strong class="govuk-tag govuk-tag--yellow">
-          Request sent
-        </strong>
-      </td>
-
-  </tr>
-
-<tr class="govuk-table__row">
-<td class="govuk-table__cell govuk-!-font-weight-bold">
-<a href="#" class="govuk-link">ASG2803W</a>
-</td>
-<td class="govuk-table__cell">AG 80 21 20 N</td>
-<td class="govuk-table__cell">Ethan Frederick Smith</td>
-<td class="govuk-table__cell">23 Aug 2025</td>
-<td class="govuk-table__cell"></td>
-<td class="govuk-table__cell" data-sort-value="4">
-<strong class="govuk-tag govuk-tag--grey">Request cancelled</strong>
-</td>
-</tr>
-</tbody>
-</table>
-
-
-<nav class="govuk-pagination" aria-label="Pagination">
-  <div class="govuk-pagination__prev">
-    <a class="govuk-link govuk-pagination__link" href="#" rel="prev">
-      <svg class="govuk-pagination__icon govuk-pagination__icon--prev" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m6.5938-0.0078125-6.7266 6.7266 6.7441 6.4062 1.377-1.449-4.1856-3.9768h12.896v-2h-12.984l4.2931-4.293-1.414-1.414z"></path>
-      </svg>
-      <span class="govuk-pagination__link-title ">
-        Previous<span class="govuk-visually-hidden"> page</span>
-      </span>
-    </a>
-  </div>
-  <ul class="govuk-pagination__list">
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 1">
-        1
-      </a>
-    </li>
-    <li class="govuk-pagination__item govuk-pagination__item--current">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 2" aria-current="page">
-        2
-      </a>
-    </li>
-    <li class="govuk-pagination__item">
-      <a class="govuk-link govuk-pagination__link" href="#" aria-label="Page 3">
-        3
-      </a>
-    </li>
-  </ul>
-  <div class="govuk-pagination__next">
-    <a class="govuk-link govuk-pagination__link" href="#" rel="next">
-      <span class="govuk-pagination__link-title">
-        Next<span class="govuk-visually-hidden"> page</span>
-      </span>
-      <svg class="govuk-pagination__icon govuk-pagination__icon--next" xmlns="http://www.w3.org/2000/svg" height="13" width="15" aria-hidden="true" focusable="false" viewBox="0 0 15 13">
-        <path d="m8.107-0.0078125-1.4136 1.414 4.2926 4.293h-12.986v2h12.896l-4.1855 3.9766 1.377 1.4492 6.7441-6.4062-6.7246-6.7266z"></path>
-      </svg>
-    </a>
-  </div>
-</nav>
 
 </div>
 
-<!-- Javascript for Sorting Status -->
-<script>
-  
-class MOJSortableTable {
-constructor(table) {
-this.table = table;
-this.tbody = table.querySelector('tbody');
-this.originalRows = Array.from(this.tbody.querySelectorAll('tr'));
-
-this.init();
-}
-
-init() {
-// Find all sortable headers (those with aria-sort attribute)
-const sortableHeaders = this.table.querySelectorAll('th[aria-sort]');
-
-sortableHeaders.forEach(header => {
-header.addEventListener('click', () => this.handleSort(header));
-});
-}
-
-handleSort(clickedHeader) {
-const currentSort = clickedHeader.getAttribute('aria-sort');
-const sortColumn = clickedHeader.getAttribute('data-sort-column');
-
-// Reset other headers to "none"
-this.table.querySelectorAll('th[aria-sort]').forEach(header => {
-if (header !== clickedHeader) {
-header.setAttribute('aria-sort', 'none');
-}
-});
-
-// Cycle through sort states: ascending -> descending
-let newSort;
-switch (currentSort) {
-case 'none':
-newSort = 'ascending';
-break;
-case 'ascending':
-newSort = 'descending';
-break;
-case 'descending':
-default:
-newSort = 'none';
-break;
-}
-
-clickedHeader.setAttribute('aria-sort', newSort);
-
-if (newSort === 'none') {
-this.restoreOriginalOrder();
-} else {
-this.sortTable(sortColumn, newSort === 'ascending');
-}
-}
-
-sortTable(column, ascending) {
-if (column === 'status') {
-this.sortByDataValue(ascending);
-}
-}
-
-sortByDataValue(ascending) {
-const rows = Array.from(this.tbody.querySelectorAll('tr'));
-
-rows.sort((a, b) => {
-const aValue = parseInt(a.querySelector('[data-sort-value]').getAttribute('data-sort-value'));
-const bValue = parseInt(b.querySelector('[data-sort-value]').getAttribute('data-sort-value'));
-
-return ascending ? aValue - bValue : bValue - aValue;
-});
-
-this.renderRows(rows);
-}
-
-restoreOriginalOrder() {
-this.renderRows(this.originalRows);
-}
-
-renderRows(rows) {
-// Clear current rows
-this.tbody.innerHTML = '';
-
-// Add sorted rows
-rows.forEach(row => {
-this.tbody.appendChild(row.cloneNode(true));
-});
-}
-}
-
-// Initialize all sortable tables when DOM is loaded
-document.addEventListener('DOMContentLoaded', () => {
-const sortableTables = document.querySelectorAll('[data-module="moj-sortable-table"]');
-sortableTables.forEach(table => new MOJSortableTable(table));
-});
-</script>
-
 </body>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 </html>
 
