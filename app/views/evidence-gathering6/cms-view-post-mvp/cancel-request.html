@@ -15,6 +15,7 @@
 }}
 {% endblock %}
 
+
 {% block pageTitle %}
   Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
@@ -30,38 +31,35 @@
       </span>
   </p>
 </div>
-<a class="govuk-back-link" href="national-insurance-number">Back to search results</a>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
 
-        <div class="govuk-grid-row">
-
-            <!-- Main content -->
-              <div class="govuk-grid-column-full">
-
-                <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-27 govuk-!-margin-bottom-2">Amy Hannah Dawson</p>
-              <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-2">Reference number: <span class="govuk-body">KW8424V</span></p>
-
-<span class="govuk-tag govuk-tag--red govuk-!-margin-top-0 govuk-!-margin-bottom-4">
-Response overdue
-</span>
-
-<div class="govuk-button-group">
-   {{ govukButton({
-    text: "Send a reminder",
-    href: "reminder"
-  }) }}
-
-</div>
-
-<dl class="govuk-summary-list govuk-summary-list">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<form class="form"  method="post">
+    <h1 class="govuk-heading-l">
+  Are you sure you want to cancel the request?
+</h1>
+    <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+     Child name
+    </dt>
+    <dd class="govuk-summary-list__value">
+     Amy Hannah Dawson
+    </dd>
+      <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+    </dd>
+  </div>
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       National Insurance number
     </dt>
     <dd class="govuk-summary-list__value">
-      ES 47 25 85 B
+      GK 05 47 14 D
     </dd>
       <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
@@ -83,18 +81,7 @@ Response overdue
       Home postcode
     </dt>
     <dd class="govuk-summary-list__value">
-    NE1 1NE
-    </dd>
-      <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
-    </dd>
-  </div>
- <div class="govuk-summary-list__row">
-    <dt class="govuk-summary-list__key">
-      School name
-    </dt>
-    <dd class="govuk-summary-list__value">
-      Newtown Primary School
+      NE1 1NE
     </dd>
       <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
@@ -103,22 +90,34 @@ Response overdue
 
   <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-      Email address
+      School name
     </dt>
     <dd class="govuk-summary-list__value">
-      <p class="govuk-body">enquiry@newtownprimary.sch.uk</p>
+    Newtown Primary School
     </dd>
-         <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">change-school-email</span></a>
+      <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
     </dd>
   </div>
 
    <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
+     Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+   enquiry@newtownprimary.sch.uk
+    </dd>
+     <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+    </dd>
+  </div>
+
+    <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
      Role 
     </dt>
     <dd class="govuk-summary-list__value">
-      <p class="govuk-body">SENCo</p>
+   SENCo
     </dd>
       <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
@@ -126,33 +125,20 @@ Response overdue
   </div>
 </dl>
 
-<br/>
+{{ govukButton({
+  text: "Yes, cancel this request",
+      href: "case-details-request-cancelled",
+  classes: "govuk-button--warning"
+}) }}
 
-<table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--m">Case history</caption>
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Action</th>
-      <th scope="col" class="govuk-table__header">Completed by</th>
-            <th scope="col" class="govuk-table__header">Date and time</th>
-    </tr>
-  </thead>
-  
-  <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Response overdue</td>
-      <td class="govuk-table__cell"></td>
-            <td class="govuk-table__cell">10 April 2025 at 11:18am</td>
-    </tr>
-         <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Request sent to enquiry@newtownprimary.sch.uk</td>
-      <td class="govuk-table__cell">john.smith@dwp.gov.uk</td>
-            <td class="govuk-table__cell">27 March 2025 at 11:17am</td>
-    </tr>
-  </tbody>
-</table>
+<p class="govuk-body">
+  <a href="case-details.html" class="govuk-link govuk-link--no-visited-state">
+    No, return to case details
+  </a>
+</p>
+      </form>
 
-        </div>
-                </div>
+    </div>
+  </div>
 
 {% endblock %}

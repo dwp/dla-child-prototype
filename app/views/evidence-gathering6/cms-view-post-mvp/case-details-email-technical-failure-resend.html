@@ -30,7 +30,7 @@
       </span>
   </p>
 </div>
-<a class="govuk-back-link" href="national-insurance-number">Back to search results</a>
+<a class="govuk-back-link" href="dashboard">Back to View and manage supporting information</a>
 {% endblock %}
 
 {% block content %}
@@ -38,22 +38,41 @@
         <div class="govuk-grid-row">
 
             <!-- Main content -->
-              <div class="govuk-grid-column-full">
+            <div class="govuk-grid-column-two-thirds">
 
-                <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-27 govuk-!-margin-bottom-2">Amy Hannah Dawson</p>
-              <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-2">Reference number: <span class="govuk-body">KW8424V</span></p>
+                <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+     Email has been resent.
+    </h3>
+  </div>
+</div>
 
-<span class="govuk-tag govuk-tag--red govuk-!-margin-top-0 govuk-!-margin-bottom-4">
-Response overdue
+
+            <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-27 govuk-!-margin-bottom-2">Tim Jones Miller</p>
+              <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-2">Reference number: <span class="govuk-body">VAD329A</span></p>
+
+<span class="govuk-tag govuk-tag--yellow govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+Request sent
 </span>
 
 <div class="govuk-button-group">
-   {{ govukButton({
-    text: "Send a reminder",
-    href: "reminder"
-  }) }}
-
+  {{ govukButton({
+  text: "Cancel request",
+  href: "/evidence-gathering4/cms-view/cancel-request",
+  classes: "govuk-button--secondary"
+}) }}
 </div>
+
+   </div>
+
+          <!-- Main content -->
+         <div class="govuk-grid-column-full">   
 
 <dl class="govuk-summary-list govuk-summary-list">
   <div class="govuk-summary-list__row">
@@ -61,10 +80,10 @@ Response overdue
       National Insurance number
     </dt>
     <dd class="govuk-summary-list__value">
-      ES 47 25 85 B
+    SJ 52 12 39 F
     </dd>
       <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+      <a class="govuk-link"><span class="govuk-visually-hidden"></span></a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -72,10 +91,10 @@ Response overdue
       Date of birth
     </dt>
     <dd class="govuk-summary-list__value">
-      24 March 2020
+       18 Feb 2025
     </dd>
       <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+      <a class="govuk-link"><span class="govuk-visually-hidden"></span></a>
     </dd>
   </div>
   <div class="govuk-summary-list__row">
@@ -83,21 +102,22 @@ Response overdue
       Home postcode
     </dt>
     <dd class="govuk-summary-list__value">
-    NE1 1NE
+      NE1 1NE
     </dd>
       <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+      <a class="govuk-link"><span class="govuk-visually-hidden"></span></a>
     </dd>
   </div>
- <div class="govuk-summary-list__row">
+
+  <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
       School name
     </dt>
     <dd class="govuk-summary-list__value">
       Newtown Primary School
     </dd>
-      <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+    <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">change-school-email</span></a>
     </dd>
   </div>
 
@@ -108,8 +128,8 @@ Response overdue
     <dd class="govuk-summary-list__value">
       <p class="govuk-body">enquiry@newtownprimary.sch.uk</p>
     </dd>
-         <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">change-school-email</span></a>
+     <dd class="govuk-summary-list__actions">
+      <a class="govuk-link"><span class="govuk-visually-hidden"> name</span></a>
     </dd>
   </div>
 
@@ -121,7 +141,7 @@ Response overdue
       <p class="govuk-body">SENCo</p>
     </dd>
       <dd class="govuk-summary-list__actions">
-      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+      <a class="govuk-link"><span class="govuk-visually-hidden"></span></a>
     </dd>
   </div>
 </dl>
@@ -139,10 +159,15 @@ Response overdue
   </thead>
   
   <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-              <td class="govuk-table__cell">Response overdue</td>
+    <tr class="govuk-table__row">
+         <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Request resent to enquiry@newtownprimary.sch.uk</td>
+      <td class="govuk-table__cell">john.smith@dwp.gov.uk</td>
+            <td class="govuk-table__cell">11 April 2025 at 11:18am</td>
+    </tr>
+              <td class="govuk-table__cell">Email not delivered</td>
       <td class="govuk-table__cell"></td>
-            <td class="govuk-table__cell">10 April 2025 at 11:18am</td>
+            <td class="govuk-table__cell">27 March 2025 at 11:27am</td>
     </tr>
          <tr class="govuk-table__row">
               <td class="govuk-table__cell">Request sent to enquiry@newtownprimary.sch.uk</td>
@@ -151,8 +176,7 @@ Response overdue
     </tr>
   </tbody>
 </table>
-
         </div>
-                </div>
-
+        </div>
+        
 {% endblock %}
