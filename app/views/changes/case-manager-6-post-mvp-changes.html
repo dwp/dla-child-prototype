@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+ 
+{{
+        dwpHeader({
+            serviceName: "Request supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: 'dashboard',
+            container: true
+        })
+}}
+{% endblock %}
+
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+ 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">
+      Case Manager Round 5 post mvp changes
+    </h1>
+    <table class="govuk-table">
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                    <p>- Case you submitted included in post MVP on the dashboard screen</p>
+                    <p>- 'Cancel Request' included in post MVP on the case details screen</p>
+
+                  </td>
+               
+                </tr>
+              </tbody>
+       
+    </table>
+</div>
+
+
+{% endblock %}
