@@ -25,7 +25,7 @@
       <strong class="govuk-tag govuk-phase-banner__content__tag">
           Beta
       </strong>
-     <span class="govuk-phase-banner__text">
+      <span class="govuk-phase-banner__text">
         This is a new service. Help us improve it and
           <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
       </span>
@@ -53,12 +53,19 @@
   </div>
 </div>
 
-     <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-27 govuk-!-margin-bottom-2">Amy Hannah Dawson</p>
-              <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-2">Reference number: <span class="govuk-body">KW8424V</span></p>
+  <section class="dwp-quick-reference govuk-!-margin-bottom-0" aria-label="Case information">
+  <dl class="dwp-quick-reference__block">
+    <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+    <dd class="dwp-quick-reference__primary">Amy Hannah Dawson</dd>
+    <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary">Reference number:</dt>
+    <dd class="dwp-quick-reference__secondary">KW8424V</dd>
+  </dl>
+</section>
 
-<span class="govuk-tag govuk-tag--yellow govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+ <span class="govuk-tag govuk-tag--yellow govuk-!-margin-top-0 govuk-!-margin-bottom-4">
 Reminder sent
 </span>
+
 
 <div class="govuk-button-group">
   {{ govukButton({
@@ -73,6 +80,10 @@ Reminder sent
 
             <!-- Main content -->
          <div class="govuk-grid-column-full">        
+
+               <div class="govuk-!-padding-bottom-8"></div>
+
+          <h1 class="govuk-heading-l">Case details</h1>
 
 <dl class="govuk-summary-list govuk-summary-list">
   <div class="govuk-summary-list__row">
