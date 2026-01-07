@@ -1,0 +1,153 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#",
+  navigationClasses: "margin-left-signout",
+  navigation: [
+    {
+      href: "#",
+      text: "Sign out"
+     }
+  ]
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="dashboard">Back</a>
+{% endblock %}
+
+{% block content %}
+        <div class="govuk-grid-row">
+
+            <!-- Main content -->
+            <div class="govuk-grid-column-two-thirds">
+                                      <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+     The request has been cancelled
+    </h3>
+  </div>
+</div>
+
+  <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-27 govuk-!-margin-bottom-2">Amy Hannah Dawson</p>
+              <p class="govuk-body govuk-!-font-weight-bold govuk-!-font-size-19 govuk-!-margin-bottom-2">Reference number: <span class="govuk-body">KW8424V</span></p>
+
+<span class="govuk-tag govuk-tag--grey govuk-!-margin-top-0 govuk-!-margin-bottom-4">
+Request cancelled 
+</span>
+
+<dl class="govuk-summary-list govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      National Insurance number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      LJ 34 29 66 C
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+      24 March 2020
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Home postcode
+    </dt>
+    <dd class="govuk-summary-list__value">
+      NE1 1NE
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      School name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Newtown Primary School
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">enquiry@newtownprimary.sch.uk</p>
+    </dd>
+  </div>
+
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+     Role 
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">SENCo</p>
+    </dd>
+  </div>
+</dl>
+
+<br/>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Case history</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">What happened</th>
+      <th scope="col" class="govuk-table__header">Who was involved</th>
+            <th scope="col" class="govuk-table__header">Date and time</th>
+    </tr>
+  </thead>
+  
+  <tbody class="govuk-table__body">
+         <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Request cancelled</td>
+      <td class="govuk-table__cell">john.smith@dwp.gov.uk</td>
+            <td class="govuk-table__cell">29 Mar 2025 at 2:30pm</td>
+    </tr>
+         <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Response overdue</td>
+      <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">10 April 2025 at 11:18am</td>
+    </tr>
+    <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Request delivered</td>
+      <td class="govuk-table__cell"></td>
+            <td class="govuk-table__cell">27 Mar 2025 at 11:27am</td>
+    </tr>
+         <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Request sent</td>
+      <td class="govuk-table__cell">john.smith@dwp.gov.uk</td>
+            <td class="govuk-table__cell">27 Mar 2025 at 11:17am</td>
+    </tr>
+  </tbody>
+</table>
+
+        </div>
+        
+{% endblock %}

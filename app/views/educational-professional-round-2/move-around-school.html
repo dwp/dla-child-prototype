@@ -1,0 +1,64 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <span class="govuk-caption-l">Walk safety and independently</span>
+<h1 class="govuk-heading-l">
+ Tell us about how they move around at school
+</h1>
+
+<p class="govuk-body">Tell us about things like:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>how they move in specific rooms like classrooms or canteens</li>
+  <li>how they move indoors, between other rooms in the same building</li>
+  <li>how they move outdoors, between buildings</li>
+  <li>any aids or adaptations they may use</li>
+    <li>whether they need more supervision when moving around school     
+    than other children of the same age</li>
+
+
+</ul>
+
+      <form class="form"  method="post">
+    <div class="govuk-form-group">
+  <textarea class="govuk-textarea" id="more-detail" name="moreDetail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+ 
+  {{ govukButton({
+    text: "Continue",
+    href: "level-of-awareness"
+  }) }}
+
+  </form>
+      </div>
+      </div>
+{% endblock %}

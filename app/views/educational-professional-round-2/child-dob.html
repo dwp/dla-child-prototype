@@ -1,0 +1,112 @@
+{% extends "layouts/main.html" %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "#"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+  Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Alpha
+      </strong>
+      <span class="govuk-phase-banner__text">
+          This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+<form class="form"  method="post">
+      <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset" role="group" aria-describedby="dob-hint">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        Confirm their date of birth
+      </h1>
+    </legend> <br>
+    <p class="govuk-body-m">
+      We need to know that you have access to information about them.</p> <br>
+    <div id="dob-hint" class="govuk-hint">
+      For example, 31 3 1980
+    </div>
+    <div class="govuk-date-input" id="dob">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-day" name="dob-day" type="text" autocomplete="bday-day" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="dob-month" name="dob-month" type="text" autocomplete="bday-month" inputmode="numeric">
+        </div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="dob-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="dob-year" name="dob-year" type="text" autocomplete="bday-year" inputmode="numeric">
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</div> <br>
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+    If you do not know their date of birth
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+      <p class="govuk-body">
+    You should contact us if you do not know the child's date of birth.
+        </p>
+     <p class="govuk-body">
+         Telephone: 0800 121 4600 <br>
+         Textphone: 0800 121 4523  
+        </p>
+                 <p class="govuk-body">
+      <a href="#" class="govuk-link">Relay UK</a> (if you cannot hear or speak on the phone): 18001 
+then 0800 121 4600
+        </p>
+                  <p class="govuk-body">
+   British Sign Language (BSL)  <a href="#" class="govuk-link">video relay service</a> if you're on a computer - find out <a href="#" class="govuk-link">how to use the service on mobile or tablet</a><br>Monday to Friday, 9am to 5pm
+        </p>
+      <p class="govuk-body">
+        <a href="https://www.gov.uk/">Find out about call charges</a>
+
+    </p>
+  </div>
+</details>
+  {{ govukButton({
+    text: "Continue",
+    href: "provide-information.html"
+  }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
