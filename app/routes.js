@@ -318,9 +318,9 @@ router.post('/handle-sort-selection', function(request, response) {
 const sort = request.body.sort;
 
 if (sort === 'nino') {
-    response.redirect('/evidence-gathering4/cms-view/national-insurance-number');
+    response.redirect('national-insurance-number');
 } else if (sort === 'case-reference') {
-     response.redirect('evidence-gathering4/cms-view/case-details');
+     response.redirect('case-details');
 }
 })
 
