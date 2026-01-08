@@ -1,0 +1,174 @@
+{% extends "layouts/main.html" %}
+
+{% block footer %}
+  {% include "includes/dwp-footer.njk" %}
+{% endblock %}
+
+{% block header %}
+ 
+{{
+        dwpHeader({
+            serviceName: "Request supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: 'dashboard',
+            container: true
+        })
+}}
+{% endblock %}
+
+{% block pageTitle %}
+  Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Beta
+      </strong>
+        <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and
+          <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="national-insurance-number">Back to search results</a>
+{% endblock %}
+
+{% block content %}
+
+    
+         <div class="govuk-grid-row">
+
+            <!-- Main content -->
+            <div class="govuk-grid-column-two-thirds">
+
+    <!-- <div class="govuk-notification-banner govuk-notification-banner--success" role="alert" aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
+  <div class="govuk-notification-banner__header">
+    <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
+      Success
+    </h2>
+  </div>
+  <div class="govuk-notification-banner__content">
+    <h3 class="govuk-notification-banner__heading">
+      Email address has been changed. Email has been resent.
+    </h3>
+  </div>
+</div> -->
+
+  <section class="dwp-quick-reference govuk-!-margin-bottom-0" aria-label="Case information">
+  <dl class="dwp-quick-reference__block">
+    <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
+    <dd class="dwp-quick-reference__primary">Oliver Charles Smith</dd>
+    <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary">Case reference number:</dt>
+    <dd class="dwp-quick-reference__secondary">FGE8364F</dd>
+       <dd class="dwp-quick-reference__status">
+      <strong class="govuk-tag govuk-tag--yellow">
+Request sent 
+      </strong>
+    </dd>
+  </dl>
+</section>
+
+   </div>
+
+            <!-- Main content -->
+         <div class="govuk-grid-column-full">   
+               <div class="govuk-!-padding-bottom-8"></div>
+
+          <h1 class="govuk-heading-l">Case details</h1>
+
+<dl class="govuk-summary-list govuk-summary-list">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      National Insurance number
+    </dt>
+    <dd class="govuk-summary-list__value">
+     GK 05 47 14 W
+    </dd>
+     <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Date of birth
+    </dt>
+    <dd class="govuk-summary-list__value">
+     18 Feb 2025
+    </dd>
+     <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+    </dd>
+  </div>
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Home postcode
+    </dt>
+    <dd class="govuk-summary-list__value">
+      NE1 1NE
+    </dd>
+     <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+    </dd>
+  </div>
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      School name
+    </dt>
+    <dd class="govuk-summary-list__value">
+      Newtown Primary School
+    </dd>
+     <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+    </dd>
+  </div>
+
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      Email address
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">enquiry@newtownprimary.sch.uk</p>
+    </dd>
+       <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">change-school-email</span></a>
+    </dd>
+  </div>
+
+   <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+     Role 
+    </dt>
+    <dd class="govuk-summary-list__value">
+      <p class="govuk-body">SENCo</p>
+    </dd>
+     <dd class="govuk-summary-list__actions">
+      <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
+    </dd>
+  </div>
+</dl>
+
+<br/>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Case history</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Action</th>
+      <th scope="col" class="govuk-table__header">Completed by</th>
+            <th scope="col" class="govuk-table__header">Date and time</th>
+    </tr>
+  </thead>
+  
+  <tbody class="govuk-table__body">
+         <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Request sent to enquiry@newtownprimary.sch.uk</td>
+      <td class="govuk-table__cell">john.smith@dwp.gov.uk</td>
+            <td class="govuk-table__cell">27 March 2025 at 11:17am</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+                </div>
+        
+{% endblock %}
