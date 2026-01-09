@@ -361,7 +361,7 @@ router.post('/educational-professional-round-3/checkboxes/about-child', function
 })
 
 
-router.post('/educational-professional-round-3radio-buttons/about-child', function(request, response) {
+router.post('/educational-professional-round-3/radio-buttons/about-child', function(request, response) {
 
     var ms = request.session.data['6kno']
     if (ms === "yes"){
@@ -430,7 +430,7 @@ router.post('/educational-professional-round-3/radio-buttons/personal-safety-que
     } 
 })
 
-router.post('/educational-professional-round-3radio-buttons/personal-care-question', function(request, response) {
+router.post('/educational-professional-round-3/radio-buttons/personal-care-question', function(request, response) {
 
     var ms = request.session.data['care']
     if (ms === "yes"){
