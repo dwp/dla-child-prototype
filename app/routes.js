@@ -119,6 +119,9 @@ router.post('/part-1/night-needs/need-to-get-up-2', function(request, response) 
         response.redirect("/end-screen")
     }
 })
+
+// EDUCATIONAL PROFESSIONAL ROUND 0
+
 router.post('/educational-professional-round-0/tendencies', function(request, response) {
 
     var dT = request.session.data['dt']
@@ -182,6 +185,9 @@ router.post('/educational-professional-round-0/file-uploaded', function(request,
         response.redirect("/educational-professional-round-0/your-details")
     }
 })
+
+// EDUCATIONAL PROFESSIONAL ROUND 1
+
 router.post('/educational-professional-round-1/additional-support', function(request, response) {
 
     var as = request.session.data['as']
@@ -297,8 +303,7 @@ router.post('/educational-professional-round-1/child-safely', function(request, 
     }
 })
 
-// Evidence gather 4
-
+// EDUCATIONAL PROFESSIONAL ROUND 2
 
 router.post('/educational-professional-round-2/about-child', function(request, response) {
 
@@ -339,27 +344,12 @@ router.post('/choose-options', function (req, res) {
   res.redirect('/educational-professional-round-3/checkboxes/personal-safety.html');
 });
 
-
-
 router.get('/choose-options', function (req, res) {
   res.render('choose-options');
 });
 
 
-router.post('/educational-professional-round-3/checkboxes/about-child', function(request, response) {
-
-    var ms = request.session.data['live1']
-    if (ms === "yesdirect"){
-        response.redirect("/educational-professional-round-3/checkboxes/child-dob")
-    } 
-        if (ms === "yesbut"){
-        response.redirect("/educational-professional-round-3/checkboxes/response-sent")
-    } 
-    else {
-        response.redirect("/educational-professional-round-3//checkboxes/response-sent")
-    }
-})
-
+// EDUCATIONAL PROFESSIONAL ROUND 3 RADIO BUTTONS
 
 router.post('/educational-professional-round-3/radio-buttons/about-child', function(request, response) {
 
@@ -463,7 +453,21 @@ router.post('/educational-professional-round-3/radio-buttons/sleep-problems-ques
     } 
 })
 
-// CHECKBOX LOGIC
+// EDUCATIONAL PROFESSIONAL ROUND 3 CHECKBOXES
+
+router.post('/educational-professional-round-3/checkboxes/about-child', function(request, response) {
+
+    var ms = request.session.data['live1']
+    if (ms === "yesdirect"){
+        response.redirect("/educational-professional-round-3/checkboxes/child-dob")
+    } 
+        if (ms === "yesbut"){
+        response.redirect("/educational-professional-round-3/checkboxes/response-sent")
+    } 
+    else {
+        response.redirect("/educational-professional-round-3//checkboxes/response-sent")
+    }
+})
 
 // Define page order
 const pageOrder = ['individual-plans', 
@@ -562,7 +566,7 @@ function nextPage(req, res) {
   }
 }
 
-// RADIO BUTTONS evidence gathering 6
+// EDUCATIONAL PROFESSIONAL ROUND 4 
 
 router.get('/choose-options', function (req, res) {
   res.render('choose-options');
@@ -680,8 +684,7 @@ if (sort === 'nino') {
 }
 })
 
-
-// RADIO BUTTONS evidence gathering 7
+// EDUCATIONAL PROFESSIONAL ROUND 5
 
 router.get('/choose-options', function (req, res) {
   res.render('choose-options');
