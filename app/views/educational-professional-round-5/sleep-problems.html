@@ -1,4 +1,7 @@
 {% extends "layouts/main.html" %}
+{% block footer %}
+  {% include "includes/dwp-footer-ep.njk" %}
+{% endblock %}
 {% block header %}
 {{ super() }}
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
