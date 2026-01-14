@@ -25,7 +25,7 @@
       <strong class="govuk-tag govuk-phase-banner__content__tag">
           Beta
       </strong>
-       <span class="govuk-phase-banner__text">
+      <span class="govuk-phase-banner__text">
         This is a new service. Help us improve it and
           <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
       </span>
@@ -39,17 +39,42 @@
 
 </head>
 <body>
-<div class="govuk-width-container">
+<div class="govuk-width-container min-height">
   <h1 class="govuk-heading-l">
-No results for "LJ342966C" </h1> <br>
+Search results 
+ </h1> 
 
-<p class="govuk-body">Check that the National Insurance number you entered is correct.</p>
 
-<p class="govuk-body">
-  <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">
-    Return to View and manage supporting information
-  </a>
-</p>
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      National Insurance number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      GU 11 86 25 D
+    </dd>
+  </div>
+</dl>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Search again",
+  classes: "govuk-button--secondary",
+    href: "dashboard"
+}) }}
+
+  <div class="govuk-summary-list__row">
+    <dd class="govuk-summary-list__value govuk-body-s">
+  There are no matching results.
+    </dd>
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--visible">
+
+
+</dl>
+
 
 </div>
 
