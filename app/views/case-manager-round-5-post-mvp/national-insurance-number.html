@@ -25,7 +25,7 @@
       <strong class="govuk-tag govuk-phase-banner__content__tag">
           Beta
       </strong>
-     <span class="govuk-phase-banner__text">
+      <span class="govuk-phase-banner__text">
         This is a new service. Help us improve it and
           <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
       </span>
@@ -43,6 +43,7 @@
   <h1 class="govuk-heading-l">
 Search results 
  </h1> 
+
 
 <dl class="govuk-summary-list govuk-summary-list--no-border">
   <div class="govuk-summary-list__row">
@@ -63,62 +64,81 @@ Search results
     href: "dashboard"
 }) }}
 
-   <div class="govuk-hint">
+ 
+    <div class="ds_search-results">
+       <div class="ds_search-results__title">
   3 results
       </div>
+  <hr class="ds_search-results__divider">
 
-<hr class="govuk-section-break govuk-section-break--visible">
+    <ol class="ds_search-results__list" data-total="3" start="1">
 
-<dl class="govuk-summary-list govuk-summary-list--no-border govuk-!-margin-bottom-2">
- <ul class="govuk-list">
-  <li class="govuk-body govuk-!-margin-top-4">
-     <div class="govuk-!-margin-bottom-2 govuk-!-font-weight-bold">
-     <a class="govuk-link" href="#" >WAE8362L</a>
-     </div>
-       <div class="govuk-tag govuk-tag--yellow govuk-!-margin-bottom-2">
-   Request sent 
-  </div>
-    <div class="govuk-hint govuk-hint--small">
- Last updated: 18 August 2024
-      </div>
-  </li>
-</ul>
-<hr class="govuk-section-break govuk-section-break--visible">
-<ul class="govuk-list">
-  <li class="govuk-body govuk-!-margin-top-4">
-     <div class="govuk-!-margin-bottom-2 govuk-!-font-weight-bold">
-     <a class="govuk-link" href="#" >QAR8321W</a>
-     </div>
-       <div class="govuk-tag govuk-tag--green govuk-!-margin-bottom-2">
-     Response received
-  </div>
-    <div class="govuk-hint govuk-hint--small">
-Last updated: 12 December 2023
-      </div>
-  </li>
-</ul>
-<hr class="govuk-section-break govuk-section-break--visible">
-<ul class="govuk-list">
-  <li class="govuk-body govuk-!-margin-top-4">
-     <div class="govuk-!-margin-bottom-2 govuk-!-font-weight-bold">
-     <a class="govuk-link" href="#" >BSW3316J</a>
-     </div>
-       <div class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-2">
-      Request cancelled
-  </div>
-    <div class="govuk-hint govuk-hint--small">
-Last updated: 22 November 2021
-      </div>
-  </li>
-</ul>
-  </div>
-</dl>
+  <li class="ds_search-result">
+    <h3 class="ds_search-result__title">
+        <a class="ds_search-result__link govuk-secondary-text-colour" href="#">
+          <span class="govuk-visually-hidden">Case reference number</span>
+          WAE8362L</a>
+    </h3>
+       <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-bottom-2">
+        <span class="govuk-visually-hidden">Case status</span>
+    Request sent 
+  </strong>
+    <dl class="ds_search-result__metadata  ds_metadata  ds_metadata--inline">
+        <div class="ds_metadata__item">
+            <dd class="ds_metadata__value">
+                <span>Last updated:</span>
+             18 August 2024
+            </dd>
+        </div>
+    </dl>
+</li>
 
+  <li class="ds_search-result">
+    <h3 class="ds_search-result__title">
+        <a class="ds_search-result__link govuk-secondary-text-colour" href="#">
+                    <span class="govuk-visually-hidden">Case reference number</span>
 
+          QAR8321W</a>
+    </h3>
+       <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-2">
+                <span class="govuk-visually-hidden">Case status</span>
+
+   Response received
+  </strong>
+    <dl class="ds_search-result__metadata  ds_metadata  ds_metadata--inline">
+        <div class="ds_metadata__item">
+            <dd class="ds_metadata__value">
+                <span>Last updated:</span>
+          12 December 2023
+            </dd>
+        </div>
+    </dl>
+</li>
+
+ <li class="ds_search-result">
+    <h3 class="ds_search-result__title">
+        <a class="ds_search-result__link govuk-secondary-text-colour" href="#">
+                              <span class="govuk-visually-hidden">Case reference number</span>
+
+          BSW3316J</a>
+    </h3>
+       <strong class="govuk-tag govuk-tag--grey govuk-!-margin-bottom-2">
+                        <span class="govuk-visually-hidden">Case status</span>
+   Request cancelled
+  </strong>
+    <dl class="ds_search-result__metadata  ds_metadata  ds_metadata--inline">
+        <div class="ds_metadata__item">
+            <dd class="ds_metadata__value">
+                <span>Last updated:</span>
+          22 November 2021
+            </dd>
+        </div>
+    </dl>
+</li>
+</ol>
 </div>
-
+</div>
 </body>
-
 </html>
 
 
