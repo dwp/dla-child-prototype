@@ -691,17 +691,20 @@ router.get('/choose-options', function (req, res) {
 }); 
 
 router.post('/educational-professional-round-5/about-child', function(request, response) {
-
     var ms = request.session.data['6kno']
+
     if (ms === "yes"){
-        response.redirect("/educational-professional-round-5/child-dob")
+       return response.redirect("/educational-professional-round-5/child-dob")
     } 
-        if (ms === "yesbut"){
-        response.redirect("/educational-professional-round-5/check-answers-child")
+
+    if (ms === "yesbut"){
+       return response.redirect("/educational-professional-round-5/check-answers-child")
     } 
-    else {
-        response.redirect("/educational-professional-round-5/check-answers-no-child")
-    }
+
+    return response.redirect("/educational-professional-round-5/check-answers-no-child")
+    // else {
+    //     response.redirect("/educational-professional-round-5/check-answers-no-child")
+    // }
 })
 
 router.post('/educational-professional-round-5/learning-support-question', function(request, response) {
