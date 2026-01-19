@@ -364,7 +364,8 @@ ol.ds_search-results__list {
     line-height: 1.5;
     margin-bottom: .5rem;
     font-weight: 400;
-    margin-top: 0 !important
+    margin-top: 0 !important;
+    font-family: "GDS Transport", arial, sans-serif;
 }
 
 @media(min-width: 768px) {
@@ -497,12 +498,16 @@ ol.ds_search-results__list {
 }
 
 .ds_metadata__value a {
-    font-weight: 400
+    font-weight: 400;
+    font-family: "GDS Transport", arial, sans-serif;
 }
 
+
+
 .ds_metadata--inline {
-    color: #505A5F;
-    margin-bottom: .5rem
+    color: #505a5f;
+    margin-bottom: .5rem;
+    font-family: "GDS Transport", arial, sans-serif;
 }
 
 .ds_metadata--inline .ds_metadata__item {
@@ -534,7 +539,8 @@ ol.ds_search-results__list {
 }
 
 .ds_metadata--inline .ds_metadata__value {
-    font-weight: 400
+    font-weight: 400;
+    font-family: "GDS Transport", arial, sans-serif;
 }
 
 .ds_link-item__metadata .ds_metadata--inline {

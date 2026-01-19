@@ -12,7 +12,6 @@
 {% block content %}
 
 <div class="govuk-grid-row">
-  
 
   <span class="govuk-caption-xl">DLA child: supporting information </span>
   <h1 class="govuk-heading-xl">
@@ -23,7 +22,7 @@
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Prototype</th>
           <th scope="col" class="govuk-table__header">Round</th>
-          <th scope="col" class="govuk-table__header">Changes</th>
+          <th scope="col" class="govuk-table__header">What changed</th>
         </tr>
       </thead>
 
@@ -31,16 +30,35 @@
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Case Manager</th>
                   <td class="govuk-table__cell">
-                    <a href="/case-manager-round-3/dashboard">Round 3</a><br>
-                    <a href="/case-manager-round-4/dashboard">Round 4</a><br>
-                    <a href="/case-manager-round-5/dashboard">Round 5 (MVP)</a><br>
-                    <a href="/case-manager-round-5-post-mvp/dashboard">Round 5 (Post MVP)</a><br>
+                    <a href="/case-manager-round-3/dashboard">Round 3</a>
+                    <br> <br>
+
+                    <a href="/case-manager-round-4/dashboard">Round 4</a>
+                      <div class="govuk-hint govuk-body-s">
+                 Case details flow added with cases you submitted and search by NINO / Case Reference Number. 
+                  </div>
+                    <br>
+                    <a href="/case-manager-round-5/dashboard">Round 5 (MVP)</a>
+                        <div class="govuk-hint govuk-body-s">
+                  Cancel request and case you submitted removed. Column changes to the case history with the email changed included.  
+                  </div>
+                    <br>
+                    <a href="/case-manager-round-5-post-mvp/dashboard">Round 5 (Post MVP)</a>
+                       <div class="govuk-hint govuk-body-s">
+                  Prepared post MVP changes of the prototype to include cancel request and case you submitted.
+                  </div>
+                    
                   </td>
                          <td class="govuk-table__cell">
-                 <a href="/"></a><br>
-                    <a href="change-log/case-manager-4-changes.html">View changes</a><br>
-                    <a href="change-log/case-manager-6-changes.html">View changes</a><br>
-                    <a href="change-log/case-manager-6-post-mvp-changes.html">View changes</a><br>
+                 <a href="/"></a><br><br>
+                    <a href="change-log/case-manager-4-changes.html">Changes</a>
+
+                    <br>
+                    <br><br><br><br>
+                    
+                    <a href="change-log/case-manager-6-changes.html">Changes</a><br>
+                    <br><br><br>
+                    <a href="change-log/case-manager-6-post-mvp-changes.html">Changes</a><br>
                   </td>
                 </tr>
               </tbody>
@@ -48,26 +66,48 @@
                 <tr class="govuk-table__row">
                   <th scope="row" class="govuk-table__header">Education Professional</th>
                   <td class="govuk-table__cell">
-                    <a href="/educational-professional-round-0/ref-no">Round 0</a><br>
-                    <a href="/educational-professional-round-1/ref-no">Round 1</a><br>
-                    <a href="/educational-professional-round-2/start">Round 2</a><br>
+                    <a href="/educational-professional-round-0/ref-no">Round 0</a><br><br>
+                    <a href="/educational-professional-round-1/ref-no">Round 1</a>
+                             <div class="govuk-hint govuk-body-s">
+                 Name and date of birth removed from the options screen.  
+                  </div>
+                    <br>
+                    
+                    <a href="/educational-professional-round-2/start">Round 2</a>
+                                  <div class="govuk-hint govuk-body-s">
+                 Changed the questions to a checkbox style with upload files removed. 
+                  </div>
+                    <br>
                    <a href="/educational-professional-round-3/checkboxes/start">Round 3: Select multiple options</a> 
                    <br>
                    <a href="/educational-professional-round-3/radio-buttons/start">Round 3: Select one option</a>
+                              <div class="govuk-hint govuk-body-s">
+                 Two version to test, one with users using checkboxes to select which info they’d like and the other using radio buttons yes/no options.
+                  </div>
                     <br>
                    <a href="/educational-professional-round-4/email">Round 4</a> 
-    <br>
+                <div class="govuk-hint govuk-body-s">
+                Added check your answers when the user clicks 'No' on child details.
+                  </div>
+                    <br>
                    <a href="/educational-professional-round-5/email">Round 5 (MVP)</a> 
-
+  <div class="govuk-hint govuk-body-s">
+                 School email address added to check your answers and expiry code changed to 15 minutes. 
+                  </div>
+                    <br>
                   </td>
 
                              <td class="govuk-table__cell">
-                    <a href="/"></a><br>
-                    <a href="change-log/school-round-1-changes">View changes</a><br>
-                    <a href="change-log/school-round-2-changes">View changes</a><br>
-                     <a href="change-log/school-round-3-changes">View changes</a><br><br>
-                     <a href="change-log/school-round-4-changes">View changes</a><br>
-                     <a href="change-log/school-round-5-changes">View changes</a><br>
+                    <a href="/"></a><br><br>
+                    <a href="change-log/school-round-1-changes">Changes</a><br>
+                    <br><br><br>
+                    <a href="change-log/school-round-2-changes">Changes</a><br>
+                     <br><br><br>
+                     <a href="change-log/school-round-3-changes">Changes</a><br><br>
+                      <br><br><br>
+                     <a href="change-log/school-round-4-changes">Changes</a><br>
+                      <br><br>
+                     <a href="change-log/school-round-5-changes">Changes</a><br>
 
                   </td>
                 </tr>
