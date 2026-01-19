@@ -309,14 +309,13 @@ router.post('/educational-professional-round-2/about-child', function(request, r
 
     var ms = request.session.data['kno']
     if (ms === "yes"){
-        response.redirect("/educational-professional-round-2/child-dob")
+        return response.redirect("/educational-professional-round-2/child-dob")
     } 
         if (ms === "yesbut"){
-        response.redirect("/educational-professional-round-2/tell-us-why")
+        return response.redirect("/educational-professional-round-2/tell-us-why")
     } 
-    else {
-        response.redirect("/educational-professional-round-2/do-not-know-this-child")
-    }
+     return response.redirect("/educational-professional-round-2/do-not-know-this-child")
+    
 })
 
 router.post('/handle-sort-selection', function(request, response) {
@@ -355,14 +354,13 @@ router.post('/educational-professional-round-3/radio-buttons/about-child', funct
 
     var ms = request.session.data['6kno']
     if (ms === "yes"){
-        response.redirect("/educational-professional-round-3/radio-buttons/child-dob")
+        return response.redirect("/educational-professional-round-3/radio-buttons/child-dob")
     } 
         if (ms === "yesbut"){
-        response.redirect("/educational-professional-round-3/radio-buttons/response-sent")
+        return response.redirect("/educational-professional-round-3/radio-buttons/response-sent")
     } 
-    else {
-        response.redirect("/educational-professional-round-3/radio-buttons/response-sent")
-    }
+    return response.redirect("/educational-professional-round-3/radio-buttons/response-sent")
+    
 })
 
 router.post('/educational-professional-round-3/radio-buttons/individual-plans-question', function(request, response) {
@@ -459,14 +457,13 @@ router.post('/educational-professional-round-3/checkboxes/about-child', function
 
     var ms = request.session.data['live1']
     if (ms === "yesdirect"){
-        response.redirect("/educational-professional-round-3/checkboxes/child-dob")
+        return response.redirect("/educational-professional-round-3/checkboxes/child-dob")
     } 
         if (ms === "yesbut"){
-        response.redirect("/educational-professional-round-3/checkboxes/response-sent")
+        return response.redirect("/educational-professional-round-3/checkboxes/response-sent")
     } 
-    else {
-        response.redirect("/educational-professional-round-3//checkboxes/response-sent")
-    }
+     return response.redirect("/educational-professional-round-3//checkboxes/response-sent")
+
 })
 
 // Define page order
@@ -576,14 +573,13 @@ router.post('/educational-professional-round-4/about-child', function(request, r
 
     var ms = request.session.data['6kno']
     if (ms === "yes"){
-        response.redirect("/educational-professional-round-4/child-dob")
+        return response.redirect("/educational-professional-round-4/child-dob")
     } 
         if (ms === "yesbut"){
-        response.redirect("/educational-professional-round-4/check-answers-child")
+        return response.redirect("/educational-professional-round-4/check-answers-child")
     } 
-    else {
-        response.redirect("/educational-professional-round-4/check-answers-no-child")
-    }
+    return response.redirect("/educational-professional-round-4/check-answers-no-child")
+    
 })
 
 router.post('/educational-professional-round-4/learning-support-question', function(request, response) {
@@ -702,9 +698,6 @@ router.post('/educational-professional-round-5/about-child', function(request, r
     } 
 
     return response.redirect("/educational-professional-round-5/check-answers-no-child")
-    // else {
-    //     response.redirect("/educational-professional-round-5/check-answers-no-child")
-    // }
 })
 
 router.post('/educational-professional-round-5/learning-support-question', function(request, response) {
