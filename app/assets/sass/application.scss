@@ -18,48 +18,15 @@
   box-shadow: none;
 }
 
-/* Scope to table only */
-[data-module="moj-sortable-table"] {
-
-  /* --- Status header: force single triangle --- */
-  thead th.govuk-table__header[data-sort-column="status"] {
-    position: relative;
-    padding-right: 1rem;        /* room for triangle */
-    color: #1d70b8;               /* clickable affordance */
-    cursor: pointer;
-    user-select: none;
-
-    /* Hide any other arrow sources ONLY on Status */
-    background: none !important;      /* kills background-image arrows */
-    background-image: none !important;
-    &::before { content: none !important; }
-    svg { display: none !important; }  /* hides inline double-chevron */
-
-    /* Draw our single triangle based on aria-sort */
-    &::after {
-      content: "";
-      position: absolute;
-      right: 8px;                     /* tweak to align */
-      top: 50%;
-      transform: translateY(-50%);
-      width: 0;
-      height: 0;
-      border-left: 5px solid transparent;
-      border-right: 5px solid transparent;
-      z-index: 2;                     /* ensure above any background */
-    }
-
-    &[aria-sort="none"]::after,
-    &[aria-sort="ascending"]::after {
-      border-bottom: 7px solid #1d70b8; /* ▲ */
-    }
-
-    &[aria-sort="descending"]::after {
-      border-top: 7px solid #1d70b8;    /* ▼ */
-    }
-  }
-
+// Only show the status svg
+th[data-sort-column="status"] svg {
+  display: none !important;
 }
+
+
+// .govuk-summary-list__actions {
+//   width: 0%;
+// }
 
 // App model for ref-no-modal
 
