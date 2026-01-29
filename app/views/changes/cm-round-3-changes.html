@@ -1,0 +1,45 @@
+{% extends "layouts/main.html" %}
+
+{% block header %}
+ 
+{{
+        dwpHeader({
+            serviceName: "Request supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: 'dashboard',
+            container: true
+        })
+}}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+ 
+
+{% block content %}
+
+<div class="govuk-grid-row">
+  <h1 class="govuk-heading-xl">
+      CM Round 3 changes
+    </h1>
+    <table class="govuk-table">
+
+              <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                    <p>- Date of birth added to the prototype</p>
+                    <p>- Dashboard redesigned</p>
+                  </td>
+               
+                </tr>
+              </tbody>
+       
+    </table>
+</div>
+
+
+{% endblock %}
