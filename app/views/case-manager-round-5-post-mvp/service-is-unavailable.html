@@ -1,20 +1,20 @@
 {% extends "layouts/main.html" %}
+
 {% block footer %}
-  {% include "includes/dwp-footer-ep.njk" %}
-{% endblock %}
-{% block header %}
-{{ super() }}
-{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
- 
-{{ govukServiceNavigation({
-  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
-  serviceUrl: "start"
-}) }}
+  {% include "includes/dwp-footer-cm.njk" %}
 {% endblock %}
 
-{% block pageTitle %}
-   {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
+{% block header %}
+ 
+{{
+        dwpHeader({
+            serviceName: "Request supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: 'dashboard',
+            container: true
+        })
+}}
+{% endblock %} 
+
 
 {% block beforeContent %}
 <div class="govuk-phase-banner">
