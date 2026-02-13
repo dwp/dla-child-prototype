@@ -106,7 +106,7 @@
 </div> 
   {{ govukButton({
     text: "Resend email",
-    href: "case-details-email-not-accepting-messages-sent.html"
+    href: "case-details-email-technical-failure-resend"
   }) }}
 
       </form>
