@@ -26,7 +26,7 @@
       <strong class="govuk-tag govuk-phase-banner__content__tag">
           Beta
       </strong>
-      <span class="govuk-phase-banner__text">
+   <span class="govuk-phase-banner__text">
         This is a new service. Help us improve it and
           <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
       </span>
@@ -43,7 +43,7 @@
       <div class="govuk-form-group">
    
     <h1 class="govuk-heading-l">
-   Check the details and resend email
+   Check the details and resend the email
     </h1> 
 
 <dl class="govuk-summary-list">
@@ -52,9 +52,9 @@
     Child name
     </dt>
     <dd class="govuk-summary-list__value">
-     Oliver Charles Smith
+     Jane Henry Johnson
     </dd>
-   <dd class="govuk-summary-list__actions">
+     <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
     </dd>
   </div>
@@ -65,7 +65,7 @@
     <dd class="govuk-summary-list__value">
       Newtown Primary School
     </dd>
-     <dd class="govuk-summary-list__actions">
+       <dd class="govuk-summary-list__actions">
       <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
     </dd>
   </div>
@@ -79,14 +79,15 @@
     <dd class="govuk-summary-list__actions">
       <ul class="govuk-summary-list__actions-list">
         <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="change-school-email">Change<span class="govuk-visually-hidden"> contact details</span></a>
+          <a class="govuk-link" href="change-school-email-not-accepting">Change<span class="govuk-visually-hidden"> contact details</span></a>
         </li>
       </ul>
     </dd>
   </div>
+
     <div class="govuk-summary-list__row">
     <dt class="govuk-summary-list__key">
-    Date you would like a response by
+      Date you would like a response by
     </dt>
     <dd class="govuk-summary-list__value">
       <p class="govuk-body">12 March 2026</p>
@@ -94,17 +95,18 @@
     <dd class="govuk-summary-list__actions">
       <ul class="govuk-summary-list__actions-list">
         <li class="govuk-summary-list__actions-list-item">
-          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden">response by</span></a>
+          <a class="govuk-link" href="#">Change<span class="govuk-visually-hidden"> contact details</span></a>
         </li>
       </ul>
     </dd>
   </div>
+  
 </dl>
 
 </div> 
   {{ govukButton({
     text: "Confirm and resend email",
-    href: "case-details-request-sent.html"
+    href: "case-details-email-technical-failure-resend"
   }) }}
 
       </form>
