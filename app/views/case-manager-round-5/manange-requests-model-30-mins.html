@@ -1,0 +1,80 @@
+{% extends "layouts/main.html" %}
+{% block footer %}
+  {% include "includes/dwp-footer-ep.njk" %}
+{% endblock %}
+{% from "includes/modal-shorter-cm.njk" import appModal %}
+
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "start"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Beta
+      </strong>
+        <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and
+          <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
+      </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+<body>
+<div class="govuk-width-container">
+  <h1 class="govuk-heading-l">
+Manage requests</h1> 
+{{ govukButton({
+  text: "Send new request",
+  href: "child-details"
+}) }}
+
+   
+<form class="min-height" method="post" action="national-insurance-number">
+<br>
+
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">
+Find an existing case
+</h2> 
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    National Insurance number
+  </label>
+
+  <input class="govuk-input govuk-input--width-10" id="width-9" name="width10" type="text">
+  
+  <button class="govuk-button govuk-button--secondary" type="submit">
+    Search 
+  </button>
+  </form>
+</div>
+</body>
+
+{{ appModal({
+  id: "example-modal",
+  title: "You are about to be signed out",
+  isOpen: true,
+  html: "
+  <p class='govuk-body'>
+   For your security, we will sign you out<br/>
+in <strong><strong>5 minutes</strong>.
+  </p>
+  
+  "
+}) }}
+
+{% endblock %}
