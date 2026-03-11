@@ -1,20 +1,13 @@
+
 {
-  "scripts": {
-    "dev": "govuk-prototype-kit dev",
-    "serve": "govuk-prototype-kit serve",
-    "start": "govuk-prototype-kit start",
-    "heroku-prebuild": "rm -rf package-lock.json"
-  },
   "dependencies": {
-    "@dwp/dwp-frontend": "^3.4.0",
-    "@govuk-prototype-kit/common-templates": "2.0.1",
-    "@ministryofjustice/frontend": "^8.0.0",
-    "audit": "^0.0.6",
-    "govuk-frontend": "^5.10.0",
-    "govuk-prototype-kit": "^13.18.1",
-    "qs": "^6.14.1"
+    "govuk-prototype-kit": "13.19.1",
+    "govuk-frontend": "5.11.2",
+    "@ministryofjustice/frontend": "7.0.0",
+    "audit": "0.0.6",
+    "qs": "6.14.1"
   },
   "devDependencies": {
-    "nodemon": "^3.1.9"
+    "nodemon": "3.0.3"
   }
 }
