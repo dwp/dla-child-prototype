@@ -1,0 +1,79 @@
+{% extends "layouts/main.html" %}
+
+{% block footer %}
+  {% include "includes/dwp-footer-cm.njk" %}
+{% endblock %}
+
+{% block header %}
+ 
+{{
+        dwpHeader({
+            serviceName: "Request supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: 'dashboard',
+            container: true
+        })
+}}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and
+          <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
+      </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="dashboard">Back</a>
+{% endblock %}
+
+{% block content %}
+
+</head>
+<body>
+<div class="govuk-width-container">
+  <h1 class="govuk-heading-l">
+Search results 
+ </h1> 
+
+
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      National Insurance number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      QQ 12 34 56 D
+    </dd>
+  </div>
+</dl>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Search again",
+  classes: "govuk-button--secondary",
+    href: "dashboard"
+}) }}
+
+ 
+    <div class="ds_search-results">
+       <div class="ds_search-results__title">
+  There are no matching results. 
+      </div>
+  <hr class="ds_search-results__divider">
+</div>
+</div>
+</body>
+</html>
+
+
+{% endblock %}

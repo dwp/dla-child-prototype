@@ -1,0 +1,146 @@
+{% extends "layouts/main.html" %}
+
+{% block footer %}
+  {% include "includes/dwp-footer-cm.njk" %}
+{% endblock %}
+
+{% block header %}
+ 
+{{
+        dwpHeader({
+            serviceName: "Request supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: 'dashboard',
+            container: true
+        })
+}}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Beta
+      </strong>
+      <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and
+          <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
+      </span>
+  </p>
+</div>
+
+<a class="govuk-back-link" href="dashboard">Back</a>
+{% endblock %}
+
+{% block content %}
+
+</head>
+<body>
+<div class="govuk-width-container">
+  <h1 class="govuk-heading-l">
+Search results 
+ </h1> 
+
+
+<dl class="govuk-summary-list govuk-summary-list--no-border">
+  <div class="govuk-summary-list__row">
+    <dt class="govuk-summary-list__key">
+      National Insurance number
+    </dt>
+    <dd class="govuk-summary-list__value">
+      QQ 12 34 56 D
+    </dd>
+  </div>
+</dl>
+
+{% from "govuk/components/button/macro.njk" import govukButton %}
+
+{{ govukButton({
+  text: "Search again",
+  classes: "govuk-button--secondary",
+    href: "dashboard"
+}) }}
+
+ 
+    <div class="ds_search-results">
+       <div class="ds_search-results__title">
+  3 results
+      </div>
+  <hr class="ds_search-results__divider">
+
+    <ol class="ds_search-results__list" data-total="3" start="1">
+    <li class="ds_search-result">
+    <h3 class="ds_search-result__title">
+        <a class="ds_search-result__link govuk-secondary-text-colour" href="case-details">
+        <span class="govuk-visually-hidden">Case reference number</span>
+          KW8424V</a>
+    </h3>
+    <strong class="govuk-tag govuk-tag--red govuk-!-margin-bottom-2">
+    <span class="govuk-visually-hidden">Status</span>
+   Response overdue
+  </strong>
+    <dl class="ds_search-result__metadata  ds_metadata  ds_metadata--inline">
+        <div class="ds_metadata__item">
+            <dd class="ds_metadata__value">
+              <span>Last updated:</span>
+             10 April 2025
+            </dd>
+        </div>
+    </dl>
+</li>
+
+  <li class="ds_search-result">
+    <h3 class="ds_search-result__title">
+        <a class="ds_search-result__link govuk-secondary-text-colour" href="#">
+                    <span class="govuk-visually-hidden">Case reference number</span>
+
+          QAR8321W</a>
+    </h3>
+   <strong class="govuk-tag govuk-tag--green govuk-!-margin-bottom-2">
+   <span class="govuk-visually-hidden">Status</span>
+
+   Response received
+  </strong>
+    <dl class="ds_search-result__metadata  ds_metadata  ds_metadata--inline">
+        <div class="ds_metadata__item">
+        <dd class="ds_metadata__value">
+        <span>Last updated:</span>
+          12 December 2023
+            </dd>
+        </div>
+    </dl>
+</li>
+
+  <li class="ds_search-result">
+    <h3 class="ds_search-result__title">
+        <a class="ds_search-result__link govuk-secondary-text-colour" href="#">
+          <span class="govuk-visually-hidden">Case reference number</span>
+          WAE8362L</a>
+    </h3>
+       <strong class="govuk-tag govuk-tag--yellow govuk-!-margin-bottom-2">
+        <span class="govuk-visually-hidden">Status</span>
+    Request sent 
+  </strong>
+    <dl class="ds_search-result__metadata  ds_metadata  ds_metadata--inline">
+        <div class="ds_metadata__item">
+            <dd class="ds_metadata__value">
+                <span>Last updated:</span>
+             18 August 2024
+            </dd>
+        </div>
+    </dl>
+</li>
+
+
+
+</ol>
+</div>
+</div>
+</body>
+</html>
+
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "layouts/main.html" %}
+{% block footer %}
+  {% include "includes/dwp-footer-ep.njk" %}
+{% endblock %}
+{% block header %}
+{{ super() }}
+{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
+ 
+{{ govukServiceNavigation({
+  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+  serviceUrl: "start"
+}) }}
+{% endblock %}
+
+{% block pageTitle %}
+   {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Beta
+      </strong>
+         <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and
+          <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
+      </span>
+  </p>
+</div>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<form class="form"  method="post">
+  <h1 class="govuk-heading-l">
+  We no longer need a response to this request
+  </h1>
+  <p class="govuk-body">This could be because we:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>have already received the information we need</li>
+  <li>cancelled the request for another reason</li>
+</ul>
+  <p class="govuk-body">
+You do not need to do anything. We may contact you again if we need further information.
+  </p>
+</form>
+  </div>
+</div>
+{% endblock %}
