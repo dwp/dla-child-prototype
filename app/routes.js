@@ -700,6 +700,22 @@ router.post('/educational-professional-round-5/about-child', function(request, r
     return response.redirect("/educational-professional-round-5/check-answers-no-child")
 })
 
+// Northern Ireland 
+
+router.post('/educational-professional-round-5-ni/about-child', function(request, response) {
+    var ms = request.session.data['6kno-ni']
+
+    if (ms === "yes"){
+       return response.redirect("/educational-professional-round-5-ni/child-dob")
+    } 
+
+    if (ms === "yesbut"){
+       return response.redirect("/educational-professional-round-5-ni/check-answers-child")
+    } 
+
+    return response.redirect("/educational-professional-round-5-ni/check-answers-no-child")
+})
+
 router.post('/educational-professional-round-5/learning-support-question', function(request, response) {
 
     var ms = request.session.data['support']
@@ -708,6 +724,19 @@ router.post('/educational-professional-round-5/learning-support-question', funct
     } 
         if (ms === "no"){
         response.redirect("/educational-professional-round-5/behaviour-question")
+    } 
+})
+
+// Northern Ireland 
+
+router.post('/educational-professional-round-5-ni/learning-support-question', function(request, response) {
+
+    var ms = request.session.data['support-ni']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-5-ni/additional-learning-support")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-5-ni/behaviour-question")
     } 
 })
 
@@ -722,6 +751,19 @@ router.post('/educational-professional-round-5/behaviour-question', function(req
     } 
 })
 
+// Northern Ireland 
+
+router.post('/educational-professional-round-5-ni/behaviour-question', function(request, response) {
+
+    var ms = request.session.data['behaviour-ni']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-5-ni/behaviour-in-school")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-5-ni/move-around-question")
+    } 
+})
+
 router.post('/educational-professional-round-5/move-around-question', function(request, response) {
 
     var ms = request.session.data['move']
@@ -730,6 +772,19 @@ router.post('/educational-professional-round-5/move-around-question', function(r
     } 
         if (ms === "no"){
         response.redirect("/educational-professional-round-5/personal-safety-question")
+    } 
+})
+
+// Northern Ireland 
+
+router.post('/educational-professional-round-5-ni/move-around-question', function(request, response) {
+
+    var ms = request.session.data['move-ni']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-5-ni/move-around-school")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-5-ni/personal-safety-question")
     } 
 })
 
@@ -744,6 +799,19 @@ router.post('/educational-professional-round-5/personal-safety-question', functi
     } 
 })
 
+// Northern Ireland 
+
+router.post('/educational-professional-round-5-ni/personal-safety-question', function(request, response) {
+
+    var ms = request.session.data['safety-ni']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-5-ni/personal-safety")  
+    } 
+        if (ms === "no"){ 
+        response.redirect("/educational-professional-round-5-ni/personal-care-question")
+    } 
+})
+
 router.post('/educational-professional-round-5/personal-care-question', function(request, response) {
 
     var ms = request.session.data['care']
@@ -755,6 +823,21 @@ router.post('/educational-professional-round-5/personal-care-question', function
     } 
 })
 
+// Northern Ireland 
+
+
+router.post('/educational-professional-round-5-ni/personal-care-question', function(request, response) {
+
+    var ms = request.session.data['care-ni']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-5-ni/personal-care") 
+    } 
+        if (ms === "no"){ 
+        response.redirect("/educational-professional-round-5-ni/therapy-or-medication-question")
+    } 
+})
+
+
 router.post('/educational-professional-round-5/therapy-or-medication-question', function(request, response) {
 
     var ms = request.session.data['therapy']
@@ -763,6 +846,19 @@ router.post('/educational-professional-round-5/therapy-or-medication-question', 
     } 
         if (ms === "no"){
         response.redirect("/educational-professional-round-5/sleep-problems-question")
+    } 
+})
+
+// Northern Ireland 
+
+router.post('/educational-professional-round-5-ni/therapy-or-medication-question', function(request, response) {
+
+    var ms = request.session.data['therapy-ni']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-5-ni/therapy-or-medication")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-5-ni/sleep-problems-question")
     } 
 })
 
@@ -777,6 +873,19 @@ router.post('/educational-professional-round-5/sleep-problems-question', functio
     } 
 })
 
+// Northern Ireland 
+
+router.post('/educational-professional-round-5-ni/sleep-problems-question', function(request, response) {
+
+    var ms = request.session.data['sleep-ni']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-5-ni/sleep-problems")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-5-ni/individual-plans-question")
+    } 
+})
+
 router.post('/educational-professional-round-5/individual-plans-question', function(request, response) {
 
     var ms = request.session.data['plan']
@@ -785,6 +894,19 @@ router.post('/educational-professional-round-5/individual-plans-question', funct
     } 
         if (ms === "no"){
         response.redirect("/educational-professional-round-5/check-answers")
+    } 
+})
+
+// Northern Ireland 
+
+router.post('/educational-professional-round-5-ni/individual-plans-question', function(request, response) {
+
+    var ms = request.session.data['plan-ni']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-5-ni/individual-plans")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-5-ni/check-answers")
     } 
 })
 
