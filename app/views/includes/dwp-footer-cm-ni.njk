@@ -1,0 +1,24 @@
+
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
+
+{{
+        dwpFooter({
+            meta: {
+                visuallyHiddenTitle: "About this website",
+                items: [
+                {
+                    href: "",
+                    text: "Accessibility statement"
+                },
+                {
+                    href: "https://intranet.dwp.gov.uk/page/dwp-employee-privacy-notice",
+                    text: "Privacy"
+                },
+                {
+                    href: "/manage-prototype/clear-data",
+                    text: "Clear data"
+                }
+                ]
+            }
+        }) 
+}}
