@@ -1,4 +1,4 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/agent.html" %}
 {% block footer %}
   {% include "includes/regular-footer.njk" %}
 {% endblock %}
@@ -55,6 +55,19 @@
 </div>
 <button class="govuk-button" type="submit">Continue</button>
 </form>
+
+<details class="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Quick links
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+            <p><a href="/page-not-found-ep.html" class="govuk-link">Page not found (EP)</a></p>
+            <p><a href="/page-not-found.html" class="govuk-link">Page not found (CM)</a></p>
+            <p><a href="/prototype-rounds.html" class="govuk-link">Rounds</a></p>
+  </div>
+</details>
 
 <!-- Logic for radio routes -->
 <script>

@@ -1,0 +1,143 @@
+{% extends "layouts/main.html" %}
+
+{% block footer %}
+  {% include "includes/dwp-footer-cm.njk" %}
+{% endblock %}
+
+{% block header %}
+ 
+{{
+        dwpHeader({
+            serviceName: "Request supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: 'dashboard',
+            container: true
+        })
+}}
+{% endblock %}
+
+{% block beforeContent %}
+<div class="govuk-phase-banner">
+  <p class="govuk-phase-banner__content">
+      <strong class="govuk-tag govuk-phase-banner__content__tag">
+          Beta
+      </strong>
+        <span class="govuk-phase-banner__text">
+        This is a new service. Help us improve it and
+          <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
+      </span>
+  </p>
+</div>
+<a class="govuk-back-link" href="javascript:history.back()">Back</a>
+{% endblock %}
+
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">
+        Accessibility statement for Request supporting information for Disability Living Allowance (DLA) for children
+      </h1>
+
+      <p class="govuk-body">This accessibility statement applies to Request supporting information for Disability Living Allowance (DLA) for children.</p>
+
+      <p> This service is run by the Department for Work and Pensions. We want as many people as possible to be able to use this service. For example, that means you should be able to:</p>
+         <ul class="govuk-list govuk-list--bullet">
+            <li>change colours, contrast levels and fonts using browser or device settings</li>
+            <li>zoom in up to 400% without the text spilling off the screen</li>
+            <li>navigate all of the website using a keyboard or speech recognition software</li>
+            <li>listen to all of the website using a screen reader (including the most recent versions of JAWS, NVDA and VoiceOver)</li>
+          </ul>
+
+      <p class="govuk-body">We’ve also made the service text as simple as possible to understand.</p>
+      <p class="govuk-body"><a href="https://mcmw.abilitynet.org.uk/" class="govuk-link">AbilityNet</a> has advice on making your device easier to use if you have a disability.</p>
+
+
+      <h2 class="govuk-heading-m">
+        How accessible this website is
+      </h2>
+          <p>
+            This website is fully accessible when accessed from a desktop or laptop computer. However, we know one section is not accessible when accessed from a mobile device. This is described in the ‘non-accessible content’ section of this statement. 
+          </p>
+
+      <h2 class="govuk-heading-m">
+        Feedback and contact information
+      </h2>
+
+          <p>
+            If you experience any accessibility issues while using this site, please raise an incident on <a href="https://dwp.service-now.com/place" class="govuk-link">DWP Place</a>. You can raise an incident yourself or ask a colleague to do it for you. We will do our best to fix the problem, or to provide an alternative solution for you.
+          </p>
+
+      <h2 class="govuk-heading-m">
+        Enforcement procedure
+      </h2>
+
+          <p>
+            The Equality and Human Rights Commission (EHRC) is responsible for enforcing the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018 (the ‘accessibility regulations’).
+          </p>
+          <p>
+            If you’re not happy with how we respond to your complaint, contact the <a href="https://www.equalityadvisoryservice.com/" class="govuk-link">Equality Advisory and Support Service (EASS)</a>.
+          </p> 
+
+      <h2 class="govuk-heading-m">
+        Technical information about this website’s accessibility
+      </h2>
+
+          <p>
+            The Department for Work and Pensions is committed to making its website accessible, in accordance with the Public Sector Bodies (Websites and Mobile Applications) (No. 2) Accessibility Regulations 2018.
+          </p>
+
+      <h2 class="govuk-heading-m">
+        Compliance status
+      </h2>
+
+          <p>
+            The website has been tested against the Web Content Accessibility Guidelines (WCAG) 2.2 AA standard.
+          </p>
+
+          <p>
+            This website is partially compliant with the Web Content Accessibility Guidelines version 2.2 AA standard, due to the non-compliance listed below.
+          </p>
+
+      <h2 class="govuk-heading-m">
+        Non-accessible content
+      </h2>
+
+          <p>
+            The content listed below is non-accessible for the following reason:
+          </p>
+                <ul class="govuk-list">
+                  <li>
+                    (a) &nbsp; non-compliance with the accessibility regulations
+                  </li>
+                </ul>
+          <p>
+            On the case details page, some content in the case history section is obscured when displayed at a width of 320 CSS pixels on a mobile device. This fails WCAG success criterion 1.4.10 reflow. To view the content on this page, please access it from a desktop or laptop computer.
+          </p>
+          <p>
+            We aim to fix this by October 2026.
+          </p>
+
+          <h2 class="govuk-heading-m">
+             Preparation of this accessibility statement
+          </h2>
+
+          <p>
+            This statement was prepared on 25 March 2026.
+          </p>
+
+          <p>
+            This website was last tested on 5 March 2026 against the WCAG 2.2 AA standard.
+          </p>
+
+           <p>
+            The test was carried out internally by the quality assurance engineers on the service team. Testing was carried out using a combination of automated and manual testing, including assistive technologies.
+          </p>
+
+           <p>
+            We used a sampling approach, selecting pages which were visually or operationally different to one another. The sample was chosen to cover as many different components and design patterns as possible.
+          </p>
+    </div>
+  </div>
+{% endblock %}

@@ -4,7 +4,18 @@ https://prototype-kit.service.gov.uk/docs/how-to-use-layouts
 #}
 
 {% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
-{% set govukRebrand = true %}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
+
+{% block header %}
+    {{
+        dwpHeader({
+            serviceName: "Request supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: '/',
+            container: true
+        })
+    }}
+{% endblock %}
 
 {% block footer %}
       {{ govukFooter({
