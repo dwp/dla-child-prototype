@@ -2,7 +2,6 @@
 {% block footer %}
   {% include "includes/dwp-footer-ep.njk" %}
 {% endblock %}
-
 {% block header %}
 {{ super() }}
 {% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
@@ -17,8 +16,6 @@
    {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-
-
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
@@ -31,40 +28,25 @@
       </span>
   </p>
 </div>
-
-{% block beforeContent %}
-<div class="govuk-phase-banner">
-  <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-          Beta
-      </strong>
-        <span class="govuk-phase-banner__text">
-        This is a new service. Help us improve it and
-          <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
-      </span>
-  </p>
-</div>
-
-
-
+{% endblock %}
 
 {% block content %}
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds-from-desktop">
-
-      <h1 class="govuk-heading-xl">
-        Page not found
-      </h1>
-
-      <p class="govuk-body">If you typed the web address, check it is correct.
-      </p>
-
-      <p class="govuk-body">If you pasted the web address, check you copied the entire address.
-      </p>
-
-      <p class="govuk-body">If the web address is correct or you selected a link or button, raise an incident on <a href="https://dwp.service-now.com/place" class="govuk-link">DWP Place</a> to let us know what went wrong.
-      </p>
-
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">Page not found</h1>
+        <p class="govuk-body">
+          If you typed the web address, check it is correct.
+        </p>
+        <p class="govuk-body">
+          If you pasted the web address, check you copied the entire address.
+        </p>
+        <p class="govuk-body">
+          If the web address is correct or you selected a link or button, use the <a href="https://forms.office.com/e/fGn6Jvbe9B" class="govuk-link">feedback link</a> to let us know what went wrong.
+        </p>
+      </div>
     </div>
-  </div>
+  </main>
+</div>
 {% endblock %}
