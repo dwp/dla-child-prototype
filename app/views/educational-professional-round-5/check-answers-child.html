@@ -33,7 +33,6 @@
 {% endblock %}
 
 {% block content %}
-
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper " id="main-content" role="main">
     <div class="govuk-grid-row"> 
@@ -42,21 +41,20 @@
         
                   <form method="post" action="/submit-application" id="main-form">
         <h1 class="govuk-heading-l">Check your answers before sending your response to our request</h1>
-      <br>
+        <br>
       
         <dl class="govuk-summary-list govuk-!-margin-bottom-9 govuk-summary-list--no-border" style="margin: 0 !important; padding: 0 !important; width: auto !important; min-width: fit-content !important">
                            <div class="govuk-summary-list__row">
-            <dt class="govuk-summary-list__key">
-          Work email address
-            </dt>
-            <dd class="govuk-summary-list__value">
+                                <dt class="govuk-summary-list__key">
+                              Work email address
+                                </dt>
+                                <dd class="govuk-summary-list__value">
                             <p class="govuk-body">
                              headteacher@school.uk
                             </p>
                               <br>
             </dd>
-             
-          </div>
+      </div>
 
                   <!-- Line split -->
          <div class="govuk-section-break govuk-section-break--visible govuk-section-break--s"></div>
@@ -80,7 +78,7 @@
             </dd>
           </div>
 
-                    <div class="govuk-summary-list__row">
+          <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
            Role
             </dt>
@@ -94,7 +92,7 @@
             </dd>
           </div>
 
-                        <div class="govuk-summary-list__row">
+          <div class="govuk-summary-list__row">
             <dt class="govuk-summary-list__key">
            UK phone number
             </dt>
@@ -113,30 +111,30 @@
                     <br/>
 
           <h2 class="govuk-heading-m"
-style="
-margin-top: 40px;
-"> Child details
+          style="
+          margin-top: 40px;
+          "> Child details
           </h2>
 
           <div class="govuk-summary-list__row" style="width: 0% !important;">
             <dt class="govuk-summary-list__key">
-           Do you know this child?
+              Do you know this child?
             <div id="authentication-code-hint" class="govuk-hint">
- Evie Scarlett Johnson  </div>
-            </dt>
-            <dd class="govuk-summary-list__value">
-          I know them but I cannot provide information about them
-            </dd>
-            <dd class="govuk-summary-list__actions" style="width: 0% !important;">
-              <a class="govuk-link" href="about-child.html">Change<span class="govuk-visually-hidden">about child</span></a>
-            </dd>
+              Evie Scarlett Johnson  
+            </div>
+              </dt>
+              <dd class="govuk-summary-list__value">
+            I know them but I cannot provide information about them
+              </dd>
+              <dd class="govuk-summary-list__actions" style="width: 0% !important;">
+                <a class="govuk-link" href="about-child.html">Change<span class="govuk-visually-hidden">about child</span></a>
+              </dd>
           </div>
-           <div class="govuk-section-break govuk-section-break--visible govuk-section-break--m"></div>
+            <div class="govuk-section-break govuk-section-break--visible govuk-section-break--m"></div>
 
         </dl>
-  
 
-        <!-- Print options -->
+  <!-- Print options -->
   <h2 class="govuk-heading-m">Download your answers</h2>
   <p class="govuk-body">If you do not select this, you will not be able to access your answers again.</p>
 
@@ -173,10 +171,9 @@ margin-top: 40px;
   </main>
 </div>
 
-<!-- Trigger print -->
- 
 
- <!-- 
+
+<!-- Trigger print -->
 <script>
     document.getElementById('main-form').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -199,16 +196,13 @@ margin-top: 40px;
       const content = document.documentElement.outerHTML;
       const blob = new Blob([content], { type: 'text/html' });
       const link = document.createElement('a');
-      link.href = URL.createObjectURL(blob);
-      link.download = 'my-answers-' + new Date().toISOString().split('T')[0] + '.html';
+     /* link.href = URL.createObjectURL(blob);
+      link.download = 'my-answers-' + new Date().toISOString().split('T')[0] + '.html'; */
       document.body.appendChild(link);
       link.click();
       document.body.removeChild(link);
       URL.revokeObjectURL(link.href);
     }
   </script>
-
- -->
-  
-
+ 
 {% endblock %}
