@@ -33,32 +33,34 @@
 {% endblock %}
 
 {% block content %}
-
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-
-<form class="form"  method="post">
-  <h1 class="govuk-heading-l">
-Enter your work email address
-  </h1>
-  <p class="govuk-body">
-    We will use this to send you a passcode.
-    <br/>
-     <br/>
-    Your email address must have the same ending as the email address that we contacted. 
-  </p>
-  <div class="govuk-inset-text">
- For example, if we sent the request for information to info@exampleschool.uk, then your email address must end with @exampleschool.uk
-</div>
- <div class="govuk-form-group">
-  <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
-</div>
+ <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-l">
+          Work email address
+        </h1>
+        <p class="govuk-body">
+        We will use this to send you a passcode.
+        <br/>
+        <br/>
+        Your email address must have the same ending as the email address that we contacted. 
+      </p>
+      <div class="govuk-inset-text">
+    For example, if we sent the request for information to info@exampleschool.uk, then your email address must end with @exampleschool.uk
+    </div>
+    <form class="form"  method="post">
+      <h2 class="govuk-heading-m">
+    Enter your work email address
+      </h2>
+    <div class="govuk-form-group">
+      <input class="govuk-input govuk-input--width-20" id="width-20" name="width20" type="text">
+  </div>
 
     {{ govukButton({
       text: "Continue",
       href: "get-passcode"
     }) }}
 </form>
-  </div>
-</div>
+      </div>
+    </div>
+
 {% endblock %}
