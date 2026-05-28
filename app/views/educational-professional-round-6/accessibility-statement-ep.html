@@ -1,28 +1,27 @@
-{% extends "layouts/main.html" %}
+{% extends "layouts/ep.html" %}
 {% block footer %}
   {% include "includes/dwp-footer-ep.njk" %}
 {% endblock %}
+
 {% block header %}
-{{ super() }}
-{% from "govuk/components/service-navigation/macro.njk" import govukServiceNavigation %}
- 
-{{ govukServiceNavigation({
-  serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
-  serviceUrl: "start"
-}) }}
+
+{{
+        dwpHeader({
+            serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: 'start',
+            container: true
+        })
+}}
 {% endblock %}
 
 {% block pageTitle %}
-   {{ serviceName }} – GOV.UK Prototype Kit
+  Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block beforeContent %}
 <div class="govuk-phase-banner">
   <p class="govuk-phase-banner__content">
-      <strong class="govuk-tag govuk-phase-banner__content__tag">
-          Beta
-      </strong>
-        <span class="govuk-phase-banner__text">
+       <span class="govuk-phase-banner__text">
         This is a new service. Help us improve it and
           <a class="govuk-link" href="#">give your feedback (opens in new tab)</a>. 
       </span>
@@ -30,7 +29,6 @@
 </div>
 <a class="govuk-back-link" href="javascript:history.back()">Back</a>
 {% endblock %}
-
 
 
 {% block content %}
