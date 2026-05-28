@@ -9,9 +9,9 @@
     "@govuk-prototype-kit/common-templates": "3.0.0",
     "@ministryofjustice/frontend": "^9.0.0",
     "govuk-frontend": "^6.1.0",
-    "govuk-prototype-kit": "^13.20.1",
     "hmrc-frontend": "7.15.0",
-    "qs": "^6.15.2"
+    "qs": "^6.15.2",
+    "@dwp-govuk/govuk-prototype-kit": "latest"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
