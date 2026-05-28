@@ -1,16 +1,19 @@
-{% from "govuk/components/footer/macro.njk" import govukFooter %}
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
 
-{{ govukFooter({
-  meta: {
-    items: [
-      {
-        href: "/educational-professional-round-ade-5/accessibility-statement-ep.html",
-        text: "Accessibility statement"
-      },
-      {
-        href: "https://www.gov.uk/government/organisations/department-for-work-pensions/about/personal-information-charter",
-        text: "Privacy"
-      }
-    ]
-  }
-}) }}
+{{
+        dwpFooter({
+            meta: {
+                visuallyHiddenTitle: "About this website",
+                items: [
+                {
+                    href: "/educational-professional-round-6/accessibility-statement-ep.html",
+                    text: "Accessibility statement"
+                },
+                {
+                    href: "https://www.gov.uk/government/organisations/department-for-work-pensions/about/personal-information-charter",
+                    text: "Privacy"
+                }
+                ]
+            }
+        }) 
+}}

@@ -1,0 +1,31 @@
+
+{% extends "govuk-prototype-kit/layouts/govuk-branded.njk" %}
+{% from "internal-service-header/macro.njk" import dwpHeader %}
+{% from "internal-service-footer/macro.njk" import dwpFooter %}
+
+{% block header %}
+    {{
+        dwpHeader({
+            serviceName: "Provide supporting information for Disability Living Allowance (DLA) for children",
+            serviceHref: '/',
+            container: true
+        })
+    }}
+{% endblock %}
+
+{% block footer %}
+      {{ govukFooter({
+      meta: {
+        items: [
+          {
+            href: "/educational-professional-round-ade-5/accessibility-statement-ep.html",
+            text: "Accessibility Statement"
+          },
+          {
+            href: "https://www.gov.uk/government/organisations/department-for-work-pensions/about/personal-information-charter" if locale != 'NI' else "https://www.communities-ni.gov.uk/dfc-privacy-notice",
+            text: "Privacy"
+          }
+        ]
+      }
+    }) }}
+    {% endblock %}
