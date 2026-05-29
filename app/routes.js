@@ -920,3 +920,243 @@ if (sort === 'nino') {
 }
 })
 
+// EDUCATIONAL PROFESSIONAL ROUND 6
+
+router.get('/choose-options', function (req, res) {
+  res.render('choose-options');
+}); 
+
+router.post('/educational-professional-round-6/about-child', function(request, response) {
+    var ms = request.session.data['6kno']
+
+    if (ms === "yes"){
+       return response.redirect("/educational-professional-round-6/child-dob")
+    } 
+
+    if (ms === "yesbut"){
+       return response.redirect("/educational-professional-round-6/check-answers-child")
+    } 
+
+    return response.redirect("/educational-professional-round-6/check-answers-no-child")
+})
+
+
+
+router.post('/educational-professional-round-6/learning-support-question', function(request, response) {
+
+    var ms = request.session.data['support']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-6/additional-learning-support")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-6/behaviour-question")
+    } 
+})
+
+
+router.post('/educational-professional-round-6/behaviour-question', function(request, response) {
+
+    var ms = request.session.data['behaviour']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-6/behaviour-in-school")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-6/move-around-question")
+    } 
+})
+
+
+
+router.post('/educational-professional-round-6/move-around-question', function(request, response) {
+
+    var ms = request.session.data['move']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-6/move-around-school")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-6/personal-safety-question")
+    } 
+})
+
+
+router.post('/educational-professional-round-6/personal-safety-question', function(request, response) {
+
+    var ms = request.session.data['safety']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-6/personal-safety")  
+    } 
+        if (ms === "no"){ 
+        response.redirect("/educational-professional-round-6/personal-care-question")
+    } 
+})
+
+
+router.post('/educational-professional-round-6/personal-care-question', function(request, response) {
+
+    var ms = request.session.data['care']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-6/personal-care") 
+    } 
+        if (ms === "no"){ 
+        response.redirect("/educational-professional-round-6/therapy-or-medication-question")
+    } 
+})
+
+
+
+router.post('/educational-professional-round-6/therapy-or-medication-question', function(request, response) {
+
+    var ms = request.session.data['therapy']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-6/therapy-or-medication")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-6/sleep-problems-question")
+    } 
+})
+
+
+
+router.post('/educational-professional-round-6/sleep-problems-question', function(request, response) {
+
+    var ms = request.session.data['sleep']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-6/sleep-problems")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-6/individual-plans-question")
+    } 
+})
+
+
+router.post('/educational-professional-round-6/individual-plans-question', function(request, response) {
+
+    var ms = request.session.data['plan']
+    if (ms === "yes"){
+        response.redirect("/educational-professional-round-6/individual-plans")
+    } 
+        if (ms === "no"){
+        response.redirect("/educational-professional-round-6/check-answers")
+    } 
+})
+
+
+// EP GOVUK ROUND 1
+
+router.get('/choose-options', function (req, res) {
+  res.render('choose-options');
+}); 
+
+router.post('/ep-govuk-round-1/about-child', function(request, response) {
+    var ms = request.session.data['6kno']
+
+    if (ms === "yes"){
+       return response.redirect("/ep-govuk-round-1/child-dob")
+    } 
+
+    if (ms === "yesbut"){
+       return response.redirect("/ep-govuk-round-1/check-answers-child")
+    } 
+
+    return response.redirect("/ep-govuk-round-1/check-answers-no-child")
+})
+
+
+
+router.post('/ep-govuk-round-1/learning-support-question', function(request, response) {
+
+    var ms = request.session.data['support']
+    if (ms === "yes"){
+        response.redirect("/ep-govuk-round-1/additional-learning-support")
+    } 
+        if (ms === "no"){
+        response.redirect("/ep-govuk-round-1/behaviour-question")
+    } 
+})
+
+
+router.post('/ep-govuk-round-1/behaviour-question', function(request, response) {
+
+    var ms = request.session.data['behaviour']
+    if (ms === "yes"){
+        response.redirect("/ep-govuk-round-1/behaviour-in-school")
+    } 
+        if (ms === "no"){
+        response.redirect("/ep-govuk-round-1/move-around-question")
+    } 
+})
+
+
+
+router.post('/ep-govuk-round-1/move-around-question', function(request, response) {
+
+    var ms = request.session.data['move']
+    if (ms === "yes"){
+        response.redirect("/ep-govuk-round-1/move-around-school")
+    } 
+        if (ms === "no"){
+        response.redirect("/ep-govuk-round-1/personal-safety-question")
+    } 
+})
+
+
+router.post('/ep-govuk-round-1/personal-safety-question', function(request, response) {
+
+    var ms = request.session.data['safety']
+    if (ms === "yes"){
+        response.redirect("/ep-govuk-round-1/personal-safety")  
+    } 
+        if (ms === "no"){ 
+        response.redirect("/ep-govuk-round-1/personal-care-question")
+    } 
+})
+
+
+router.post('/ep-govuk-round-1/personal-care-question', function(request, response) {
+
+    var ms = request.session.data['care']
+    if (ms === "yes"){
+        response.redirect("/ep-govuk-round-1/personal-care") 
+    } 
+        if (ms === "no"){ 
+        response.redirect("/ep-govuk-round-1/therapy-or-medication-question")
+    } 
+})
+
+
+
+router.post('/ep-govuk-round-1/therapy-or-medication-question', function(request, response) {
+
+    var ms = request.session.data['therapy']
+    if (ms === "yes"){
+        response.redirect("/ep-govuk-round-1/therapy-or-medication")
+    } 
+        if (ms === "no"){
+        response.redirect("/ep-govuk-round-1/sleep-problems-question")
+    } 
+})
+
+
+
+router.post('/ep-govuk-round-1/sleep-problems-question', function(request, response) {
+
+    var ms = request.session.data['sleep']
+    if (ms === "yes"){
+        response.redirect("/ep-govuk-round-1/sleep-problems")
+    } 
+        if (ms === "no"){
+        response.redirect("/ep-govuk-round-1/individual-plans-question")
+    } 
+})
+
+
+router.post('/ep-govuk-round-1/individual-plans-question', function(request, response) {
+
+    var ms = request.session.data['plan']
+    if (ms === "yes"){
+        response.redirect("/ep-govuk-round-1/individual-plans")
+    } 
+        if (ms === "no"){
+        response.redirect("/ep-govuk-round-1/check-answers")
+    } 
+})
