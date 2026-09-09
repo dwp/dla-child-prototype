@@ -9,11 +9,13 @@
     "@govuk-prototype-kit/common-templates": "3.0.0",
     "@ministryofjustice/frontend": "^9.0.0",
     "govuk-frontend": "^6.1.0",
-    "hmrc-frontend": "7.15.0",
+    "hmrc-frontend": "6.109.0",
     "qs": "^6.15.2",
-    "govuk-prototype-kit": "npm:@dwp-govuk/govuk-prototype-kit@latest"
+    "govuk-prototype-kit": "^13.20.3"
   },
-  "devDependencies": {
-    "nodemon": "^3.1.14"
+   "devDependencies": {
+    "nodemon": "^3.1.14",
+    "husky": "^9.1.7",
+    "js-yaml": "^4.3.1"
   }
 }
