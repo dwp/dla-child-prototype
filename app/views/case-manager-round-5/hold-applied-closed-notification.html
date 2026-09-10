@@ -52,7 +52,13 @@ container: true
           National Insurance number
         </dt>
         <dd class="govuk-summary-list__value">
-          QQ 12 34 56 D
+          QQ 12 34 56 D 
+          &nbsp; &nbsp;
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--orange">
+              On hold
+            </strong>
+          </td>
         </dd>
       </div>
     </dl>
@@ -71,20 +77,12 @@ container: true
 
       <div class="govuk-details__text">
         <h2 class="govuk-heading-s">Reason for hold</h2>
-        <div class="govuk-form-group">
-          <select class="govuk-select" id="sort" name="sort">
-            <option value="0010" selected>0010 - CRU Compensation Recovery Unit</option>
-            <option value="0011">0011 - Gurkha</option>
-            <option value="0012">0012 - Exportability Leap</option>
-            <option value="0013">0013 - CHD LEAP</option>
-          </select>
-        </div>
+        <p>0010 - CRU Compensation Recovery Unit</p>
 
-        {{ govukButton({
-        text: "Apply hold",
-        href: "hold-applied"
+         {{ govukButton({
+        text: "Remove hold",
+        href: "hold-removed"
         }) }}
-
       </div>
 
     </details>
@@ -108,7 +106,7 @@ container: true
       <ol class="ds_search-results__list" data-total="3" start="1">
         <li class="ds_search-result">
           <h3 class="ds_search-result__title">
-            <a class="ds_search-result__link govuk-secondary-text-colour" href="case-details">
+            <a class="ds_search-result__link govuk-secondary-text-colour" href="case-details-on-hold.html">
               <span class="govuk-visually-hidden">Case reference number</span>
               KW8424V</a>
           </h3>

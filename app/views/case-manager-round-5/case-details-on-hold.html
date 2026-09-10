@@ -31,49 +31,41 @@ Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
     </span>
   </p>
 </div>
-<a class="govuk-back-link" href="dashboard">Back to Manage requests</a>
+<a class="govuk-back-link" href="hold-applied-closed-notification.html">Back to search results</a>
 {% endblock %}
 
 {% block content %}
 
-
 <div class="govuk-grid-row">
 
   <!-- Main content -->
-  <div class="govuk-grid-column-two-thirds">
-
-    <div class="govuk-notification-banner govuk-notification-banner--success" role="alert"
-      aria-labelledby="govuk-notification-banner-title" data-module="govuk-notification-banner">
-      <div class="govuk-notification-banner__header">
-        <h2 class="govuk-notification-banner__title" id="govuk-notification-banner-title">
-          Success
-        </h2>
-      </div>
-      <div class="govuk-notification-banner__content">
-        <h3 class="govuk-notification-banner__heading">
-          Email address has been changed. Email has been resent.
-        </h3>
-      </div>
-    </div>
+  <div class="govuk-grid-column-full">
 
     <section class="dwp-quick-reference govuk-!-margin-bottom-0" aria-label="Case information">
       <dl class="dwp-quick-reference__block">
         <dt class="dwp-quick-reference__label govuk-visually-hidden">Name:</dt>
-        <dd class="dwp-quick-reference__primary">Oliver Charles Smith</dd>
+        <dd class="dwp-quick-reference__primary">Amy Hannah Dawson</dd>
         <dt class="dwp-quick-reference__label dwp-quick-reference__label--primary">Case reference number:</dt>
-        <dd class="dwp-quick-reference__secondary">FGE8364F</dd>
+        <dd class="dwp-quick-reference__secondary">KW8424V</dd>
         <dd class="dwp-quick-reference__status">
-          <strong class="govuk-tag govuk-tag--yellow">
-            Request sent
+          <strong class="govuk-tag govuk-tag--red">
+            Response overdue
+          </strong>
+          &nbsp;
+          <strong class="govuk-tag govuk-tag--orange">
+            On hold
           </strong>
         </dd>
       </dl>
     </section>
 
-  </div>
+    <div class="govuk-button-group">
+      {{ govukButton({
+      text: "Send a reminder",
+      href: "reminder-on-hold"
+      }) }}
+    </div>
 
-  <!-- Main content -->
-  <div class="govuk-grid-column-full">
     <div class="govuk-!-padding-bottom-8"></div>
 
     <h1 class="govuk-heading-l">Case details</h1>
@@ -95,7 +87,7 @@ Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
           Date of birth
         </dt>
         <dd class="govuk-summary-list__value">
-          18 Feb 2025
+          24 March 2020
         </dd>
         <dd class="govuk-summary-list__actions">
           <a class="govuk-link" href="#"><span class="govuk-visually-hidden"></span></a>
@@ -163,21 +155,9 @@ Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
 
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Request sent to
-            senco@newtownprimary.sch.uk</td>
-          <td class="govuk-table__cell">john.smith@dwp.gov.uk</td>
-          <td class="govuk-table__cell">11 April 2025 at 11:18am</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Email address changed to
-            senco@newtownprimary.sch.uk</td>
-          <td class="govuk-table__cell">john.smith@dwp.gov.uk</td>
-          <td class="govuk-table__cell">11 April 2025 at 11:18am</td>
-        </tr>
-        <tr class="govuk-table__row">
-          <td class="govuk-table__cell">Email not delivered</td>
+          <td class="govuk-table__cell">Response overdue</td>
           <td class="govuk-table__cell"></td>
-          <td class="govuk-table__cell">27 March 2025 at 11:27am</td>
+          <td class="govuk-table__cell">10 April 2025 at 11:18am</td>
         </tr>
         <tr class="govuk-table__row">
           <td class="govuk-table__cell">Request sent to enquiry@newtownprimary.sch.uk</td>
@@ -186,6 +166,7 @@ Child date of birth – {{ serviceName }} – GOV.UK Prototype Kit
         </tr>
       </tbody>
     </table>
+
   </div>
 </div>
 
