@@ -6,7 +6,7 @@
   },
   "dependencies": {
     "@dwp/dwp-frontend": "4.1.0",
-    "@govuk-prototype-kit/common-templates": "3.0.0",
+    "@govuk-prototype-kit/common-templates": "3.0.1",
     "@ministryofjustice/frontend": "9.0.0",
     "govuk-frontend": "6.1.0",
     "hmrc-frontend": "7.15.0",
